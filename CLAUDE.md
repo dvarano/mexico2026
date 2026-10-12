@@ -8,7 +8,8 @@ Handoff notes so a future session can pick this up cold.
 - **Trip:** an anniversary trip for two, **Nov 2–14 2026**. Mexico City (Andaz Condesa
   Nov 2–4, Kimpton Virgilio Polanco Nov 4–6) → San Miguel de Allende (NUMU Nov 6–10) → Cancún
   (Secrets Playa Blanca, Costa Mujeres, Nov 10–14) → home CUN → LAX 12:07 PM Nov 14.
-  **Anniversary day is Sat Nov 7** (The Restaurant, 7:30 PM).
+  **Sat Nov 7 is "Streetiversary"** (The Restaurant, 7:30 PM) and **Fri Nov 13 is "Anniversary"**
+  (optional private dinner at Secrets). Renamed Oct 12 2026 at the user's request; set by each day's `badge`.
 - **Source:** `Mexico_Anniversary_Itinerary_Latest_Oct12.pdf` (Drew, Oct 12 2026). Day pages were
   transcribed item by item, including its links; wording kept close to the PDF.
 - **Branch:** commit and push directly to `main`. Pages serves `main`.
@@ -21,7 +22,7 @@ Everything shown comes from the data blocks at the top of the script:
 
 | Block | What |
 |---|---|
-| `DAYS` | one entry per day: `d` date, `city`, `stay`, `sub` summary, `items`, optional `note` / `todo` / `head` / `tz` / `anniv` |
+| `DAYS` | one entry per day: `d` date, `city`, `stay`, `sub` summary, `items`, optional `note` / `todo` / `head` / `tz` / `badge` (pill on Today and Trip) |
 | item fields | `t` time as shown, `at` 24h start `"HH:MM"` (drives Now/Next and the day switch; omit for vague times like "Morning"), `d` details, `walk` / `ride`, `ok` status, `res` name for Reservations, `todo` |
 | `STAYS` | hotels with night ranges; verify.js checks every night maps to the right hotel |
 | `TRAVEL` | the Info tab's travel-days card, kept by hand |

@@ -73,7 +73,7 @@ main{padding:14px 16px;max-width:720px;margin:0 auto}
 .pill.ok{color:var(--ok);border-color:var(--ok);background:transparent}
 .pill.live{color:#fff;background:var(--accent);border-color:var(--accent)}
 .pill.opt{border-style:dashed;background:transparent}
-.pill.anniv,.pill.acc{color:var(--accent);border-color:var(--accent);background:transparent}
+.pill.badge,.pill.acc{color:var(--accent);border-color:var(--accent);background:transparent}
 .note{font-size:13px;color:var(--ink-2);line-height:1.5;margin:0}
 .note + .note{margin-top:8px}
 .todo{
@@ -216,7 +216,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-12T17:28:31Z');
+const SITE_UPDATED = Date.parse('2026-10-12T17:45:31Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -316,7 +316,7 @@ const DAYS = [
   { t:'~8:30/9', at:'20:30', ok:'Optional', d:'Live music + nightcap at [Raindog Lounge](map:Raindog Lounge San Miguel de Allende). Backup: [Johnny’s Piano Bar](map:Johnnys Piano Bar San Miguel de Allende). Check that night’s music and go only if you feel like staying out.', walk:'Centro walk varies', ride:'Short taxi if preferred' },
   ] },
 
-{ d:7, city:'sma', stay:'numu', anniv:true, sub:'Anniversary Day: Parks + Historic Centro + Markets + Pool + Dinner',
+{ d:7, city:'sma', stay:'numu', badge:'Streetiversary', sub:'Streetiversary: Parks + Historic Centro + Markets + Pool + Dinner',
   items:[
   { t:'8:30–9:30', at:'08:30', d:'[Lavanda](map:Lavanda Cafe San Miguel de Allende) or [Panio](map:Panio San Miguel de Allende).', walk:'~8–15', ride:'~4–8' },
   { t:'9:45–11:00', at:'09:45', d:'**Scenic walk:** NUMU → [Parque Benito Juárez](map:Parque Benito Juarez San Miguel de Allende) → [El Chorro / Lavaderos](map:El Chorro San Miguel de Allende) → [Calle Aldama](map:Calle Aldama San Miguel de Allende) → [Jardín Allende](map:Jardin Allende San Miguel de Allende) / [Parroquia](map:Parroquia San Miguel Arcangel San Miguel de Allende) → Cuna de Allende → Correo → Calle Recreo.', walk:'~60–75 scenic pace', ride:'Not needed' },
@@ -325,7 +325,7 @@ const DAYS = [
   { t:'2:30–4:15', at:'14:30', d:'NUMU rooftop pool + downtime.', walk:'On property' },
   { t:'~5:00', at:'17:00', d:'[Bekeb cocktail class](https://www.bekebsma.com/classes) **option**; otherwise one regular cocktail.', walk:'~20–25 from NUMU', ride:'~5–10',
     todo:'Bekeb cocktail class: decide, and book if you want it.' },
-  { t:'7:30 PM', at:'19:30', d:'[The Restaurant](https://therestaurantsanmiguel.com/); Moroccan courtyard, arch-side table requested.', ok:'Confirmed', res:'The Restaurant (anniversary dinner)', walk:'Bekeb → ~20–25', ride:'~7–12' },
+  { t:'7:30 PM', at:'19:30', d:'[The Restaurant](https://therestaurantsanmiguel.com/); Moroccan courtyard, arch-side table requested.', ok:'Confirmed', res:'The Restaurant (Streetiversary dinner)', walk:'Bekeb → ~20–25', ride:'~7–12' },
   { t:'~9:30/10', at:'21:30', ok:'Optional', d:'Romantic nighttime stroll through [Jardín Allende](map:Jardin Allende San Miguel de Allende) / [Parroquia](map:Parroquia San Miguel Arcangel San Miguel de Allende). If you want more, continue to [Raindog Lounge](map:Raindog Lounge San Miguel de Allende) for live music + a nightcap; otherwise walk back to NUMU.', walk:'~10–20+ depending on route', ride:'Short taxi if preferred' },
   ],
   note:'Keep The Restaurant unless Kan Bei confirms and you decide to switch.',
@@ -382,7 +382,7 @@ const DAYS = [
   { t:'Dinner', d:'Bordeaux.', walk:'On property', ride:'Not needed' },
   ] },
 
-{ d:13, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Favorite Resort Day + Optional Anniversary Finale',
+{ d:13, city:'cun', stay:'secrets', badge:'Anniversary', head:'Secrets Playa Blanca', sub:'Favorite Resort Day + Optional Anniversary Finale',
   items:[
   { t:'Morning', d:'Favorite workout/class if desired.', walk:'On property', ride:'On property' },
   { t:'Daytime', d:'Favorite pool/beach + optional one resort activity.', walk:'On property', ride:'On property' },
@@ -474,7 +474,7 @@ const IDEAS = [
     lead:'Jazz is optional; the connection fixes take pressure off the busiest days.',
     opts:[
       { day:5, h:'Jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
-      { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so the anniversary night stays simple.' },
+      { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
       { day:3, h:'Lighten Tuesday', p:'The busiest day: nine stops before a 7:30 PM show. Dropping Biblioteca Vasconcelos, the only stop north of Centro, saves about an hour and lets the day start at 9:30.' },
       { day:4, h:'One ride on Wednesday', p:'Ask the Teotihuacan driver to stop at the Andaz for your bags after Maizajo and drop you at the Kimpton. One ride instead of two, and no 3:00 deadline.' },
       { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
@@ -597,7 +597,7 @@ function renderToday(){
     const n = daysUntil(now, 0);
     pills.push('<span class="pill">' + (n <= 1 ? (n === 1 ? 'Tomorrow' : 'Today') : 'In ' + n + ' days') + '</span>');
   }
-  if(D.anniv) pills.push('<span class="pill anniv">Anniversary</span>');
+  if(D.badge) pills.push('<span class="pill badge">' + esc(D.badge) + '</span>');
   pills.push('<span class="pill">Day ' + (cur + 1) + ' of ' + DAYS.length + '</span>');
 
   let stay = '';
@@ -682,7 +682,7 @@ function renderTrip(){
     g.idx.forEach(i => {
       const D = DAYS[i];
       const res = D.items.filter(x => x.res).map(x => '<span class="pill ok">' + esc(x.res.replace(/ \(.*\)$/, '')) + '</span>');
-      if(D.anniv) res.unshift('<span class="pill anniv">Anniversary</span>');
+      if(D.badge) res.unshift('<span class="pill badge">' + esc(D.badge) + '</span>');
       const isLive = ph === 'during' && i === live;
       h += '<button class="dayrow' + (isLive ? ' live' : '') + '" data-day="' + D.d + '">'
          +   '<span class="db"><small>' + DOW[dowOf(D.d)].slice(0,3) + '</small><b>' + D.d + '</b></span>'

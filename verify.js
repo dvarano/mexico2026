@@ -135,7 +135,8 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     await page.click('#tab-trip .dayrow[data-day="7"]');
     let s = await state(page);
     ok(s.tab === 'today' && s.day === 7, 'Trip row opens that day on Today');
-    ok(/Anniversary/.test(await page.textContent('#tab-today .dayhero')), 'the 7th is flagged Anniversary');
+    ok(/Streetiversary/.test(await page.textContent('#tab-today .dayhero')), 'the 7th is flagged Streetiversary');
+    ok(/Anniversary/.test(await page.textContent('#tab-trip .dayrow[data-day="13"]')), 'the 13th is flagged Anniversary on Trip');
     await page.click('nav button[data-tab="ideas"]');
     await page.click('#tab-ideas .chip[data-day="5"]');
     s = await state(page);
