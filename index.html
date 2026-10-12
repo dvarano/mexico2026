@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
+<title>Mexico 2026</title>
+<style>
+:root{
+  color-scheme: light;
+  --plane:#f5f0e8; --surface-1:#fffdf9; --surface-2:#f8f3eb;
+  --ink-1:#1f1b16; --ink-2:#5b534a; --ink-3:#8c8377;
+  --grid:#ebe3d6; --ring:rgba(31,27,22,0.11);
+  --accent:#b5502a; --ok:#2f7a4f; --warn:#b97a0c; --warn-bg:#fbf1dc;
+  --c-cdmx:#c2366b; --c-sma:#c07a12; --c-cun:#13827f;
+  --radius:14px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --plane:#12110f; --surface-1:#1c1a17; --surface-2:#24211c;
+    --ink-1:#f4eee5; --ink-2:#cdc4b6; --ink-3:#8f877b;
+    --grid:#2e2a24; --ring:rgba(255,255,255,0.10);
+    --accent:#e0794d; --ok:#55b97f; --warn:#e3a83a; --warn-bg:#2b2416;
+    --c-cdmx:#e5679a; --c-sma:#e0a145; --c-cun:#3fbfba;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--plane); color:var(--ink-1);
+  font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
+  padding-bottom:calc(66px + env(safe-area-inset-bottom));
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--accent);text-decoration:none;font-weight:550}
+a:active{opacity:.6}
+header{
+  position:sticky; top:0; z-index:20;
+  background:var(--surface-1); border-bottom:1px solid var(--ring);
+  padding:10px 16px;
+}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.brand h1{font:600 18px/1.2 var(--serif);margin:0;letter-spacing:-0.01em}
+.brand h1 small{display:none;font:11px system-ui,sans-serif;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;margin-left:6px}
+@media (min-width:480px){ .brand h1 small{display:inline} }
+.brand span{font-size:11px;color:var(--ink-3);white-space:nowrap}
+.daysel{display:flex;align-items:center;gap:5px;margin-top:8px}
+.daysel select{
+  flex:1 1 0;min-width:0;min-height:38px;font:inherit;font-size:14px;color:var(--ink-1);
+  background:var(--plane);border:1px solid var(--ring);border-radius:8px;padding:0 8px;
+}
+.daysel button{
+  flex:0 0 auto;width:36px;min-height:38px;font-size:18px;line-height:1;padding:0;
+  background:var(--plane);color:var(--ink-1);border:1px solid var(--ring);border-radius:8px;
+}
+.daysel button:disabled{opacity:.35}
+main{padding:14px 16px;max-width:720px;margin:0 auto}
+.card{
+  background:var(--surface-1);border:1px solid var(--ring);border-radius:var(--radius);
+  padding:14px;margin-bottom:12px;
+}
+.card h2{font-size:12px;margin:0 0 10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.hide{display:none !important}
+.pill{
+  display:inline-block;padding:2px 8px;border-radius:999px;font-size:10.5px;
+  border:1px solid var(--ring);color:var(--ink-2);background:var(--surface-2);
+  text-transform:uppercase;letter-spacing:.05em;font-weight:650;vertical-align:1px;white-space:nowrap;
+}
+.pill.ok{color:var(--ok);border-color:var(--ok);background:transparent}
+.pill.live{color:#fff;background:var(--accent);border-color:var(--accent)}
+.pill.opt{border-style:dashed;background:transparent}
+.pill.anniv,.pill.acc{color:var(--accent);border-color:var(--accent);background:transparent}
+.note{font-size:13px;color:var(--ink-2);line-height:1.5;margin:0}
+.note + .note{margin-top:8px}
+.todo{
+  margin-top:7px;font-size:12.5px;color:var(--ink-1);line-height:1.45;
+  border-left:3px solid var(--warn);background:var(--warn-bg);padding:5px 9px;border-radius:0 6px 6px 0;
+}
+.chip{
+  display:inline-flex;align-items:center;min-height:28px;padding:0 9px;margin:2px 4px 2px 0;
+  font:inherit;font-size:12px;font-weight:600;color:var(--ink-1);
+  background:var(--surface-2);border:1px solid var(--ring);border-radius:999px;cursor:pointer;
+  white-space:nowrap;flex:none;
+}
+
+/* ---- Today ---- */
+.dayhero{border-top:4px solid var(--city)}
+.dayhero .dow{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.dayhero h2.city{font:600 27px/1.15 var(--serif);color:var(--ink-1);text-transform:none;letter-spacing:-0.01em;margin:6px 0 4px}
+.dayhero .sub{color:var(--ink-2);font-size:14px;margin:0}
+.dayhero .stay{margin-top:10px;padding-top:10px;border-top:1px solid var(--grid);font-size:13.5px;color:var(--ink-2)}
+.dayhero .stay b{color:var(--ink-1);font-weight:600}
+.dayhero .pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.items{list-style:none;margin:0;padding:0}
+.it{display:grid;grid-template-columns:78px 1fr;gap:10px;padding:11px 0;border-top:1px solid var(--grid);position:relative}
+.it:first-child{border-top:0;padding-top:2px}
+.it .t{font-weight:650;font-size:13.5px;font-variant-numeric:tabular-nums;line-height:1.35}
+.it .t em{display:block;font-style:normal;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-top:3px}
+.it .d{font-size:14.5px;min-width:0;overflow-wrap:anywhere}
+.it .d .pill{margin-left:4px}
+.it .mv{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:5px;font-size:12px;color:var(--ink-3)}
+.it .mv span{white-space:nowrap}
+.it .mv i{font-style:normal;text-transform:uppercase;font-size:10px;letter-spacing:.06em;margin-right:4px;color:var(--ink-3)}
+.it .mv span.wrap{white-space:normal}
+.it.now::before{content:"";position:absolute;left:-14px;top:9px;bottom:9px;width:3px;border-radius:0 3px 3px 0;background:var(--accent)}
+.it.past .t,.it.past .d,.it.past .mv{opacity:.55}
+.foot{border-left:3px solid var(--city);background:var(--surface-2)}
+.tmrw .kv{display:flex;gap:10px;padding:6px 0;border-top:1px solid var(--grid);font-size:14px}
+.tmrw .kv:first-of-type{border-top:0}
+.tmrw .kv b{flex:0 0 78px;font-variant-numeric:tabular-nums}
+.backbtn{margin-bottom:12px}
+.backbtn button{width:100%;min-height:42px;font:inherit;font-weight:600;border-radius:10px;border:1px solid var(--accent);color:var(--accent);background:transparent}
+
+/* ---- Trip ---- */
+.trip-hero h2.big{font:600 26px/1.15 var(--serif);color:var(--ink-1);text-transform:none;letter-spacing:-0.01em;margin:0 0 4px}
+.cityhd{display:flex;align-items:center;gap:8px;margin:0 0 2px}
+.cityhd .dot{width:10px;height:10px;border-radius:50%;background:var(--city);flex:none}
+.cityhd h3{font:600 19px/1.2 var(--serif);margin:0}
+.cityhd small{margin-left:auto;color:var(--ink-3);font-size:12px;white-space:nowrap}
+.citystays{font-size:12.5px;color:var(--ink-3);margin:0 0 8px 18px}
+.dayrow{
+  display:grid;grid-template-columns:46px 1fr;gap:10px;width:100%;text-align:left;
+  padding:10px 0;border:0;border-top:1px solid var(--grid);background:none;color:inherit;font:inherit;cursor:pointer;
+}
+.dayrow .db{text-align:center;line-height:1.1;border-radius:9px;padding:5px 0;background:var(--surface-2);border:1px solid var(--ring)}
+.dayrow .db small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:600}
+.dayrow .db b{font-size:18px;font-variant-numeric:tabular-nums}
+.dayrow.live .db{background:var(--accent);border-color:var(--accent);color:#fff}
+.dayrow.live .db small{color:#fff}
+.dayrow .dt{font-size:14px;min-width:0}
+.dayrow .dt .ttl{font-weight:600}
+.dayrow .dt .res{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+
+/* ---- Info / lists ---- */
+.row{padding:9px 0;border-top:1px solid var(--grid);font-size:14px}
+.row:first-of-type{border-top:0;padding-top:0}
+.row .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.row .top b{font-weight:600}
+.row .top span{color:var(--ink-3);font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.row .meta{color:var(--ink-2);font-size:13px;margin-top:2px}
+.row .links{display:flex;gap:14px;margin-top:4px;font-size:13px}
+.steps{margin:4px 0 0;padding-left:18px;font-size:13.5px;color:var(--ink-2)}
+.steps li{margin:3px 0}
+
+/* ---- Shop ---- */
+.check{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:10px 0;border-top:1px solid var(--grid)}
+.check:first-of-type{border-top:0;padding-top:0}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ok)}
+.check .w b{font-weight:600}
+.check .w .meta{font-size:13px;color:var(--ink-2);margin-top:2px}
+.check .w .where{font-size:13px;margin-top:4px}
+.check.done .w b{text-decoration:line-through;color:var(--ink-3)}
+.check.done .w .meta,.check.done .w .where{opacity:.55}
+
+/* ---- Ideas ---- */
+.idea h3{font:600 17px/1.25 var(--serif);margin:0 0 6px}
+.idea .lead{font-size:13.5px;color:var(--ink-2);margin:0 0 4px}
+.opt{padding:10px 0 2px;border-top:1px solid var(--grid);margin-top:8px}
+.opt .oh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-weight:600;font-size:14px}
+.opt p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.sec{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:650;margin:14px 0 0}
+
+nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;
+  background:var(--surface-1);border-top:1px solid var(--ring);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+nav button{
+  flex:1;min-height:60px;background:none;border:0;color:var(--ink-3);cursor:pointer;
+  font:inherit;font-size:11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+}
+nav button svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+nav button[aria-selected=true]{color:var(--accent);font-weight:650}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <h1 id="brandName">Mexico 2026</h1>
+    <span id="updTxt"></span>
+  </div>
+  <div class="daysel" id="daySel">
+    <button id="prevD" aria-label="Previous day">&#8249;</button>
+    <select id="dayPick" aria-label="Day"></select>
+    <button id="nextD" aria-label="Next day">&#8250;</button>
+  </div>
+</header>
+
+<main>
+  <section id="tab-today"></section>
+  <section id="tab-trip" class="hide"></section>
+  <section id="tab-info" class="hide"></section>
+  <section id="tab-shop" class="hide"></section>
+  <section id="tab-ideas" class="hide"></section>
+</main>
+
+<nav>
+  <button data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Today</button>
+  <button data-tab="trip"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 6h7a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h7"/></svg>Trip</button>
+  <button data-tab="info"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Info</button>
+  <button data-tab="shop"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Shop</button>
+  <button data-tab="ideas"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Ideas</button>
+</nav>
+
+<script>
+/* =====================================================================
+   Mexico 2026: day-by-day itinerary. One file, no build, no dependencies.
+   Everything the page shows comes from the data blocks below; edit those,
+   bump SITE_UPDATED, push to main. See CLAUDE.md.
+   ===================================================================== */
+const TRIP_NAME = 'Mexico 2026';
+const TRIP_SUB  = 'Anniversary · Nov 2–14';
+/* Bump on every commit that changes something you'd see on the site (UTC). */
+const SITE_UPDATED = Date.parse('2026-10-12T17:28:31Z');
+const YEAR = 2026, MONTH = 10;          // November (0-based)
+
+/* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
+   is UTC-5 all year. Neither observes daylight saving. */
+const CITIES = {
+  cdmx: { name:'Mexico City',           tz:-6, color:'var(--c-cdmx)' },
+  sma:  { name:'San Miguel de Allende', tz:-6, color:'var(--c-sma)'  },
+  cun:  { name:'Cancún',                tz:-5, color:'var(--c-cun)'  },
+};
+
+const STAYS = {
+  andaz:   { name:'Andaz Mexico City Condesa', area:'Condesa, Mexico City', from:2,  to:4,
+             map:'Andaz Mexico City Condesa' },
+  kimpton: { name:'Kimpton Virgilio',          area:'Polanco, Mexico City', from:4,  to:6,
+             map:'Kimpton Virgilio Polanco Mexico City' },
+  numu:    { name:'NUMU',                      area:'San Miguel de Allende', from:6, to:10,
+             url:'https://www.hyatt.com/unbound-collection/en-US/bjxub-numu', map:'NUMU Boutique Hotel San Miguel de Allende' },
+  secrets: { name:'Secrets Playa Blanca',      area:'Costa Mujeres, Cancún', from:10, to:14,
+             url:'https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres', map:'Secrets Playa Blanca Costa Mujeres' },
+};
+
+/* ---------- The itinerary ----------
+   d      date in November
+   city   key into CITIES (sets the colour and the time zone)
+   tz     optional override of the city's zone, for the times on that day
+   stay   where you sleep that night; a change from the night before is flagged
+   head   optional heading (defaults to the city name)
+   sub    the one-line summary under the heading
+   items  t = time as displayed; at = 24h start "HH:MM" (drives Now/Next and
+          the day switch; leave off when the time is vague)
+          d = details. Markup: [text](url), [text](map:Google Maps query), **bold**
+          walk / ride = the two travel columns; ok = Confirmed / Reserved / Booked / Optional
+          res = name for the Reservations list; todo = shows amber here and in Info → Still to sort
+   note   footnote under the day */
+const DAYS = [
+{ d:2, city:'cdmx', stay:'andaz', sub:'Arrival + Día de Muertos + Taverna',
+  items:[
+  { t:'Arrival', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa). Check in and settle.', walk:'Not practical', ride:'~30–60 min' },
+  { t:'Late PM', d:'[Avenida Amsterdam](map:Avenida Amsterdam Condesa Mexico City) + [Parque México](map:Parque Mexico Condesa Mexico City).', walk:'~5–10 min from hotel', ride:'Unneeded' },
+  { t:'5:15 PM', at:'17:15', d:'Leave for [Zócalo](map:Zocalo Mexico City) / Centro for Día de Muertos atmosphere.', walk:'~75–90 min', ride:'~25–40 min' },
+  { t:'5:45–7:40', at:'17:45', d:'Centro/Zócalo at dusk and after illumination begins. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
+  { t:'7:40 PM', at:'19:40', d:'Leave for [Taverna](map:Taverna Prim Mexico City).', walk:'Zócalo ~35–45 min', ride:'~10–20 min' },
+  { t:'8:30 PM', at:'20:30', d:'[Taverna](map:Taverna Prim Mexico City)', ok:'Confirmed', res:'Taverna', ride:'Return to Andaz ~15–25 min' },
+  ],
+  note:'Walking backup: Bellas Artes → Taverna ~25–30 min.' },
+
+{ d:3, city:'cdmx', stay:'andaz', sub:'Biblioteca + Centro + Templo Mayor + Ciudadela + Roma + Lucha',
+  items:[
+  { t:'~7:00', at:'07:00', d:'[Saint Panadería](map:Saint Panaderia Benjamin Hill 146 Mexico City) or [Odette Condesa](map:Odette Condesa Popocatepetl 35 Mexico City) + short Parque México loop.', walk:'Saint ~10–15; Odette ~5–10', ride:'Unneeded' },
+  { t:'7:45', at:'07:45', d:'Leave for [Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/).', walk:'Not practical', ride:'~20–30 min' },
+  { t:'8:30–9:15', at:'08:30', d:'[Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/) architecture visit.', walk:'Inside' },
+  { t:'10:00–11:40', at:'10:00', d:'[MUNAL](https://munal.mx/es/visita) → **go inside** [Palacio Postal](map:Palacio Postal Mexico City) for ~10–15 min to see the ornate lobby/staircase → [Casa de los Azulejos](map:Casa de los Azulejos Mexico City) → **optional 5–10 min** [Palacio de Iturbide](map:Palacio de Iturbide Mexico City) courtyard if open → [Bellas Artes](https://inba.gob.mx/recinto/67/museo-del-palacio-de-bellas-artes).', walk:'2–7 min between nearby sights', ride:'Biblioteca → Centro ~10–20' },
+  { t:'~11:40', at:'11:40', d:'Quick exterior look at [Templo Mayor](map:Templo Mayor Mexico City) archaeological ruins. No museum visit needed.', walk:'~12–18 min from Bellas Artes', ride:'~5–10 min' },
+  { t:'~12:00–12:30', at:'12:00', d:'[La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City): gifts, textiles + napkins.', walk:'~25–30 from Templo Mayor', ride:'~10–15 min' },
+  { t:'1:30 PM', at:'13:30', d:'[Botánico](map:Botanico Condesa CDMX)', ok:'Confirmed', res:'Botánico (lunch)', walk:'Long walk', ride:'Uber recommended' },
+  { t:'Afternoon', at:'15:00', d:'Roma: [Utilitario Mexicano](https://www.utilitariomexicano.com/) → [Proyecto Rufina](map:Proyecto Rufina Roma Norte CDMX) → [Casa Bosques](https://casabosques.net/) → optional [Xinú](https://xinu.mx/).', walk:'Walk between nearby shops', ride:'Short Ubers as needed' },
+  { t:'4:30–5:30', at:'16:30', d:'Andaz rest / shower / change.' },
+  { t:'5:30–6:20', at:'17:30', d:'Dinner: [Tizne Tacomotora](map:Tizne Tacomotora Roma CDMX) preferred; or [Orinoco](map:Taqueria Orinoco Roma Norte CDMX), [Cariñito](map:Carinito Tacos Roma Norte CDMX), [Los Alexis](map:Tacos Los Alexis Roma Norte CDMX), [Marlindo](map:Marlindo Roma Norte CDMX).', walk:'From Andaz ~20–30 min', ride:'~7–12 min' },
+  { t:'7:30 PM', at:'19:30', d:'[Lucha Libre, Arena México](map:Arena Mexico CDMX); arrive 30–45 min early. [Tickets](https://www.ticketmaster.com.mx/lucha-libre-cmll-boletos/artist/1156538).', walk:'Dinner → arena varies', ride:'~10–20 min',
+    todo:'Lucha Libre tickets: not marked as bought in the plan.' },
+  ] },
+
+{ d:4, city:'cdmx', stay:'kimpton', sub:'Teotihuacan + Maizajo + Kimpton + Polanco + Rosetta',
+  items:[
+  { t:'6:30 AM', at:'06:30', d:'Private driver pickup at Andaz.', walk:'Not practical', ride:'Private car' },
+  { t:'8:00–10:45', at:'08:00', d:'[Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), focused route: **Pyramid of the Sun → Avenue of the Dead → Puma Mural → Plaza/Pyramid of the Moon → Quetzalpapalotl complex**. Skip the museums; depart about 10:45 AM.', walk:'Site walking', ride:'Private car' },
+  { t:'1:30 PM', at:'13:30', d:'[Maizajo upstairs](https://www.maizajo.com/pages/restaurante)', ok:'Confirmed', res:'Maizajo (lunch)', ride:'Private car' },
+  { t:'~3:00', at:'15:00', d:'Collect bags at Andaz → [Kimpton Virgilio](map:Kimpton Virgilio Polanco Mexico City).', walk:'Not practical with bags', ride:'~25–40 min' },
+  { t:'4:20–5:10', at:'16:20', d:'[Ensamble Artesano](https://ensambleartesano.org/pages/tiendas), [IKAL](https://ikalstore.com/), [LAGO](https://lagolatam.com/pages/stores-2), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones).', walk:'~1–7 min', ride:'Unneeded' },
+  { t:'5:10–6:30', at:'17:10', d:'Kimpton rooftop pool/rest.', walk:'On property' },
+  { t:'7:15', at:'19:15', d:'Leave for [Licorería Limantour](https://limantour.tv/).', walk:'~50–65 min', ride:'~20–30 min' },
+  { t:'~7:40–8:25', at:'19:40', d:'Cocktails at Limantour.' },
+  { t:'9:00 PM', at:'21:00', d:'[Rosetta](https://rosetta.com.mx/) indoor dinner', ok:'Confirmed', res:'Rosetta', walk:'Limantour → Rosetta ~10–15', ride:'~5–10 min' },
+  ] },
+
+{ d:5, city:'cdmx', stay:'kimpton', sub:'Chapultepec + Anthropology + Polanco + Comedor Jacinta',
+  items:[
+  { t:'Early AM', d:'[Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) or [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City) + Parque Lincoln.', walk:'Nearby', ride:'Unneeded' },
+  { t:'8:35', at:'08:35', d:'Leave for [Chapultepec Castle](https://mnh.inah.gob.mx/).', walk:'~30–40 incl. uphill', ride:'~10–20 + uphill' },
+  { t:'9:00–10:30', at:'09:00', d:'Chapultepec Castle. Don’t miss the Alcázar terraces/gardens and views over Paseo de la Reforma.', walk:'Inside/site' },
+  { t:'11:00–1:00', at:'11:00', d:'[Anthropology Museum](https://mna.inah.gob.mx/) key galleries.', walk:'Castle → museum ~20–30', ride:'Short ride possible' },
+  { t:'1:00', at:'13:00', d:'Sala Gastronómica OR [El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City).', walk:'Varies', ride:'Short Uber if El Turix' },
+  { t:'2:00–2:45', at:'14:00', d:'Optional [Museo Soumaya](https://www.museosoumaya.org/). Skip it if you’d rather stay longer at Anthropology.', walk:'Longer walk', ride:'Uber recommended' },
+  { t:'3:00–4:30', at:'15:00', d:'Shopping: [Onora](map:Onora Polanco Mexico City), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones), [Yuriko Moda](https://yurikomoda.mx/), [Zara Masaryk](https://www.zara.com/mx/); optional ACAPELLA.', walk:'Walk between Polanco stops', ride:'Short Ubers as needed' },
+  { t:'7:30 PM', at:'19:30', d:'[Comedor Jacinta](map:Comedor Jacinta Polanco Mexico City), Salón Standard.', ok:'Confirmed', res:'Comedor Jacinta', walk:'~3–6 from Kimpton', ride:'Unneeded' },
+  ] },
+
+{ d:6, city:'sma', stay:'numu', sub:'Private Car + NUMU + Pool/Rest + Luna + Tostévere',
+  items:[
+  { t:'7:15–8:00', at:'07:15', d:'[Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) or [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City).', walk:'~5–10', ride:'~3–5' },
+  { t:'8:30 AM', at:'08:30', d:'**Pre-booked private car** Kimpton → [NUMU](https://www.hyatt.com/unbound-collection/en-US/bjxub-numu).', ok:'Booked', res:'Private car to San Miguel', walk:'Not practical', ride:'~3.5–4.5 hr' },
+  { t:'~12–1', at:'12:00', d:'NUMU arrival, lunch/check-in.', walk:'On property' },
+  { t:'Afternoon', at:'13:30', d:'NUMU pool/rest + get ready. Keep arrival day light.', walk:'On property' },
+  { t:'~5:00', at:'17:00', d:'Walk into [Rosewood](https://www.rosewoodhotels.com/en/san-miguel-de-allende) and enjoy the property.', walk:'~1–3', ride:'Unneeded' },
+  { t:'5:15 PM', at:'17:15', d:'[Luna Rooftop](https://www.rosewoodhotels.com/en/san-miguel-de-allende/dining/luna-rooftop)', ok:'Confirmed', res:'Luna Rooftop', walk:'~1–3 from NUMU', ride:'Unneeded' },
+  { t:'7:00 PM', at:'19:00', d:'[Tostévere](https://www.instagram.com/tosteveresma/)', ok:'Reserved', res:'Tostévere', walk:'~5 from Luna', ride:'Unneeded' },
+  { t:'~8:30/9', at:'20:30', ok:'Optional', d:'Live music + nightcap at [Raindog Lounge](map:Raindog Lounge San Miguel de Allende). Backup: [Johnny’s Piano Bar](map:Johnnys Piano Bar San Miguel de Allende). Check that night’s music and go only if you feel like staying out.', walk:'Centro walk varies', ride:'Short taxi if preferred' },
+  ] },
+
+{ d:7, city:'sma', stay:'numu', anniv:true, sub:'Anniversary Day: Parks + Historic Centro + Markets + Pool + Dinner',
+  items:[
+  { t:'8:30–9:30', at:'08:30', d:'[Lavanda](map:Lavanda Cafe San Miguel de Allende) or [Panio](map:Panio San Miguel de Allende).', walk:'~8–15', ride:'~4–8' },
+  { t:'9:45–11:00', at:'09:45', d:'**Scenic walk:** NUMU → [Parque Benito Juárez](map:Parque Benito Juarez San Miguel de Allende) → [El Chorro / Lavaderos](map:El Chorro San Miguel de Allende) → [Calle Aldama](map:Calle Aldama San Miguel de Allende) → [Jardín Allende](map:Jardin Allende San Miguel de Allende) / [Parroquia](map:Parroquia San Miguel Arcangel San Miguel de Allende) → Cuna de Allende → Correo → Calle Recreo.', walk:'~60–75 scenic pace', ride:'Not needed' },
+  { t:'Late AM', at:'11:00', d:'[Mercado de Artesanías](map:Mercado de Artesanias San Miguel de Allende) + [Mercado Ignacio Ramírez](map:Mercado Ignacio Ramirez San Miguel de Allende).', walk:'Walk', ride:'~4–8 if needed' },
+  { t:'Midday', at:'12:30', d:'[Dôce 18](https://www.doce-18.com/) + [Mixta](https://www.mixtashop.com) + optional [Recreo](https://recreosanmiguel.com/) + casual lunch.', walk:'~3–12 each', ride:'~3–7' },
+  { t:'2:30–4:15', at:'14:30', d:'NUMU rooftop pool + downtime.', walk:'On property' },
+  { t:'~5:00', at:'17:00', d:'[Bekeb cocktail class](https://www.bekebsma.com/classes) **option**; otherwise one regular cocktail.', walk:'~20–25 from NUMU', ride:'~5–10',
+    todo:'Bekeb cocktail class: decide, and book if you want it.' },
+  { t:'7:30 PM', at:'19:30', d:'[The Restaurant](https://therestaurantsanmiguel.com/); Moroccan courtyard, arch-side table requested.', ok:'Confirmed', res:'The Restaurant (anniversary dinner)', walk:'Bekeb → ~20–25', ride:'~7–12' },
+  { t:'~9:30/10', at:'21:30', ok:'Optional', d:'Romantic nighttime stroll through [Jardín Allende](map:Jardin Allende San Miguel de Allende) / [Parroquia](map:Parroquia San Miguel Arcangel San Miguel de Allende). If you want more, continue to [Raindog Lounge](map:Raindog Lounge San Miguel de Allende) for live music + a nightcap; otherwise walk back to NUMU.', walk:'~10–20+ depending on route', ride:'Short taxi if preferred' },
+  ],
+  note:'Keep The Restaurant unless Kan Bei confirms and you decide to switch.',
+  todo:'Kan Bei: waiting to hear back. The Restaurant stays the plan unless you switch.' },
+
+{ d:8, city:'sma', stay:'numu', sub:'El Mirador + Fábrica La Aurora + NUMU + Bocaciega',
+  items:[
+  { t:'Morning', d:'Breakfast, then **new:** quick [El Mirador](map:El Mirador San Miguel de Allende) panoramic viewpoint stop. Allow ~10–15 min for views/photos.', walk:'Uphill; not ideal', ride:'Taxi ~5–10 min' },
+  { t:'After', d:'Continue to [Fábrica La Aurora](https://fabricalaaurora.com/).', walk:'Long walk', ride:'Taxi ~10–15 min' },
+  { t:'~10–12:30', at:'10:00', d:'[Rachel Horn Home](https://fabricalaaurora.com/kora_portfolio/rachel-horn-home/), Cantadora Antiques, [Sortilegio](https://fabricalaaurora.com/kora_genre/decor/), BAILA + galleries. [Map](https://fabricalaaurora.com/en/mapa/).', walk:'Inside complex', ride:'No car' },
+  { t:'Lunch', at:'12:30', d:'[Café de la Aurora](map:Cafe de la Aurora Fabrica La Aurora San Miguel de Allende) / nearby.', walk:'0–5', ride:'No car' },
+  { t:'Afternoon', at:'14:00', d:'NUMU downtime + missed Centro shops.', walk:'~20–25', ride:'~7–12' },
+  { t:'7:30 PM', at:'19:30', d:'[Bocaciega](map:Bocaciega San Miguel de Allende)', ok:'Reserved', res:'Bocaciega', walk:'~12–18', ride:'~5–10' },
+  ] },
+
+{ d:9, city:'sma', stay:'numu', sub:'Sazón Cooking School + Final Shopping + Early Night',
+  items:[
+  { t:'Morning', d:'Coffee/pastry + favorite Centro streets.', walk:'~5–15', ride:'~3–8' },
+  { t:'11:00 AM', at:'11:00', d:'[Sazón Cooking School](https://www.belmond.com/en/hotels/north-america/mexico/casa-de-sierra-nevada-san-miguel-de-allende/sazon-cooking-school); ~3 hr + meal.', ok:'Confirmed', res:'Sazón Cooking School', walk:'~8–15', ride:'~4–8' },
+  { t:'~2:00', d:'Finish Sazón; class meal = lunch.' },
+  { t:'2:00–4:00', at:'14:00', d:'Final shopping / revisit favorites.', walk:'~5–15', ride:'~3–8' },
+  { t:'4:00–6:00', at:'16:00', d:'NUMU pool/rest + pack.', walk:'On property' },
+  { t:'~6:00', at:'18:00', d:'Light dinner near NUMU; early night.', walk:'0–10', ride:'0–5' },
+  ] },
+
+/* The early times on the 10th are San Miguel / Querétaro time (UTC-6), so the
+   day keeps that zone; the clocks go forward an hour on landing in Cancún. */
+{ d:10, city:'cun', tz:-6, stay:'secrets', sub:'QRO → Cancún → Secrets Playa Blanca',
+  items:[
+  { t:'~2:30 AM', at:'02:30', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 6:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
+    todo:'Book the BajíoGo pickup: confirm the shared shuttle runs at 2:30 AM, and compare a private transfer.' },
+  { t:'~4:00', at:'04:00', d:'Target QRO airport arrival.' },
+  { t:'6:00', at:'06:00', d:'QRO → CUN flight.' },
+  { t:'Arrival', d:'[Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
+  { t:'Day', d:'Lunch, beach/pool, nap, easy dinner. Check the weekly activity schedule and choose one activity for the stay.', walk:'On property', ride:'On property' },
+  ],
+  note:'Cancún is one hour ahead of San Miguel. Times before landing are San Miguel / Querétaro time.' },
+
+{ d:11, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Workout + Beach/Pool + Himitsu',
+  items:[
+  { t:'Morning', d:'Yoga/Pilates/stretching/aqua fitness if offered; gym backup.', walk:'On property', ride:'On property' },
+  { t:'Daytime', d:'Beach/pool; optional kayak.', walk:'On property', ride:'On property' },
+  { t:'Activity', d:'Choose one resort activity during the stay based on the current weekly schedule: cocktail, cooking, tequila, art/alebrije, etc.', walk:'On property', ride:'Not needed' },
+  { t:'Pre-dinner', d:'Rendezvous cocktail.', walk:'~2–10 min', ride:'Not needed' },
+  { t:'Dinner', d:'Himitsu.', walk:'On property', ride:'Not needed' },
+  ] },
+
+{ d:12, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Spa Day + Beach/Pool + Bordeaux',
+  items:[
+  { t:'Morning', d:'Slow breakfast + beach/pool.', walk:'On property', ride:'On property' },
+  { t:'Spa', d:'Massage + hydrotherapy.', walk:'On property', ride:'On property' },
+  { t:'Afternoon', d:'Barracuda or Manatees + beach/pool.', walk:'~2–10 min', ride:'Not needed' },
+  { t:'Pre-dinner', d:'Rendezvous.', walk:'~2–10 min', ride:'Not needed' },
+  { t:'Dinner', d:'Bordeaux.', walk:'On property', ride:'Not needed' },
+  ] },
+
+{ d:13, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Favorite Resort Day + Optional Anniversary Finale',
+  items:[
+  { t:'Morning', d:'Favorite workout/class if desired.', walk:'On property', ride:'On property' },
+  { t:'Daytime', d:'Favorite pool/beach + optional one resort activity.', walk:'On property', ride:'On property' },
+  { t:'Dinner', ok:'Optional', d:'Romantic/private dining. Ask concierge for current price, menu, locations, inclusions + weather policy. [Celebrations info](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres/weddings).', walk:'On property', ride:'Not needed',
+    todo:'Private anniversary dinner: ask the concierge about price, menu, location and weather policy.' },
+  { t:'Backup', d:'Portofino or Seaside Grill. [Dining & drinks](https://www.secretsresorts.com.mx/en/resorts-hotels/secrets/mexico/playa-blanca-costa-mujeres/dining-drinks/).', walk:'On property', ride:'Not needed' },
+  { t:'After', d:'Desires only if you want a later night.', walk:'On property', ride:'Not needed' },
+  ] },
+
+{ d:14, city:'cun', stay:null, head:'Travel home', sub:'Secrets Playa Blanca → CUN → LAX',
+  items:[
+  { t:'Morning', d:'Breakfast + check out.', walk:'On property' },
+  { t:'TBD', d:'Pre-arranged resort → CUN transfer; allow drive + airport buffer.', walk:'Not practical', ride:'~45–70 min',
+    todo:'Book the resort → CUN transfer and set the pickup time.' },
+  { t:'12:07 PM', at:'12:07', d:'CUN → LAX flight.' },
+  ] },
+];
+
+/* Travel days for Info. Kept by hand: these are the moves, not every ride. */
+const TRAVEL = [
+  { d:2,  h:'Fly in to Mexico City', lines:['Airport → Andaz Condesa, ~30–60 min by car.'] },
+  { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
+  { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM pre-booked private car, Kimpton → NUMU, ~3.5–4.5 hr.'] },
+  { d:10, h:'San Miguel → Cancún', lines:['~2:30 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '6:00 AM flight QRO → CUN (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
+  { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '12:07 PM flight CUN → LAX.'] },
+];
+
+/* ---------- Shopping list ---------- */
+const SHOP = [
+  { h:'For you', items:[
+    { id:'linens',  b:'Handwoven / embroidered cloth napkins or table linens', m:'Look for cream, white, ochre, olive, muted blue or earthy embroidery.',
+      w:'[La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City) for value; San Miguel artisan market for another look.', on:[3,7] },
+    { id:'botan',   b:'Small botanical / pressed-flower artwork', m:'Only buy if a piece really feels special and works at home.',
+      w:'[Mercado de Artesanías SMA](map:Mercado de Artesanias San Miguel de Allende) + galleries / [Fábrica La Aurora](https://fabricalaaurora.com/).', on:[7,8] },
+    { id:'ceramic', b:'One Mexican ceramic piece', m:'Bowl, platter, vase or serving piece rather than a whole set.',
+      w:'[Uriarte Talavera](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones) or artisan markets.', on:[4,5] },
+    { id:'folk',    b:'One small folk-art object', m:'Tin heart, carved wood, milagro-inspired object, small ceramic or other shelf-sized piece.',
+      w:'La Ciudadela or San Miguel artisan market.', on:[3,7] },
+    { id:'kitchen', b:'Useful kitchen / household object', m:'Enamelware, little tray, glassware, serving utensil, tortilla warmer, etc.',
+      w:'[Utilitario Mexicano](https://www.utilitariomexicano.com/): especially good fit.', on:[3] },
+    { id:'paper',   b:'Paper / art object', m:'Mexican art book, print, notebook or beautifully designed stationery.',
+      w:'[Casa Bosques](https://casabosques.net/) or museum shops.', on:[3,5] },
+    { id:'wear',    b:'One wearable piece', m:'White/embroidered blouse, woven bag, scarf/wrap or jewelry; only something you’d genuinely wear at home.',
+      w:'San Miguel markets, [Mixta](https://www.mixtashop.com), optional [Recreo](https://recreosanmiguel.com/) or shops you discover.', on:[7,9] },
+    { id:'wild',    b:'One “I didn’t know I wanted this” piece', m:'Art, antique object, unusual ceramic or sculptural item. No need to force it.',
+      w:'[Fábrica La Aurora](https://fabricalaaurora.com/): leave some budget/luggage room.', on:[8] },
+  ]},
+  { h:'Maddie: 2 surprises + 1 coloring book', items:[
+    { id:'alebrije', b:'Surprise #1: small hand-painted alebrije', m:'Pick an animal that makes you think of Maddie. La Ciudadela is ideal.', on:[3] },
+    { id:'purse',    b:'Surprise #2: embroidered mini purse / pouch', m:'San Miguel artisan market; wearable/useful and fun for little treasures.', on:[7] },
+    { id:'coloring', b:'Mexico-themed coloring book', m:'Look for alebrijes, Mexican animals/plants, folk art or culture. Anthropology museum shop or Casa Bosques.', on:[3,5] },
+    { id:'loteria',  b:'Optional tiny extra: lotería cards', m:'Flat, inexpensive and something you can play together at home.' },
+  ]},
+];
+const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudadela; leave room for a special find in San Miguel/Fábrica La Aurora. Skip generic Día de Muertos décor, mass-produced souvenirs, bulky pieces without a place at home, and anything you only like because you’re on vacation.';
+
+/* ---------- Ideas: changes being considered, NOT in the plan yet ----------
+   When one is decided, move it into DAYS and delete it here. */
+const IDEAS = [
+  { h:'Swap one upscale dinner for a casual Mexican night',
+    lead:'Tuesday’s tacos before Lucha Libre are already casual. The three best candidates to swap:',
+    opts:[
+      { day:4, tag:'Suggested', h:'Rosetta', p:'The longest day of the trip: 6:30 AM pickup, Teotihuacan, the hotel move, then a 9:00 PM dinner across town. Keep the Limantour cocktails in Roma and eat tacos nearby from Tuesday’s shortlist (Orinoco, Cariñito, Los Alexis, Marlindo), or stay in Polanco and skip the ride altogether.' },
+      { day:2, h:'Taverna', p:'Arrival day. Eating casually in Centro after the Zócalo removes the 7:40 cross-town ride.' },
+      { day:8, h:'Bocaciega', p:'The third dinner out in a row in San Miguel, the night before the cooking class.' },
+    ]},
+  { h:'Specialty taco or seafood lunches',
+    lead:'Two slots fit without moving anything confirmed.',
+    opts:[
+      { day:5, tag:'Suggested', h:'El Turix, 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
+      { day:7, h:'San Miguel, midday', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open.' },
+    ]},
+  { h:'Self-guided audio tours',
+    lead:'VoiceMap tours play by GPS as you walk. Buy and download them on hotel wifi first, then they work offline.',
+    opts:[
+      { day:3, h:'Roma, afternoon', p:'“Mexico City Streets: La Roma” (~45 min, 1.3 mi, about $8) fits between Botánico and the shops. The food-focused version is “La Roma Culinary Quest” (starts at Jardín Pushkin, about $20).' },
+      { day:3, h:'Centro, morning', p:'VoiceMap’s catalog lists a Centro walk that starts at the Zócalo and follows the Aztec precinct around Templo Mayor, which overlaps the 10:00–12:00 loop. Check its length in the app.' },
+      { day:2, h:'Condesa, arrival afternoon', p:'“The Architecture of La Condesa” (Context Travel on VoiceMap, ~90 min, about $20) covers the streets around the Andaz. Part of it fits the Amsterdam / Parque México stroll.' },
+    ]},
+  { h:'Split up for some shopping',
+    lead:'Agree on a meet-up spot and time before splitting. These are the windows that already have shopping in them.',
+    opts:[
+      { day:3, h:'Roma shops, afternoon', p:'**Shop:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Wander:** the La Roma audio walk, then meet at Casa Bosques.' },
+      { day:5, h:'Polanco, 2:00–4:30', p:'**Shop:** start early on Masaryk (Onora, Uriarte, Yuriko Moda). **Wander:** take the Museo Soumaya slot and add Museo Jumex next door. Meet back at the Kimpton.' },
+      { day:7, h:'San Miguel markets, late morning', p:'**Shop:** Mercado de Artesanías. **Wander:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
+      { day:9, h:'Final shopping, 2:00–4:00', p:'**Shop:** revisit favorites. **Wander:** a last walk through Centro, or El Mirador if Sunday morning skipped it.' },
+    ]},
+  { h:'Live jazz, and fewer clock-watching connections',
+    lead:'Jazz is optional; the connection fixes take pressure off the busiest days.',
+    opts:[
+      { day:5, h:'Jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
+      { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so the anniversary night stays simple.' },
+      { day:3, h:'Lighten Tuesday', p:'The busiest day: nine stops before a 7:30 PM show. Dropping Biblioteca Vasconcelos, the only stop north of Centro, saves about an hour and lets the day start at 9:30.' },
+      { day:4, h:'One ride on Wednesday', p:'Ask the Teotihuacan driver to stop at the Andaz for your bags after Maizajo and drop you at the Kimpton. One ride instead of two, and no 3:00 deadline.' },
+      { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
+      { day:14, h:'Flight home', p:'Set the resort pickup for about 8:15–8:30 AM: 45–70 min to CUN, then two-plus hours before the 12:07 PM flight.' },
+    ]},
+];
+
+/* =====================================================================
+   Engine
+   ===================================================================== */
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const DOW  = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MON  = 'November';
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function href(u){ return u.startsWith('map:') ? 'https://maps.google.com/?q=' + encodeURIComponent(u.slice(4)).replace(/%20/g,'+') : u; }
+function fmt(t){ return esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
+/* [text](url) and **bold**. Bold must not span a link. */
+function md(s){
+  const out = [], re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0, m;
+  while((m = re.exec(s))){
+    out.push(fmt(s.slice(last, m.index)));
+    out.push('<a href="' + esc(href(m[2])) + '" target="_blank" rel="noopener">' + fmt(m[1]) + '</a>');
+    last = re.lastIndex;
+  }
+  out.push(fmt(s.slice(last)));
+  return out.join('');
+}
+function plain(s){ return s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, ''); }
+function brk(t){ return esc(t).replace(/–/g, '–<wbr>'); }
+
+const dayIdx  = d => DAYS.findIndex(x => x.d === d);
+const dayTz   = D => (D.tz != null ? D.tz : CITIES[D.city].tz);
+const dowOf   = d => new Date(Date.UTC(YEAR, MONTH, d)).getUTCDay();
+const shortDay = d => DOW[dowOf(d)].slice(0,3) + ' ' + d;
+const longDay  = d => DOW[dowOf(d)] + ', ' + MON + ' ' + d;
+const headOf   = D => D.head || CITIES[D.city].name;
+
+/* An instant given as local wall-clock time in a fixed UTC offset. */
+function utcAt(date, hhmm, tz){
+  const [h, m] = hhmm.split(':').map(Number);
+  return Date.UTC(YEAR, MONTH, date, h - tz, m);
+}
+/* A day "opens" (becomes Today) at 3 AM local, so a late dinner still shows
+   that day's plan. A day whose first fixed time is before 5 AM (the 2:30
+   pickup on the 10th) opens at 8 PM the evening before instead. */
+function dayOpens(i){
+  const D = DAYS[i], first = D.items.find(x => x.at);
+  if(i > 0 && first && first.at < '05:00'){
+    const P = DAYS[i - 1];
+    return utcAt(P.d, '20:00', dayTz(P));
+  }
+  return utcAt(D.d, '03:00', dayTz(D));
+}
+const TRIP_END = utcAt(DAYS[DAYS.length - 1].d + 1, '03:00', dayTz(DAYS[DAYS.length - 1]));
+/* -1 before the trip, else the index of the day that is Today. */
+function liveDay(now){
+  let k = -1;
+  for(let i = 0; i < DAYS.length; i++) if(now >= dayOpens(i)) k = i;
+  return k;
+}
+function phase(now){ return now < dayOpens(0) ? 'before' : now >= TRIP_END ? 'after' : 'during'; }
+/* Whole days from now until a date, counted in that day's zone. */
+function daysUntil(now, i){
+  const D = DAYS[i], tz = dayTz(D);
+  const loc = new Date(now + tz * 3600e3);
+  const today = Date.UTC(loc.getUTCFullYear(), loc.getUTCMonth(), loc.getUTCDate());
+  return Math.round((Date.UTC(YEAR, MONTH, D.d) - today) / 864e5);
+}
+/* Which item is happening now / next, on the live day only. */
+function nowNext(i, now){
+  const D = DAYS[i], loc = new Date(now + dayTz(D) * 3600e3);
+  const sameDay = loc.getUTCMonth() === MONTH && loc.getUTCDate() === D.d;
+  const before  = Date.UTC(loc.getUTCFullYear(), loc.getUTCMonth(), loc.getUTCDate()) < Date.UTC(YEAR, MONTH, D.d);
+  const hm = String(loc.getUTCHours()).padStart(2,'0') + ':' + String(loc.getUTCMinutes()).padStart(2,'0');
+  let cur = -1, nxt = -1;
+  D.items.forEach((x, k) => {
+    if(!x.at) return;
+    if(sameDay && x.at <= hm) cur = k;
+    else if(nxt < 0 && (before || (sameDay && x.at > hm))) nxt = k;
+  });
+  return { cur, nxt };
+}
+
+const STATUS = { Confirmed:'ok', Reserved:'ok', Booked:'ok', Optional:'opt', Suggested:'acc' };
+function pill(s){ return '<span class="pill ' + (STATUS[s] || '') + '">' + esc(s) + '</span>'; }
+function moveLine(x){
+  const bits = [];
+  const skip = v => !v || v === '-' ;
+  if(x.walk && x.ride && x.walk === x.ride) bits.push('<span>' + esc(x.walk) + '</span>');
+  else {
+    if(!skip(x.walk)) bits.push('<span class="' + (x.walk.length > 24 ? 'wrap' : '') + '"><i>Walk</i>' + esc(x.walk) + '</span>');
+    if(!skip(x.ride)) bits.push('<span class="' + (x.ride.length > 24 ? 'wrap' : '') + '"><i>Car</i>' + esc(x.ride) + '</span>');
+  }
+  return bits.length ? '<div class="mv">' + bits.join('') + '</div>' : '';
+}
+function dayChip(d, label){ return '<button class="chip" data-day="' + d + '">' + esc(label || shortDay(d)) + '</button>'; }
+
+/* ---------- state ---------- */
+let tab = 'today', cur = 0, lastLive = null;
+const NOW = () => Date.now();
+
+/* ---------- Today ---------- */
+function renderToday(){
+  const now = NOW(), live = liveDay(now), ph = phase(now);
+  const D = DAYS[cur], C = CITIES[D.city], prev = DAYS[cur - 1];
+  const isLive = ph === 'during' && cur === live;
+  const nn = isLive ? nowNext(cur, now) : { cur:-1, nxt:-1 };
+  let h = '';
+
+  if(ph === 'during' && cur !== live && live >= 0){
+    h += '<div class="backbtn"><button data-day="' + DAYS[live].d + '">Back to today, ' + esc(shortDay(DAYS[live].d)) + '</button></div>';
+  }
+
+  const pills = [];
+  if(isLive) pills.push('<span class="pill live">Today</span>');
+  else if(ph === 'before' && cur === 0){
+    const n = daysUntil(now, 0);
+    pills.push('<span class="pill">' + (n <= 1 ? (n === 1 ? 'Tomorrow' : 'Today') : 'In ' + n + ' days') + '</span>');
+  }
+  if(D.anniv) pills.push('<span class="pill anniv">Anniversary</span>');
+  pills.push('<span class="pill">Day ' + (cur + 1) + ' of ' + DAYS.length + '</span>');
+
+  let stay = '';
+  if(D.stay){
+    const S = STAYS[D.stay], P = prev && prev.stay ? STAYS[prev.stay] : null;
+    const link = '<a href="' + esc(S.url || href('map:' + S.map)) + '" target="_blank" rel="noopener">' + esc(S.name) + '</a>';
+    stay = (P && prev.stay !== D.stay)
+      ? '<b>Hotel change:</b> ' + esc(P.name) + ' → ' + link
+      : (cur === 0 ? '<b>Check in:</b> ' : '<b>Staying:</b> ') + link;
+  } else if(prev && prev.stay){
+    stay = '<b>Check out:</b> ' + esc(STAYS[prev.stay].name);
+  }
+
+  h += '<div class="card dayhero" style="--city:' + C.color + '">'
+     +   '<div class="pills">' + pills.join('') + '</div>'
+     +   '<div class="dow">' + esc(longDay(D.d)) + '</div>'
+     +   '<h2 class="city">' + esc(headOf(D)) + '</h2>'
+     +   '<p class="sub">' + esc(D.sub) + '</p>'
+     +   (stay ? '<div class="stay">' + stay + '</div>' : '')
+     + '</div>';
+
+  h += '<div class="card"><ul class="items">';
+  D.items.forEach((x, k) => {
+    const cls = ['it'];
+    let tag = '';
+    if(k === nn.cur){ cls.push('now'); tag = '<em>Now</em>'; }
+    else if(k === nn.nxt){ cls.push('now'); tag = '<em>Next</em>'; }
+    else if(isLive && nn.cur >= 0 && x.at && k < nn.cur) cls.push('past');
+    h += '<li class="' + cls.join(' ') + '">'
+       +   '<div class="t">' + brk(x.t) + tag + '</div>'
+       +   '<div class="d">' + md(x.d) + (x.ok ? ' ' + pill(x.ok) : '')
+       +     moveLine(x)
+       +     (x.todo ? '<div class="todo">' + md(x.todo) + '</div>' : '')
+       +   '</div>'
+       + '</li>';
+  });
+  h += '</ul></div>';
+
+  if(D.note || D.todo){
+    h += '<div class="card foot" style="--city:' + C.color + '">'
+       + (D.note ? '<p class="note">' + md(D.note) + '</p>' : '')
+       + (D.todo ? '<div class="todo">' + md(D.todo) + '</div>' : '')
+       + '</div>';
+  }
+
+  const N = DAYS[cur + 1];
+  if(N){
+    const show = N.items.slice(0, 2);
+    const change = N.stay && D.stay !== N.stay ? '<div class="kv"><b>Hotel</b><span>Move to ' + esc(STAYS[N.stay].name) + '</span></div>' : '';
+    h += '<div class="card tmrw"><h2>' + (isLive ? 'Tomorrow' : 'Next day') + ' · ' + esc(shortDay(N.d)) + ' · ' + esc(headOf(N)) + '</h2>'
+       + show.map(x => '<div class="kv"><b>' + brk(x.t) + '</b><span>' + esc(plain(x.d)) + '</span></div>').join('')
+       + change
+       + '<div style="margin-top:8px">' + dayChip(N.d, 'Open ' + shortDay(N.d) + ' →') + '</div>'
+       + '</div>';
+  }
+  $('#tab-today').innerHTML = h;
+}
+
+/* ---------- Trip ---------- */
+function renderTrip(){
+  const now = NOW(), live = liveDay(now), ph = phase(now);
+  let h = '<div class="card trip-hero"><h2 class="big">' + esc(TRIP_NAME) + '</h2>'
+        + '<p class="note">Anniversary trip: Mexico City, San Miguel de Allende and Cancún. ' + DAYS.length + ' days, November ' + DAYS[0].d + '–' + DAYS[DAYS.length-1].d + '.</p>';
+  if(ph === 'before'){
+    const n = daysUntil(now, 0);
+    h += '<p class="note" style="margin-top:6px"><span class="pill live">' + (n > 1 ? n + ' days to go' : n === 1 ? 'Tomorrow' : 'Today') + '</span></p>';
+  }
+  h += '</div>';
+
+  const groups = [];
+  DAYS.forEach((D, i) => {
+    const g = groups[groups.length - 1];
+    if(g && g.city === D.city) g.idx.push(i); else groups.push({ city:D.city, idx:[i] });
+  });
+  groups.forEach(g => {
+    const C = CITIES[g.city];
+    const first = DAYS[g.idx[0]].d, last = DAYS[g.idx[g.idx.length - 1]].d;
+    const stays = [...new Set(g.idx.map(i => DAYS[i].stay).filter(Boolean))].map(k => STAYS[k]);
+    h += '<div class="card" style="--city:' + C.color + '">'
+       +   '<div class="cityhd"><span class="dot"></span><h3>' + esc(C.name) + '</h3><small>Nov ' + first + (last !== first ? '–' + last : '') + '</small></div>'
+       +   '<p class="citystays">' + stays.map(S => esc(S.name) + ' (' + S.from + '–' + S.to + ')').join(' · ') + '</p>';
+    g.idx.forEach(i => {
+      const D = DAYS[i];
+      const res = D.items.filter(x => x.res).map(x => '<span class="pill ok">' + esc(x.res.replace(/ \(.*\)$/, '')) + '</span>');
+      if(D.anniv) res.unshift('<span class="pill anniv">Anniversary</span>');
+      const isLive = ph === 'during' && i === live;
+      h += '<button class="dayrow' + (isLive ? ' live' : '') + '" data-day="' + D.d + '">'
+         +   '<span class="db"><small>' + DOW[dowOf(D.d)].slice(0,3) + '</small><b>' + D.d + '</b></span>'
+         +   '<span class="dt"><span class="ttl">' + esc(D.head && D.head !== C.name ? D.head + ': ' : '') + esc(D.sub) + '</span>'
+         +     (res.length ? '<span class="res">' + res.join('') + '</span>' : '')
+         +   '</span>'
+         + '</button>';
+    });
+    h += '</div>';
+  });
+  $('#tab-trip').innerHTML = h;
+}
+
+/* ---------- Info ---------- */
+function ago(ms){
+  const s = Math.max(0, (Date.now() - ms) / 1000);
+  if(s < 90) return 'just now';
+  const m = s / 60; if(m < 60) return Math.round(m) + ' min ago';
+  const hr = m / 60; if(hr < 36) return Math.round(hr) + ' h ago';
+  return Math.round(hr / 24) + ' days ago';
+}
+function renderInfo(){
+  let h = '';
+
+  h += '<div class="card"><h2>Where you’re staying</h2>';
+  Object.values(STAYS).forEach(S => {
+    const n = S.to - S.from;
+    h += '<div class="row"><div class="top"><b>' + esc(S.name) + '</b><span>Nov ' + S.from + '–' + S.to + ' · ' + n + ' night' + (n > 1 ? 's' : '') + '</span></div>'
+       + '<div class="meta">' + esc(S.area) + '</div>'
+       + '<div class="links">' + (S.url ? '<a href="' + esc(S.url) + '" target="_blank" rel="noopener">Website</a>' : '')
+       + '<a href="' + esc(href('map:' + S.map)) + '" target="_blank" rel="noopener">Map</a></div></div>';
+  });
+  h += '</div>';
+
+  h += '<div class="card"><h2>Travel days</h2>';
+  TRAVEL.forEach(T => {
+    h += '<div class="row"><div class="top"><b>' + esc(T.h) + '</b>' + dayChip(T.d) + '</div>'
+       + '<ul class="steps">' + T.lines.map(l => '<li>' + md(l) + '</li>').join('') + '</ul></div>';
+  });
+  h += '</div>';
+
+  const res = [];
+  DAYS.forEach(D => D.items.forEach(x => { if(x.res) res.push({ D, x }); }));
+  h += '<div class="card"><h2>Reservations</h2>';
+  res.forEach(({ D, x }) => {
+    h += '<div class="row"><div class="top"><b>' + esc(x.res) + '</b><span>' + esc(shortDay(D.d)) + (x.at ? ' · ' + esc(x.t) : '') + '</span></div>'
+       + '<div class="meta">' + pill(x.ok) + '</div></div>';
+  });
+  h += '</div>';
+
+  const todos = [];
+  DAYS.forEach(D => {
+    D.items.forEach(x => { if(x.todo) todos.push({ D, t:x.todo }); });
+    if(D.todo) todos.push({ D, t:D.todo });
+  });
+  h += '<div class="card"><h2>Still to sort</h2>';
+  todos.forEach(({ D, t }) => {
+    h += '<div class="row"><div class="top"><span style="white-space:normal;color:var(--ink-1);font-size:14px">' + md(t) + '</span>' + dayChip(D.d) + '</div></div>';
+  });
+  h += '<div class="row"><div class="top"><span style="white-space:normal;color:var(--ink-1);font-size:14px">Flight in to Mexico City: add the details.</span>' + dayChip(2) + '</div></div>';
+  h += '</div>';
+
+  h += '<div class="card"><h2>Time zones</h2>'
+     + '<p class="note"><b>Mexico City and San Miguel:</b> UTC−6, two hours ahead of Los Angeles in November.</p>'
+     + '<p class="note"><b>Cancún:</b> UTC−5, one hour ahead of San Miguel and three ahead of Los Angeles. You lose an hour on the QRO → CUN flight.</p>'
+     + '<p class="note">Neither observes daylight saving, and phones switch on their own. Every time on this site is local to where you are that day.</p>'
+     + '</div>';
+
+  h += '<div class="card"><h2>About this site</h2>'
+     + '<p class="note">It opens on today’s plan once the trip starts. Each day takes over at 3 AM local time, so a late dinner still shows that night’s plan. The 10th takes over at 8 PM the night before, because of the 2:30 AM pickup.</p>'
+     + '<p class="note">Tap any place to open it in Google Maps. When the plan changes, an open page reloads itself with the new version.</p>'
+     + '<p class="note">Plan last updated ' + esc(ago(SITE_UPDATED)) + '.</p>'
+     + '</div>';
+
+  $('#tab-info').innerHTML = h;
+}
+
+/* ---------- Shop ---------- */
+const SHOP_KEY = 'mx26.shop';
+function shopGet(){ try{ return JSON.parse(localStorage.getItem(SHOP_KEY) || '[]'); }catch(e){ return []; } }
+function shopSet(a){ try{ localStorage.setItem(SHOP_KEY, JSON.stringify(a)); }catch(e){} }
+function renderShop(){
+  const done = new Set(shopGet());
+  let h = '<div class="card"><p class="note">' + md(SHOP_NOTE) + '</p></div>';
+  SHOP.forEach(sec => {
+    h += '<div class="card"><h2>' + esc(sec.h) + '</h2>';
+    sec.items.forEach(x => {
+      const on = done.has(x.id);
+      h += '<label class="check' + (on ? ' done' : '') + '"><input type="checkbox" data-shop="' + x.id + '"' + (on ? ' checked' : '') + '>'
+         + '<span class="w"><b>' + esc(x.b) + '</b><div class="meta">' + md(x.m) + '</div>'
+         + (x.w ? '<div class="where">' + md(x.w) + '</div>' : '')
+         + (x.on ? '<div class="where">' + x.on.map(d => dayChip(d)).join('') + '</div>' : '')
+         + '</span></label>';
+    });
+    h += '</div>';
+  });
+  h += '<p class="note" style="text-align:center;color:var(--ink-3)">Ticks are saved on this phone only.</p>';
+  $('#tab-shop').innerHTML = h;
+}
+
+/* ---------- Ideas ---------- */
+function renderIdeas(){
+  let h = '<div class="card"><p class="note"><b>Changes you’re considering.</b> Nothing on this tab is in the plan yet. Once you decide, it moves into the day and comes off this list.</p></div>';
+  IDEAS.forEach((I, n) => {
+    h += '<div class="card idea"><h3>' + (n + 1) + '. ' + esc(I.h) + '</h3><p class="lead">' + md(I.lead) + '</p>';
+    I.opts.forEach(o => {
+      h += '<div class="opt"><div class="oh">' + dayChip(o.day) + '<span>' + esc(o.h) + '</span>' + (o.tag ? pill(o.tag) : '') + '</div><p>' + md(o.p) + '</p></div>';
+    });
+    h += '</div>';
+  });
+  $('#tab-ideas').innerHTML = h;
+}
+
+/* ---------- shell ---------- */
+const RENDER = { today:renderToday, trip:renderTrip, info:renderInfo, shop:renderShop, ideas:renderIdeas };
+function renderHeader(){
+  $('#brandName').innerHTML = esc(TRIP_NAME) + '<small>' + esc(TRIP_SUB) + '</small>';
+  $('#updTxt').textContent = 'Updated ' + ago(SITE_UPDATED);
+  $('#daySel').classList.toggle('hide', tab !== 'today');
+  $('#dayPick').value = String(cur);
+  $('#prevD').disabled = cur === 0;
+  $('#nextD').disabled = cur === DAYS.length - 1;
+}
+function render(){
+  renderHeader();
+  RENDER[tab]();
+}
+function show(t){
+  tab = t;
+  $$('main > section').forEach(s => s.classList.toggle('hide', s.id !== 'tab-' + t));
+  $$('nav button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === t)));
+  render();
+  window.scrollTo(0, 0);
+}
+function goDay(d){
+  const i = dayIdx(d);
+  if(i < 0) return;
+  cur = i;
+  show('today');
+}
+
+$('#dayPick').innerHTML = DAYS.map((D, i) => '<option value="' + i + '">' + esc(shortDay(D.d) + ' · ' + headOf(D)) + '</option>').join('');
+$('#dayPick').addEventListener('change', e => { cur = +e.target.value; render(); window.scrollTo(0, 0); });
+$('#prevD').addEventListener('click', () => { if(cur > 0){ cur--; render(); window.scrollTo(0, 0); } });
+$('#nextD').addEventListener('click', () => { if(cur < DAYS.length - 1){ cur++; render(); window.scrollTo(0, 0); } });
+$$('nav button').forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-day]');
+  if(b){ e.preventDefault(); goDay(+b.dataset.day); }
+});
+document.addEventListener('change', e => {
+  const id = e.target.dataset && e.target.dataset.shop;
+  if(!id) return;
+  const s = new Set(shopGet());
+  if(e.target.checked) s.add(id); else s.delete(id);
+  shopSet([...s]);
+  e.target.closest('.check').classList.toggle('done', e.target.checked);
+});
+
+/* ---------- Picking up code updates ----------
+   GitHub Pages serves this file with a 10-minute cache and Safari holds it
+   longer, so a plan change might not show on reload. The page fetches a fresh,
+   cache-busted copy of itself, hashes its script and compares it with the one
+   running; on a mismatch it reloads onto ?v=<build>, a URL nothing has cached.
+   `v` also stops a loop. Same mechanism as the Sand Valley site. */
+function strHash(str){
+  let h = 5381;
+  for(let i = 0; i < str.length; i++) h = (Math.imul(h, 33) ^ str.charCodeAt(i)) >>> 0;
+  return h.toString(36);
+}
+const SELF_SRC = (document.currentScript && document.currentScript.textContent) || '';
+const BUILD = strHash(SELF_SRC);
+let lastUpdCheck = 0;
+async function checkForUpdate(){
+  if(!SELF_SRC || !/^https?:$/.test(location.protocol)) return;
+  if(Date.now() - lastUpdCheck < 30000) return;
+  lastUpdCheck = Date.now();
+  let txt;
+  try{
+    const r = await fetch(location.pathname + '?cb=' + Date.now(), { cache:'no-store' });
+    if(!r.ok) return;
+    txt = await r.text();
+  }catch(e){ return; }
+  const el = new DOMParser().parseFromString(txt, 'text/html').querySelector('script');
+  if(!el) return;
+  const fresh = strHash(el.textContent);
+  if(fresh === BUILD) return;
+  if(new URLSearchParams(location.search).get('v') === fresh) return;
+  location.replace(location.pathname + '?v=' + fresh + location.hash);
+}
+
+/* ---------- boot ---------- */
+/* During the trip open on Today at the live day; before or after, on Trip. */
+function land(){
+  const now = NOW(), ph = phase(now), live = liveDay(now);
+  lastLive = live;
+  cur = live >= 0 ? live : 0;
+  show(ph === 'during' ? 'today' : 'trip');
+}
+land();
+checkForUpdate();
+document.addEventListener('visibilitychange', () => {
+  if(document.visibilityState !== 'visible') return;
+  checkForUpdate();
+  /* Left open overnight: move on to the new day if the page was on the old one. */
+  const live = liveDay(NOW());
+  if(live !== lastLive && phase(NOW()) === 'during' && (tab !== 'today' || cur === lastLive)) cur = live;
+  lastLive = live;
+  render();
+});
+window.addEventListener('pageshow', e => { if(e.persisted) checkForUpdate(); });
+</script>
+</body>
+</html>
