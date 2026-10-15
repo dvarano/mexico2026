@@ -5,7 +5,7 @@ Handoff notes so a future session can pick this up cold.
 - **Live site:** https://dvarano.github.io/mexico2026/
 - **The app:** `index.html`, one self-contained file. No build step, no dependencies, no network
   calls except the self-update check (below).
-- **Trip:** an anniversary trip for two, **Nov 2–14 2026**. Mexico City (Andaz Condesa
+- **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Mexico City (Andaz Condesa
   Nov 2–4, Kimpton Virgilio Polanco Nov 4–6) → San Miguel de Allende (NUMU Nov 6–10) → Cancún
   (Secrets Playa Blanca, Costa Mujeres, Nov 10–14) → home CUN → LAX 12:07 PM Nov 14.
   **Sat Nov 7 is "Streetiversary"** (The Restaurant, 7:30 PM) and **Fri Nov 13 is "Anniversary"**
@@ -94,13 +94,14 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Flight in to Mexico City Nov 2: details not in the PDF.
 - [ ] Ideas to discuss. **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
-      through Centro east to west, dropping Biblioteca Vasconcelos (variation: the wife does the
+      through Centro east to west, dropping Biblioteca Vasconcelos (variation: Jen does the
       library solo at 7:45 and they meet at Templo Mayor ~9:45); split at La Ciudadela (Biblioteca
       de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea.
       **Wednesday Nov 4 card** (Oct 15): driver drops at the Andaz ~12:15 to shower and check out
       before Maizajo (which is in Condesa, Fernando Montes de Oca 113); Teotihuacan status after the
       April 2026 shooting; arrive at Rosetta ~30 min early to try for an earlier seat (the user
-      chose this over requesting an 8:00 reservation); split at the Polanco shops. It replaced the old
+      chose this over requesting an 8:00 reservation); split in Polanco (Jen dropped at the shops on the ~3:00
+      Uber, Drew checks in with the bags). It replaced the old
       "driver carries the bags" idea. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
