@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:40:02Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:44:40Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -332,7 +332,6 @@ const DAYS = [
   { t:'~4:00–5:00', at:'16:00', ok:'Optional', d:'[Museo Soumaya](https://www.museosoumaya.org/) at Plaza Carso in Nuevo Polanco: free, and the building itself is the draw (open to 6:30). Museo Jumex next door closes at 5:00.', walk:'Not practical', ride:'~10–15 min' },
   { t:'5:00–7:00', at:'17:00', d:'Back to the Kimpton: rest, and pack for tomorrow’s move to San Miguel.', walk:'On property' },
   { t:'7:30 PM', at:'19:30', d:'[Comedor Jacinta](map:Comedor Jacinta Polanco Mexico City), Salón Standard.', ok:'Confirmed', res:'Comedor Jacinta', walk:'~3–6 from Kimpton', ride:'Unneeded' },
-  { t:'~9:30', at:'21:30', ok:'Optional', d:'Live jazz at [Parker & Lenox](map:Parker and Lenox Milan 14 Juarez CDMX) (Milán 14, Juárez): jazz or blues most nights, listed as Tuesday to Saturday. Reserve a table and keep it to one set, with the move to San Miguel in the morning.', ride:'~15–20 min' },
   ] },
 
 { d:6, city:'sma', stay:'numu', sub:'Private Car + NUMU + Pool/Rest + Luna + Tostévere',
@@ -502,6 +501,11 @@ const IDEAS = [
     opts:[
       { day:6, h:'Breakfast: free hotel breakfast at the Kimpton', p:'Your Kimpton booking includes daily breakfast for two. Eat there from about 7:15 instead of walking to Joselo or Café Toscano. Breakfast, checkout and the 8:30 car are then all in one building.' },
       { day:6, h:'Leave later? NUMU check-in is 3:00', p:'With the 8:30 car you reach NUMU around noon, three hours before check-in. That’s fine if you’re happy to have lunch and sit by the pool while the room is readied, which fits the plan’s “keep arrival day light”. Since the car isn’t booked yet, you could instead leave around 10:00 after a slower breakfast and arrive about 1:30–2:30. The Kimpton’s guaranteed 4:00 PM late checkout means no rush to leave the room either way. The fixed point is Luna Rooftop at 5:15.' },
+    ]},
+  { day:5, h:'After dinner, on foot',
+    lead:'Only walkable options after Comedor Jacinta. I couldn’t find a reliable live-jazz spot within walking distance in Polanco.',
+    opts:[
+      { day:5, h:'Nightcap at Limantour Polanco', p:'[Licorería Limantour’s Polanco bar](map:Licoreria Limantour Polanco Oscar Wilde) is on Oscar Wilde, between Masaryk and Parque Lincoln, a short walk from Jacinta and the Kimpton. Quieter and more upscale than the Roma original; reservations recommended. It does repeat Wednesday’s Limantour stop in Roma, so it’s only worth it if you loved that one.' },
     ]},
   { day:14, h:'Travel home',
     lead:'Your flight leaves at 3:07 PM, so the morning is free.',

@@ -119,7 +119,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       walk the alebrijes to the Estela de Luz; castle at 9:00; Anthropology with the gallery order;
       **lunch keeps both options (El Turix or Sala Gastronómica)**; Masaryk shopping 2:00–4:00;
       **Museo Soumaya Optional after the shopping (~4:00–5:00)**, per the user, instead of the split;
-      rest and pack 5:00–7:00; Jacinta 7:30; Parker & Lenox Optional. The Thursday Ideas card is gone.
+      rest and pack 5:00–7:00; Jacinta 7:30. **Parker & Lenox removed (Oct 15): after dinner the user only
+      wants options within walking distance, no Uber.** The Thursday Ideas card now holds just that
+      (a nightcap at Limantour Polanco, Oscar Wilde; no walkable live jazz found).
 - [ ] Ideas to discuss. (History) **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
       through Centro east to west, dropping Biblioteca Vasconcelos (variation: Jen does the
