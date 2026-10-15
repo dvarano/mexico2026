@@ -102,6 +102,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       April 2026 shooting; arrive at Rosetta ~30 min early to try for an earlier seat (the user
       chose this over requesting an 8:00 reservation); split in Polanco (Jen dropped at the shops on the ~3:00
       Uber, Drew checks in with the bags). It replaced the old
-      "driver carries the bags" idea. Still open
+      "driver carries the bags" idea. **Thursday Nov 5 card** (Oct 15): El Turix lunch; afternoon
+      split (Jen on Masaryk, Drew to Soumaya/Jumex or the pool) instead of the Soumaya zigzag;
+      Anthropology galleries (Teotihuacan, Mexica, Maya); pack before Jacinta; optional Parker &
+      Lenox. The Thursday items moved here from the theme cards. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.

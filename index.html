@@ -221,7 +221,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:21:59Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:24:24Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -490,10 +490,23 @@ const IDEAS = [
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
       { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in, then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
     ]},
-  { h:'Specialty taco or seafood lunches',
-    lead:'Two slots fit without moving anything confirmed.',
+  { h:'Thursday, Nov 5: Chapultepec and Polanco',
+    lead:'A good day as planned: the castle at opening, the Anthropology Museum, then Polanco. These fix an afternoon zigzag and gather the Thursday ideas in one place.',
     opts:[
-      { day:5, tag:'Suggested', h:'El Turix, 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
+      { day:5, tag:'Suggested', h:'Lunch: El Turix at 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
+      { day:5, tag:'Suggested', h:'Afternoon: split up instead of zigzagging', rows:[
+        ['1:00–1:45', '[El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City) together'],
+        ['2:00–4:30', '**Jen:** the Masaryk shops, on foot from El Turix: Onora, Uriarte, Yuriko Moda, Zara Masaryk, optional ACAPELLA'],
+        ['2:00–4:30', '**Drew:** short Uber to Plaza Carso for [Museo Soumaya](https://www.museosoumaya.org/) (free, and the building is the draw) and Museo Jumex next door. Or skip both for the Kimpton pool'],
+        ['4:30', 'Meet back at the Kimpton'],
+      ], p:'As planned, the afternoon goes from the museum to Polanquito for lunch, out to Soumaya in Nuevo Polanco, then back to Polanquito for the shops. Splitting up cuts the back-and-forth and gives Jen two and a half hours on Masaryk instead of one and a half.' },
+      { day:5, h:'Anthropology Museum: which galleries', p:'Two hours goes fast in a museum this size. Start with the Teotihuacan hall (the day after the pyramids), then the Mexica hall with the Sun Stone (it ties back to Tuesday’s Templo Mayor), then the Maya hall if there’s time.' },
+      { day:5, h:'Evening: pack before dinner', p:'The car to San Miguel leaves at 8:30 Friday morning. Packing between 4:30 and 7:00 means Comedor Jacinta, a few minutes’ walk from the Kimpton, can be an unhurried dinner with no late-night repack.' },
+      { day:5, h:'Optional jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
+    ]},
+  { h:'Specialty taco or seafood lunches',
+    lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
+    opts:[
       { day:7, h:'San Miguel, midday', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open.' },
     ]},
   { h:'Self-guided audio tours',
@@ -506,14 +519,12 @@ const IDEAS = [
     lead:'Agree on a meet-up spot and time before splitting. These are the windows that already have shopping in them.',
     opts:[
       { day:3, h:'Roma shops, afternoon', p:'**Shop:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Wander:** the La Roma audio walk, then meet at Casa Bosques.' },
-      { day:5, h:'Polanco, 2:00–4:30', p:'**Shop:** start early on Masaryk (Onora, Uriarte, Yuriko Moda). **Wander:** take the Museo Soumaya slot and add Museo Jumex next door. Meet back at the Kimpton.' },
       { day:7, h:'San Miguel markets, late morning', p:'**Shop:** Mercado de Artesanías. **Wander:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
       { day:9, h:'Final shopping, 2:00–4:00', p:'**Shop:** revisit favorites. **Wander:** a last walk through Centro, or El Mirador if Sunday morning skipped it.' },
     ]},
   { h:'Live jazz, and fewer clock-watching connections',
     lead:'Jazz is optional; the connection fixes take pressure off the busiest days.',
     opts:[
-      { day:5, h:'Jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
       { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
       { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
       { day:14, h:'Flight home', p:'Set the resort pickup for about 8:15–8:30 AM: 45–70 min to CUN, then two-plus hours before the 12:07 PM flight.' },
