@@ -112,6 +112,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       **Colorful museums** (Oct 15; the user isn't keen on Diego Rivera): Tuesday adds the Museo de Arte
       Popular instead of MUNAL and an afternoon split (Jen in the Roma shops; Drew at MODO or MUJAM, the
       toy museum by the arena); Thursday adds a morning walk past the monumental alebrijes on Reforma
-      (Ángel → Estela de Luz, on display until Nov 8 2026). Still open
+      (Ángel → Estela de Luz, on display until Nov 8 2026). **Hotel breakfast** (Oct 15): the user
+      believes their Chase Edit bookings include free breakfast (true of The Edit's Boutique Collection,
+      not its All-In Collection; unconfirmed per hotel). Tue/Thu/Fri carry a hotel-breakfast alternative;
+      Wed suggests asking the Andaz for breakfast to go (6:30 pickup). **Friday Nov 6 card** exists for
+      that only. Monday Nov 2 reviewed Oct 15 and left as is. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
