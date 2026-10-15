@@ -99,7 +99,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea.
       **Wednesday Nov 4 card** (Oct 15): driver drops at the Andaz ~12:15 to shower and check out
       before Maizajo (which is in Condesa, Fernando Montes de Oca 113); Teotihuacan status after the
-      April 2026 shooting; ask Rosetta for 8:00; split at the Polanco shops. It replaced the old
+      April 2026 shooting; arrive at Rosetta ~30 min early to try for an earlier seat (the user
+      chose this over requesting an 8:00 reservation); split at the Polanco shops. It replaced the old
       "driver carries the bags" idea. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
