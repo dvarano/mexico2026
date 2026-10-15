@@ -96,6 +96,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
       through Centro east to west, dropping Biblioteca Vasconcelos (variation: the wife does the
       library solo at 7:45 and they meet at Templo Mayor ~9:45); split at La Ciudadela (Biblioteca
-      de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea. Still open
+      de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea.
+      **Wednesday Nov 4 card** (Oct 15): driver drops at the Andaz ~12:15 to shower and check out
+      before Maizajo (which is in Condesa, Fernando Montes de Oca 113); Teotihuacan status after the
+      April 2026 shooting; ask Rosetta for 8:00; split at the Polanco shops. It replaced the old
+      "driver carries the bags" idea. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
