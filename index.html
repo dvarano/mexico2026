@@ -162,6 +162,11 @@ main{padding:14px 16px;max-width:720px;margin:0 auto}
 .opt{padding:10px 0 2px;border-top:1px solid var(--grid);margin-top:8px}
 .opt .oh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-weight:600;font-size:14px}
 .opt p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.opt .rows{margin:6px 0 4px}
+.opt .kv{display:flex;gap:10px;padding:5px 0;border-top:1px solid var(--grid);font-size:13.5px}
+.opt .kv:first-child{border-top:0}
+.opt .kv b{flex:0 0 76px;font-weight:650;font-variant-numeric:tabular-nums}
+.opt .kv span{min-width:0;overflow-wrap:anywhere}
 .sec{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:650;margin:14px 0 0}
 
 nav{
@@ -216,7 +221,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-12T17:45:31Z');
+const SITE_UPDATED = Date.parse('2026-10-15T15:58:24Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -440,14 +445,30 @@ const SHOP = [
 const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudadela; leave room for a special find in San Miguel/Fábrica La Aurora. Skip generic Día de Muertos décor, mass-produced souvenirs, bulky pieces without a place at home, and anything you only like because you’re on vacation.';
 
 /* ---------- Ideas: changes being considered, NOT in the plan yet ----------
+   Never edit DAYS for an idea until the user says it's decided. A day being
+   reworked gets its own card, at the top, with `rows` for a revised schedule.
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
-  { h:'Swap one upscale dinner for a casual Mexican night',
-    lead:'Tuesday’s tacos before Lucha Libre are already casual. The three best candidates to swap:',
+  { h:'Tuesday, Nov 3: a lighter day',
+    lead:'The busiest day of the trip. The evening change stands on its own; the morning one is optional.',
     opts:[
-      { day:4, tag:'Suggested', h:'Rosetta', p:'The longest day of the trip: 6:30 AM pickup, Teotihuacan, the hotel move, then a 9:00 PM dinner across town. Keep the Limantour cocktails in Roma and eat tacos nearby from Tuesday’s shortlist (Orinoco, Cariñito, Los Alexis, Marlindo), or stay in Polanco and skip the ride altogether.' },
-      { day:2, h:'Taverna', p:'Arrival day. Eating casually in Centro after the Zócalo removes the 7:40 cross-town ride.' },
-      { day:8, h:'Bocaciega', p:'The third dinner out in a row in San Miguel, the night before the cooking class.' },
+      { day:3, tag:'Suggested', h:'Evening: Botánico as the main meal', rows:[
+        ['1:30–3:00', '[Botánico](map:Botanico Condesa CDMX), the main meal (no change)'],
+        ['3:00–5:00', 'Roma shops at an easy pace'],
+        ['5:00–6:15', 'Rest and change at the Andaz'],
+        ['6:15', 'Uber straight to [Arena México](map:Arena Mexico CDMX), 10–20 min'],
+        ['~6:40', 'If hungry: tacos at [Tacos Carmelita](map:Tacos Carmelita Doctor Lavista Doctores CDMX), a stand by the arena on Dr. Lavista, or snacks inside'],
+        ['7:30', 'Lucha Libre'],
+        ['After', 'Uber to [Taquería Orinoco](map:Taqueria Orinoco Alvaro Obregon Roma Norte CDMX) on Álvaro Obregón for late tacos (listed as open to about 3:30 AM on weeknights), then a short ride to the Andaz'],
+      ], p:'**What it changes:** no 5:30 dinner three hours after lunch, one fewer Uber (Andaz → arena instead of Andaz → dinner → arena), 45 more minutes of rest and no 6:20 deadline. Tizne and the other taco spots stay as backups.' },
+      { day:3, tag:'Suggested', h:'Morning: audio walk through Centro', rows:[
+        ['8:00–9:00', 'Slow breakfast at Saint or Odette + Parque México loop'],
+        ['~9:15', 'Uber to [Templo Mayor](map:Templo Mayor Mexico City), ~25–40 min'],
+        ['9:45–11:45', 'Self-guided audio walk, east to west: Templo Mayor and the Zócalo → Madero (Palacio de Iturbide, Casa de los Azulejos) → Palacio Postal → Bellas Artes → MUNAL'],
+        ['~12:00–1:00', 'Walk to [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City) through the Alameda, ~15–20 min'],
+        ['~1:00', 'Uber to Botánico (no change)'],
+      ], p:'**Audio:** VoiceMap’s “Mexico City’s Historical Sights” (by Context Travel; ~75 min, 1.1 mi, about $20) covers the Zócalo, Templo Mayor, the Cathedral and Bellas Artes. For more on the Aztec city, “Mexico City’s Aztec Origins” (~90 min, 1.5 mi, about $15). Buy and download on hotel wifi. **What it changes:** drops Biblioteca Vasconcelos, so no 7:45 start and about an hour less in Ubers. Walking east to west also removes the double-back from Bellas Artes to Templo Mayor and then on to La Ciudadela.' },
+      { day:3, h:'Split up at La Ciudadela, 12:00–1:00', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
     ]},
   { h:'Specialty taco or seafood lunches',
     lead:'Two slots fit without moving anything confirmed.',
@@ -459,7 +480,6 @@ const IDEAS = [
     lead:'VoiceMap tours play by GPS as you walk. Buy and download them on hotel wifi first, then they work offline.',
     opts:[
       { day:3, h:'Roma, afternoon', p:'“Mexico City Streets: La Roma” (~45 min, 1.3 mi, about $8) fits between Botánico and the shops. The food-focused version is “La Roma Culinary Quest” (starts at Jardín Pushkin, about $20).' },
-      { day:3, h:'Centro, morning', p:'VoiceMap’s catalog lists a Centro walk that starts at the Zócalo and follows the Aztec precinct around Templo Mayor, which overlaps the 10:00–12:00 loop. Check its length in the app.' },
       { day:2, h:'Condesa, arrival afternoon', p:'“The Architecture of La Condesa” (Context Travel on VoiceMap, ~90 min, about $20) covers the streets around the Andaz. Part of it fits the Amsterdam / Parque México stroll.' },
     ]},
   { h:'Split up for some shopping',
@@ -475,7 +495,6 @@ const IDEAS = [
     opts:[
       { day:5, h:'Jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
       { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
-      { day:3, h:'Lighten Tuesday', p:'The busiest day: nine stops before a 7:30 PM show. Dropping Biblioteca Vasconcelos, the only stop north of Centro, saves about an hour and lets the day start at 9:30.' },
       { day:4, h:'One ride on Wednesday', p:'Ask the Teotihuacan driver to stop at the Andaz for your bags after Maizajo and drop you at the Kimpton. One ride instead of two, and no 3:00 deadline.' },
       { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
       { day:14, h:'Flight home', p:'Set the resort pickup for about 8:15–8:30 AM: 45–70 min to CUN, then two-plus hours before the 12:07 PM flight.' },
@@ -789,7 +808,10 @@ function renderIdeas(){
   IDEAS.forEach((I, n) => {
     h += '<div class="card idea"><h3>' + (n + 1) + '. ' + esc(I.h) + '</h3><p class="lead">' + md(I.lead) + '</p>';
     I.opts.forEach(o => {
-      h += '<div class="opt"><div class="oh">' + dayChip(o.day) + '<span>' + esc(o.h) + '</span>' + (o.tag ? pill(o.tag) : '') + '</div><p>' + md(o.p) + '</p></div>';
+      h += '<div class="opt"><div class="oh">' + dayChip(o.day) + '<span>' + esc(o.h) + '</span>' + (o.tag ? pill(o.tag) : '') + '</div>'
+         + (o.rows ? '<div class="rows">' + o.rows.map(r => '<div class="kv"><b>' + brk(r[0]) + '</b><span>' + md(r[1]) + '</span></div>').join('') + '</div>' : '')
+         + (o.p ? '<p>' + md(o.p) + '</p>' : '')
+         + '</div>';
     });
     h += '</div>';
   });

@@ -56,7 +56,12 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
       Object.entries(STAYS).forEach(([k, S]) => {
         for(let d = S.from; d < S.to; d++) if(DAYS[dayIdx(d)].stay !== k) bad.push('stay night ' + k + ' ' + d);
       });
-      IDEAS.forEach(I => I.opts.forEach(o => { if(dayIdx(o.day) < 0) bad.push('idea day ' + o.day); }));
+      IDEAS.forEach(I => I.opts.forEach(o => {
+        if(dayIdx(o.day) < 0) bad.push('idea day ' + o.day);
+        const all = [o.p || ''].concat((o.rows || []).map(r => r[1])).join(' ');
+        if((all.match(/\*\*/g) || []).length % 2) bad.push('unbalanced bold in idea ' + o.h);
+        (all.match(/\]\(([^)]+)\)/g) || []).forEach(l => { const u = l.slice(2, -1); if(!/^(https:\/\/|map:)/.test(u)) bad.push('idea link ' + u); });
+      }));
       SHOP.forEach(s => s.items.forEach(x => (x.on || []).forEach(d => { if(dayIdx(d) < 0) bad.push('shop day ' + d); })));
       return bad;
     });

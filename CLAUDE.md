@@ -27,7 +27,12 @@ Everything shown comes from the data blocks at the top of the script:
 | `STAYS` | hotels with night ranges; verify.js checks every night maps to the right hotel |
 | `TRAVEL` | the Info tab's travel-days card, kept by hand |
 | `SHOP` / `SHOP_NOTE` | the shopping list (`on` = days you're near the shop, as chips) |
-| `IDEAS` | changes being considered, **not in the plan**. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
+| `IDEAS` | changes being considered, **not in the plan**. Options can carry `rows` (`[time, text]` pairs) for a revised schedule. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
+
+**Rule (Oct 15 2026): never change `DAYS` (the Today tab) for a suggestion until the user says it's
+decided** (they discuss changes with their wife first). New suggestions go on the Ideas tab, **grouped
+by day**: a day being reworked gets its own card at the top (the first is "Tuesday, Nov 3: a lighter
+day"). The renames in the Trip line above were direct requests, not ideas.
 
 Markup inside text: `[text](url)`, `[text](map:Google Maps query)` and `**bold**`. Bold must not
 span a link (`**Pre-book** [BajíoGo](…) **pickup**`, not `**Pre-book [BajíoGo](…) pickup**`).
@@ -87,5 +92,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
 - [ ] Flight in to Mexico City Nov 2: details not in the PDF.
-- [ ] The five Ideas areas (Oct 12, to discuss): casual dinner swap, El Turix / seafood lunch,
-      audio tours, splitting up for shopping, optional jazz + simpler connections.
+- [ ] Ideas to discuss. **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
+      no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
+      through Centro east to west, dropping Biblioteca Vasconcelos; split at La Ciudadela (Biblioteca
+      de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea. Still open
+      from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
+      simpler connections.
