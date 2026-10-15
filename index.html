@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:49:29Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:53:06Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -308,7 +308,8 @@ const DAYS = [
 
 { d:4, city:'cdmx', stay:'kimpton', sub:'Teotihuacan + Maizajo + Kimpton + Polanco + Rosetta',
   items:[
-  { t:'6:30 AM', at:'06:30', d:'Private driver pickup at Andaz.', walk:'Not practical', ride:'Private car' },
+  { t:'6:30 AM', at:'06:30', d:'Private driver pickup at Andaz.', walk:'Not practical', ride:'Private car',
+    todo:'Not booked yet: a private driver, or Uber out and bus back. Options and costs are on the Ideas tab.' },
   { t:'8:00–10:45', at:'08:00', d:'[Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), focused route: **Pyramid of the Sun → Avenue of the Dead → Puma Mural → Plaza/Pyramid of the Moon → Quetzalpapalotl complex**. Skip the museums; depart about 10:45 AM.', walk:'Site walking', ride:'Private car' },
   { t:'1:30 PM', at:'13:30', d:'[Maizajo upstairs](https://www.maizajo.com/pages/restaurante)', ok:'Confirmed', res:'Maizajo (lunch)', ride:'Private car' },
   { t:'~3:00', at:'15:00', d:'Collect bags at Andaz → [Kimpton Virgilio](map:Kimpton Virgilio Polanco Mexico City).', walk:'Not practical with bags', ride:'~25–40 min' },
@@ -479,10 +480,16 @@ const IDEAS = [
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
+      { day:4, tag:'Suggested', h:'Getting there cheaply: Uber out, bus back', rows:[
+        ['6:30', 'Uber from the Andaz, ~1 hr, about MX$350–500 for the car. Schedule it in the app the night before'],
+        ['8:00–10:45', 'Teotihuacan (no change)'],
+        ['~10:45', 'Bus from the main gate to Terminal Norte, ~1 hr, about MX$70 each, every 15–20 min. Bring pesos'],
+        ['~11:45', 'Uber Terminal Norte → the Andaz, ~25–35 min'],
+      ], p:'About US$35–45 for the two of you, against roughly US$200 for a round-trip private driver. Uber out at dawn is easy; Uber back from the pyramids is unreliable because few drivers are out there, which is why the bus. If you’d rather go door to door both ways, book a private driver a few days ahead through the Andaz concierge or a site like Viator.' },
       { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. Your booking includes breakfast for two, so ask the night before whether they can pack it for the car.' },
       { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
         ['10:45', 'Leave Teotihuacan (no change)'],
-        ['~12:15', 'Driver drops you at the Andaz instead of Maizajo. Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
+        ['~12:15–12:30', 'Back at the Andaz instead of going straight to Maizajo (the driver drops you, or the bus and Uber get you there). Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
         ['1:30', '[Maizajo](https://www.maizajo.com/pages/restaurante) (Fernando Montes de Oca 113, Condesa), a short ride or walk'],
         ['~3:00', 'Back to the Andaz for the bags, then one Uber to the Kimpton, ~25–40 min'],
       ], p:'The drive back takes about 1–1.5 hours, so you’d reach Condesa around 12:15 with over an hour before lunch. Using it at the Andaz means lunch without the pyramid dust and no packing against the clock. Alternative: stay longer at Teotihuacan and leave around 11:30.' },
