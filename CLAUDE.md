@@ -106,8 +106,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [x] Nov 2 evening (decided Oct 15, now on Today): land 3:55, Andaz ~5:00, Centro ~6:30 (drop at
       Bellas Artes if needed, walk Madero), Zócalo ~7:15–8:30, **Taverna moved to 9:00 PM** by the user.
       Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
-- [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
-      "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
+- [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
+      with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
+      day and in Info. The user also still needs to book the Nov 10 NUMU → QRO transfer (BajíoGo item).
 - [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
 - [x] Tuesday Nov 3 (decided Oct 15, now on Today): breakfast 8:00 (Saint / Odette / the Andaz) and
       the Parque México + Amsterdam loop; Uber ~9:15 to Templo Mayor; audio walk east to west to MUNAL;
@@ -115,7 +116,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Biblioteca Vasconcelos at 7:45 is an Optional item; Botánico as the main meal; Roma shops; rest;
       Uber 6:15 to the arena; optional Carmelita; Lucha 7:30; Orinoco after. **3:00–5:00 is a split**
       (Jen: Roma shops; Drew: La Roma audio walk, MODO or MUJAM; meet at Casa Bosques ~4:45), added
-      Oct 15. The Tuesday Ideas card holds only the La Ciudadela split; the audio-tours card is gone.
+      Oct 15. The audio-tours card is gone, and the Tuesday Ideas card was removed
+      entirely (Oct 15). The Friday card too: its breakfast and later departure are in the plan.
 - [x] Thursday Nov 5 (decided Oct 15, now on Today): Kimpton breakfast 7:15; Uber 8:00 to the Ángel and
       walk the alebrijes to the Estela de Luz; castle at 9:00; Anthropology with the gallery order;
       **lunch keeps both options (El Turix or Sala Gastronómica)**; Masaryk shopping 2:00–4:00;

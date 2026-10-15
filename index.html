@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:46:18Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:49:29Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -336,11 +336,11 @@ const DAYS = [
 
 { d:6, city:'sma', stay:'numu', sub:'Private Car + NUMU + Pool/Rest + Luna + Tostévere',
   items:[
-  { t:'7:15–8:00', at:'07:15', d:'[Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) or [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City).', walk:'~5–10', ride:'~3–5' },
-  { t:'8:30 AM', at:'08:30', d:'**Private car** Kimpton → [NUMU](https://www.hyatt.com/unbound-collection/en-US/bjxub-numu).', walk:'Not practical', ride:'~3.5–4.5 hr',
-    todo:'Book the private car to San Miguel (8:30 AM pickup at the Kimpton). Not booked yet.' },
-  { t:'~12–1', at:'12:00', d:'NUMU arrival, lunch/check-in.', walk:'On property' },
-  { t:'Afternoon', at:'13:30', d:'NUMU pool/rest + get ready. Keep arrival day light.', walk:'On property' },
+  { t:'8:00–9:30', at:'08:00', d:'Slow breakfast at the Kimpton (breakfast for two is included), or [Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) / [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City). Finish packing and check out.', walk:'On property', ride:'Unneeded' },
+  { t:'10:30 AM', at:'10:30', d:'**Private car** Kimpton → [NUMU](https://www.hyatt.com/unbound-collection/en-US/bjxub-numu).', walk:'Not practical', ride:'~3.5–4.5 hr',
+    todo:'Book the private car to San Miguel (10:30 AM pickup at the Kimpton). Not booked yet.' },
+  { t:'~2:00–3:00', at:'14:00', d:'Arrive at NUMU: late lunch and check-in (rooms from 3:00).', walk:'On property' },
+  { t:'~3:00–4:45', at:'15:00', d:'NUMU pool/rest + get ready. Keep arrival day light.', walk:'On property' },
   { t:'~5:00', at:'17:00', d:'Walk into [Rosewood](https://www.rosewoodhotels.com/en/san-miguel-de-allende) and enjoy the property.', walk:'~1–3', ride:'Unneeded' },
   { t:'5:15 PM', at:'17:15', d:'[Luna Rooftop](https://www.rosewoodhotels.com/en/san-miguel-de-allende/dining/luna-rooftop)', ok:'Confirmed', res:'Luna Rooftop', walk:'~1–3 from NUMU', ride:'Unneeded' },
   { t:'7:00 PM', at:'19:00', d:'[Tostévere](https://www.instagram.com/tosteveresma/)', ok:'Reserved', res:'Tostévere', walk:'~5 from Luna', ride:'Unneeded' },
@@ -436,7 +436,7 @@ const DAYS = [
 const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
-  { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
+  { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
   { d:10, h:'San Miguel → Cancún', lines:['~5:00 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
@@ -476,11 +476,6 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
-  { day:3, h:'A lighter day',
-    lead:'The new morning, afternoon and evening are in the plan. Still open:',
-    opts:[
-      { day:3, h:'Split up at La Ciudadela, if you go', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
-    ]},
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
@@ -494,12 +489,6 @@ const IDEAS = [
       { day:4, h:'Teotihuacan: check the site status', p:'The route still works: it doesn’t climb anything, and climbing the Pyramid of the Sun has been banned since 2020. The site closed briefly in April 2026 after a shooting at the Pyramid of the Moon and reopened with extra security, and access to the Moon pyramid has been limited since. Check INAH’s notices the week before, expect a bag check at the entrance, and arrive at 8:00 when it opens.' },
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
       { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in (official check-in is 4:00; early check-in is a perk when available, otherwise leave the bags), then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
-    ]},
-  { day:6, h:'Travel day to San Miguel',
-    lead:'Just the morning for now. The rest of San Miguel comes after you’ve talked it over.',
-    opts:[
-      { day:6, h:'Breakfast: free hotel breakfast at the Kimpton', p:'Your Kimpton booking includes daily breakfast for two. Eat there from about 7:15 instead of walking to Joselo or Café Toscano. Breakfast, checkout and the 8:30 car are then all in one building.' },
-      { day:6, h:'Leave later? NUMU check-in is 3:00', p:'With the 8:30 car you reach NUMU around noon, three hours before check-in. That’s fine if you’re happy to have lunch and sit by the pool while the room is readied, which fits the plan’s “keep arrival day light”. Since the car isn’t booked yet, you could instead leave around 10:00 after a slower breakfast and arrive about 1:30–2:30. The Kimpton’s guaranteed 4:00 PM late checkout means no rush to leave the room either way. The fixed point is Luna Rooftop at 5:15.' },
     ]},
   { day:5, h:'After dinner, on foot',
     lead:'Only walkable options after Comedor Jacinta. I couldn’t find a reliable live-jazz spot within walking distance in Polanco.',
