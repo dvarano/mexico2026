@@ -103,8 +103,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
-- [ ] Nov 2: landing 3:55 PM makes the 5:15 Zócalo departure impossible. Ideas card proposes ~6:30
-      to Centro, Zócalo ~7:15–8:10, Taverna 8:30 (or 9:00 if they'll move it).
+- [x] Nov 2 evening (decided Oct 15, now on Today): land 3:55, Andaz ~5:00, Centro ~6:30 (drop at
+      Bellas Artes if needed, walk Madero), Zócalo ~7:15–8:30, **Taverna moved to 9:00 PM** by the user.
+      Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
 - [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
       "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
 - [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
@@ -130,7 +131,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       credit; the Andaz adds early/late checkout when available, the Kimpton a guaranteed 4 PM late
       checkout. NUMU (points stay) shows no breakfast; Secrets is all-inclusive. Tue/Thu/Fri carry a hotel-breakfast alternative;
       Wed suggests asking the Andaz for breakfast to go (6:30 pickup). **Friday Nov 6 card** exists for
-      that only. Monday Nov 2 reviewed Oct 15 and left as is;
-      its card holds Centro tips only (drop-off at Bellas Artes, Uber out from there, landing time). Still open
+      that only. Monday Nov 2's card was adopted into the plan
+      (Oct 15) and removed, with the Condesa audio walk that no longer fits Monday. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
