@@ -94,7 +94,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Flight in to Mexico City Nov 2: details not in the PDF.
 - [ ] Ideas to discuss. **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
-      through Centro east to west, dropping Biblioteca Vasconcelos; split at La Ciudadela (Biblioteca
+      through Centro east to west, dropping Biblioteca Vasconcelos (variation: the wife does the
+      library solo at 7:45 and they meet at Templo Mayor ~9:45); split at La Ciudadela (Biblioteca
       de México / Mercado de San Juan). It replaced the old "swap an upscale dinner" idea. Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
