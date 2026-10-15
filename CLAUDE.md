@@ -109,7 +109,13 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
       "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
 - [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
-- [ ] Ideas to discuss. **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
+- [x] Tuesday Nov 3 (decided Oct 15, now on Today): breakfast 8:00 (Saint / Odette / the Andaz) and
+      the Parque México + Amsterdam loop; Uber ~9:15 to Templo Mayor; audio walk east to west to MUNAL;
+      **Museo de Arte Popular and La Ciudadela are Optional ("depending on mood")**; Jen's solo
+      Biblioteca Vasconcelos at 7:45 is an Optional item; Botánico as the main meal; Roma shops; rest;
+      Uber 6:15 to the arena; optional Carmelita; Lucha 7:30; Orinoco after. The Tuesday Ideas card
+      now holds only the two split-up options.
+- [ ] Ideas to discuss. (History) **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
       through Centro east to west, dropping Biblioteca Vasconcelos (variation: Jen does the
       library solo at 7:45 and they meet at Templo Mayor ~9:45); split at La Ciudadela (Biblioteca

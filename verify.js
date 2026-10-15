@@ -99,8 +99,8 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     const tags = await page.$$eval('#tab-today .it', els => els.map(e => (e.querySelector('.t em') || {}).textContent || ''));
     const nowAt = tags.indexOf('Now'), nextAt = tags.indexOf('Next');
     const items = await page.evaluate(() => DAYS[1].items.map(x => x.t));
-    ok(items[nowAt] === '10:00–11:40', 'Now on the 10:00 Centro loop, got ' + items[nowAt]);
-    ok(items[nextAt] === '~11:40', 'Next on Templo Mayor, got ' + items[nextAt]);
+    ok(items[nowAt] === '9:45–11:45', 'Now on the Centro audio walk, got ' + items[nowAt]);
+    ok(items[nextAt] === '~11:45', 'Next on the optional Museo de Arte Popular, got ' + items[nextAt]);
     await ctx.close();
   }
   {

@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:14:50Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:28:48Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -286,21 +286,25 @@ const DAYS = [
   ],
   note:'If the airport is slow, skip Centro tonight (Tuesday goes through it) and go straight to Taverna. Avenida Amsterdam and Parque México move to Tuesday morning’s breakfast loop.' },
 
-{ d:3, city:'cdmx', stay:'andaz', sub:'Biblioteca + Centro + Templo Mayor + Ciudadela + Roma + Lucha',
+{ d:3, city:'cdmx', stay:'andaz', sub:'Centro audio walk + Botánico + Roma + Lucha Libre',
   items:[
-  { t:'~7:00', at:'07:00', d:'[Saint Panadería](map:Saint Panaderia Benjamin Hill 146 Mexico City) or [Odette Condesa](map:Odette Condesa Popocatepetl 35 Mexico City) + short Parque México loop.', walk:'Saint ~10–15; Odette ~5–10', ride:'Unneeded' },
-  { t:'7:45', at:'07:45', d:'Leave for [Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/).', walk:'Not practical', ride:'~20–30 min' },
-  { t:'8:30–9:15', at:'08:30', d:'[Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/) architecture visit.', walk:'Inside' },
-  { t:'10:00–11:40', at:'10:00', d:'[MUNAL](https://munal.mx/es/visita) → **go inside** [Palacio Postal](map:Palacio Postal Mexico City) for ~10–15 min to see the ornate lobby/staircase → [Casa de los Azulejos](map:Casa de los Azulejos Mexico City) → **optional 5–10 min** [Palacio de Iturbide](map:Palacio de Iturbide Mexico City) courtyard if open → [Bellas Artes](https://inba.gob.mx/recinto/67/museo-del-palacio-de-bellas-artes).', walk:'2–7 min between nearby sights', ride:'Biblioteca → Centro ~10–20' },
-  { t:'~11:40', at:'11:40', d:'Quick exterior look at [Templo Mayor](map:Templo Mayor Mexico City) archaeological ruins. No museum visit needed.', walk:'~12–18 min from Bellas Artes', ride:'~5–10 min' },
-  { t:'~12:00–12:30', at:'12:00', d:'[La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City): gifts, textiles + napkins.', walk:'~25–30 from Templo Mayor', ride:'~10–15 min' },
-  { t:'1:30 PM', at:'13:30', d:'[Botánico](map:Botanico Condesa CDMX)', ok:'Confirmed', res:'Botánico (lunch)', walk:'Long walk', ride:'Uber recommended' },
-  { t:'Afternoon', at:'15:00', d:'Roma: [Utilitario Mexicano](https://www.utilitariomexicano.com/) → [Proyecto Rufina](map:Proyecto Rufina Roma Norte CDMX) → [Casa Bosques](https://casabosques.net/) → optional [Xinú](https://xinu.mx/).', walk:'Walk between nearby shops', ride:'Short Ubers as needed' },
-  { t:'4:30–5:30', at:'16:30', d:'Andaz rest / shower / change.' },
-  { t:'5:30–6:20', at:'17:30', d:'Dinner: [Tizne Tacomotora](map:Tizne Tacomotora Roma CDMX) preferred; or [Orinoco](map:Taqueria Orinoco Roma Norte CDMX), [Cariñito](map:Carinito Tacos Roma Norte CDMX), [Los Alexis](map:Tacos Los Alexis Roma Norte CDMX), [Marlindo](map:Marlindo Roma Norte CDMX).', walk:'From Andaz ~20–30 min', ride:'~7–12 min' },
-  { t:'7:30 PM', at:'19:30', d:'[Lucha Libre, Arena México](map:Arena Mexico CDMX); arrive 30–45 min early. [Tickets](https://www.ticketmaster.com.mx/lucha-libre-cmll-boletos/artist/1156538).', walk:'Dinner → arena varies', ride:'~10–20 min',
+  { t:'7:45', at:'07:45', ok:'Optional', d:'**Jen, if she wants the library:** breakfast together at 7:00, then Uber to [Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/) for an 8:30–9:15 visit and on to Templo Mayor (~15–25 min) to meet Drew at ~9:45. Check its hours the day before (it closed without warning in 2025), and share Uber trips so you can see where the other is.', walk:'Not practical', ride:'~20–30 min' },
+  { t:'8:00–9:00', at:'08:00', d:'Slow breakfast: [Saint Panadería](map:Saint Panaderia Benjamin Hill 146 Mexico City), [Odette Condesa](map:Odette Condesa Popocatepetl 35 Mexico City), or the Andaz (breakfast for two is included). Then a loop of [Parque México](map:Parque Mexico Condesa Mexico City) and [Avenida Amsterdam](map:Avenida Amsterdam Condesa Mexico City).', walk:'Saint ~10–15; Odette ~5–10', ride:'Unneeded' },
+  { t:'~9:15', at:'09:15', d:'Uber to [Templo Mayor](map:Templo Mayor Mexico City). Buy and download the audio tour on hotel wifi first.', walk:'Not practical', ride:'~25–40 min' },
+  { t:'9:45–11:45', at:'09:45', d:'**Self-guided audio walk, east to west:** [Templo Mayor](map:Templo Mayor Mexico City) (from outside) and the [Zócalo](map:Zocalo Mexico City) → along Madero: [Palacio de Iturbide](map:Palacio de Iturbide Mexico City) courtyard if open, [Casa de los Azulejos](map:Casa de los Azulejos Mexico City) → **go inside** [Palacio Postal](map:Palacio Postal Mexico City) for ~10–15 min to see the ornate lobby/staircase → [Bellas Artes](https://inba.gob.mx/recinto/67/museo-del-palacio-de-bellas-artes) → [MUNAL](https://munal.mx/es/visita). Audio: VoiceMap’s “Mexico City’s Historical Sights” (~75 min, about $20) or “Mexico City’s Aztec Origins” (~90 min, about $15).', walk:'2–7 min between sights' },
+  { t:'~11:45', at:'11:45', ok:'Optional', d:'**Depending on mood:** the [Museo de Arte Popular](map:Museo de Arte Popular Revillagigedo 11 CDMX) (Revillagigedo 11) for ~40 min instead of MUNAL: alebrijes, Talavera, Huichol beadwork and trees of life. Open Tuesday to Sunday from 10:00.', walk:'~5–10 min from Bellas Artes, through the Alameda' },
+  { t:'~12:15–1:00', at:'12:15', ok:'Optional', d:'**Depending on mood:** [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City): gifts, textiles + napkins, and Maddie’s alebrije.', walk:'~10 min from the Museo de Arte Popular' },
+  { t:'~1:00', at:'13:00', d:'Uber to Botánico. If you skip the optional stops, head back earlier and wander Condesa.', walk:'Long walk', ride:'~15–25 min' },
+  { t:'1:30–3:00', at:'13:30', d:'[Botánico](map:Botanico Condesa CDMX), the main meal of the day.', ok:'Confirmed', res:'Botánico (lunch)' },
+  { t:'3:00–5:00', at:'15:00', d:'Roma shops at an easy pace: [Utilitario Mexicano](https://www.utilitariomexicano.com/) → [Proyecto Rufina](map:Proyecto Rufina Roma Norte CDMX) → [Casa Bosques](https://casabosques.net/) → optional [Xinú](https://xinu.mx/).', walk:'Walk between nearby shops', ride:'Short Ubers as needed' },
+  { t:'5:00–6:15', at:'17:00', d:'Andaz rest / shower / change.' },
+  { t:'6:15', at:'18:15', d:'Uber straight to [Arena México](map:Arena Mexico CDMX), arriving 30–45 min early.', walk:'Not after dark', ride:'~10–20 min' },
+  { t:'~6:40', at:'18:40', ok:'Optional', d:'If hungry: tacos at [Tacos Carmelita](map:Tacos Carmelita Doctor Lavista Doctores CDMX), a stand by the arena on Dr. Lavista (bring pesos), or snacks inside.' },
+  { t:'7:30 PM', at:'19:30', d:'[Lucha Libre, Arena México](map:Arena Mexico CDMX). [Tickets](https://www.ticketmaster.com.mx/lucha-libre-cmll-boletos/artist/1156538).',
     todo:'Lucha Libre tickets: not marked as bought in the plan.' },
-  ] },
+  { t:'After', d:'Uber to [Taquería Orinoco](map:Taqueria Orinoco Alvaro Obregon Roma Norte CDMX) on Álvaro Obregón for late tacos (listed as open to about 3:30 AM on weeknights), then a short ride to the Andaz. Or straight back if the arena snack was enough.', ride:'Short Ubers' },
+  ],
+  note:'No dinner before the show: Botánico is the big meal. If you want a real dinner after all, Tizne Tacomotora, Cariñito, Los Alexis and Marlindo in Roma are the backups.' },
 
 { d:4, city:'cdmx', stay:'kimpton', sub:'Teotihuacan + Maizajo + Kimpton + Polanco + Rosetta',
   items:[
@@ -470,34 +474,9 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
   { day:3, h:'A lighter day',
-    lead:'The busiest day of the trip. The evening change stands on its own; the morning one is optional.',
+    lead:'The new morning and evening are in the plan. Still open: splitting up.',
     opts:[
-      { day:3, tag:'Suggested', h:'Evening: Botánico as the main meal', rows:[
-        ['1:30–3:00', '[Botánico](map:Botanico Condesa CDMX), the main meal (no change)'],
-        ['3:00–5:00', 'Roma shops at an easy pace'],
-        ['5:00–6:15', 'Rest and change at the Andaz'],
-        ['6:15', 'Uber straight to [Arena México](map:Arena Mexico CDMX), 10–20 min'],
-        ['~6:40', 'If hungry: tacos at [Tacos Carmelita](map:Tacos Carmelita Doctor Lavista Doctores CDMX), a stand by the arena on Dr. Lavista, or snacks inside'],
-        ['7:30', 'Lucha Libre'],
-        ['After', 'Uber to [Taquería Orinoco](map:Taqueria Orinoco Alvaro Obregon Roma Norte CDMX) on Álvaro Obregón for late tacos (listed as open to about 3:30 AM on weeknights), then a short ride to the Andaz'],
-      ], p:'**What it changes:** no 5:30 dinner three hours after lunch, one fewer Uber (Andaz → arena instead of Andaz → dinner → arena), 45 more minutes of rest and no 6:20 deadline. Tizne and the other taco spots stay as backups.' },
-      { day:3, tag:'Suggested', h:'Morning: audio walk through Centro', rows:[
-        ['8:00–9:00', 'Slow breakfast at Saint or Odette + Parque México loop'],
-        ['~9:15', 'Uber to [Templo Mayor](map:Templo Mayor Mexico City), ~25–40 min'],
-        ['9:45–11:45', 'Self-guided audio walk, east to west: Templo Mayor and the Zócalo → Madero (Palacio de Iturbide, Casa de los Azulejos) → Palacio Postal → Bellas Artes → MUNAL'],
-        ['~12:00–1:00', 'Walk to [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City) through the Alameda, ~15–20 min'],
-        ['~1:00', 'Uber to Botánico (no change)'],
-      ], p:'**Audio:** VoiceMap’s “Mexico City’s Historical Sights” (by Context Travel; ~75 min, 1.1 mi, about $20) covers the Zócalo, Templo Mayor, the Cathedral and Bellas Artes. For more on the Aztec city, “Mexico City’s Aztec Origins” (~90 min, 1.5 mi, about $15). Buy and download on hotel wifi. **What it changes:** drops Biblioteca Vasconcelos, so no 7:45 start and about an hour less in Ubers. Walking east to west also removes the double-back from Bellas Artes to Templo Mayor and then on to La Ciudadela.' },
-      { day:3, h:'Breakfast: free hotel breakfast at the Andaz', p:'Your Andaz booking includes daily breakfast for two. Eat there instead of Saint or Odette: 8:00–9:00 in the together version, or 7:00–7:40 in the library version if the restaurant is open by then. You can still loop Parque México afterwards.' },
-      { day:3, tag:'Suggested', h:'Museo de Arte Popular instead of MUNAL', p:'End the audio walk at Bellas Artes and skip MUNAL. Walk five to ten minutes through the Alameda to the [Museo de Arte Popular](map:Museo de Arte Popular Revillagigedo 11 CDMX) (Revillagigedo 11) for about 40 minutes: the colorful one, with alebrijes, Talavera, Huichol beadwork and trees of life, and no Diego Rivera. It opens at 10, and La Ciudadela is a ten-minute walk on. Listed hours are Tuesday to Sunday, 10:00 to 6:00.' },
-      { day:3, h:'Variation: Biblioteca Vasconcelos solo, then meet up', rows:[
-        ['7:00–7:40', 'Breakfast together at Saint or Odette'],
-        ['7:45', '**Library:** Uber to [Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/), ~20–30 min. **Meanwhile:** Parque México, coffee, or the Condesa audio walk'],
-        ['8:30–9:15', '**Library:** the visit'],
-        ['~9:15', '**Library:** Uber to Templo Mayor, ~15–25 min. **Meanwhile:** Uber from Condesa, ~25–40 min'],
-        ['~9:45', 'Meet at [Templo Mayor](map:Templo Mayor Mexico City), by the Cathedral at the Zócalo’s northeast corner, and start the audio walk together'],
-      ], p:'Easy to do alone: Uber door to door both ways, in daylight. Share each Uber trip in the app so you can both see where the other is. If the library runs long, meet at Bellas Artes instead; the walk passes it around 11:15. **Check the library’s hours the day before:** it closed without warning in 2025 and has cut staff since, so the 8:30 opening isn’t guaranteed. No-travel fallback: the Biblioteca de México at La Ciudadela.' },
-      { day:3, h:'Split up at La Ciudadela, 12:00–1:00', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
+      { day:3, h:'Split up at La Ciudadela, if you go', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
       { day:3, h:'Afternoon split: Roma shops, or a colorful museum', p:'**Jen:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Drew:** [MODO, Museo del Objeto](map:Museo del Objeto del Objeto Colima 145 Roma Norte CDMX) (Colima 145, a short walk; design objects, packaging and posters; the current show is listed through October, so check what’s on), or [MUJAM](map:Museo del Juguete Antiguo Mexico Dr Olvera 15 Doctores CDMX), the antique toy museum in Doctores (a short Uber; vintage toys, a lucha libre room and rooftop murals, a good warm-up for the evening; listed as closing at 5 or 6 PM). Or the La Roma audio walk. Meet at Casa Bosques.' },
     ]},
   { day:4, h:'The long day',
