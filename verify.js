@@ -143,7 +143,16 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     ok(/Streetiversary/.test(await page.textContent('#tab-today .dayhero')), 'the 7th is flagged Streetiversary');
     ok(/Anniversary/.test(await page.textContent('#tab-trip .dayrow[data-day="13"]')), 'the 13th is flagged Anniversary on Trip');
     await page.click('nav button[data-tab="ideas"]');
-    await page.click('#tab-ideas .chip[data-day="5"]');
+    const secs = await page.$$eval('#tab-ideas .ideasec h2', els => els.map(e => e.textContent));
+    ok(secs.join('|') === 'Day by day|Other ideas', 'Ideas has Day by day then Other ideas, got ' + secs.join('|'));
+    ok(await page.evaluate(() => { const c = document.querySelectorAll('#tab-ideas .card.idea'); const firstOther = [...c].findIndex(e => e.classList.contains('other')); return [...c].slice(firstOther).every(e => e.classList.contains('other')); }), 'no day card after the Other ideas heading');
+    await page.click('#tab-ideas .dayidea .db[data-day="4"]');
+    ok((await state(page)).day === 4, 'day card date opens that day');
+    await page.click('nav button[data-tab="ideas"]');
+    await page.click('#tab-ideas .chip[data-day="7"]');
+    ok((await state(page)).day === 7, 'Other ideas chip opens that day');
+    await page.click('nav button[data-tab="ideas"]');
+    await page.click('#tab-ideas .dayidea .db[data-day="5"]');
     s = await state(page);
     ok(s.tab === 'today' && s.day === 5, 'Ideas chip opens that day');
     await page.click('#nextD');

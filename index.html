@@ -162,6 +162,18 @@ main{padding:14px 16px;max-width:720px;margin:0 auto}
 .opt{padding:10px 0 2px;border-top:1px solid var(--grid);margin-top:8px}
 .opt .oh{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-weight:600;font-size:14px}
 .opt p{margin:4px 0 0;font-size:13.5px;color:var(--ink-2)}
+.ideasec{margin:22px 2px 10px}
+.ideasec h2{font:600 21px/1.2 var(--serif);margin:0 0 2px;color:var(--ink-1)}
+.ideasec p{margin:0;font-size:13px;color:var(--ink-3)}
+.ideasec.other{margin-top:30px;padding-top:20px;border-top:2px solid var(--grid)}
+.idea.dayidea{border-top:4px solid var(--city)}
+.idea.other{background:var(--surface-2)}
+.idea .idhd{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.idea .idhd small{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:600}
+.idea .idhd h3{margin:1px 0 0}
+.idea .db{flex:0 0 46px;text-align:center;line-height:1.1;border-radius:9px;padding:5px 0;background:var(--surface-2);border:1px solid var(--ring);color:var(--ink-1);font:inherit;cursor:pointer}
+.idea .db small{font-size:10px;letter-spacing:.06em}
+.idea .db b{display:block;font-size:18px;font-variant-numeric:tabular-nums}
 .opt .rows{margin:6px 0 4px}
 .opt .kv{display:flex;gap:10px;padding:5px 0;border-top:1px solid var(--grid);font-size:13.5px}
 .opt .kv:first-child{border-top:0}
@@ -221,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:24:24Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:28:17Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -312,7 +324,8 @@ const DAYS = [
 { d:6, city:'sma', stay:'numu', sub:'Private Car + NUMU + Pool/Rest + Luna + Tostévere',
   items:[
   { t:'7:15–8:00', at:'07:15', d:'[Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) or [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City).', walk:'~5–10', ride:'~3–5' },
-  { t:'8:30 AM', at:'08:30', d:'**Pre-booked private car** Kimpton → [NUMU](https://www.hyatt.com/unbound-collection/en-US/bjxub-numu).', ok:'Booked', res:'Private car to San Miguel', walk:'Not practical', ride:'~3.5–4.5 hr' },
+  { t:'8:30 AM', at:'08:30', d:'**Private car** Kimpton → [NUMU](https://www.hyatt.com/unbound-collection/en-US/bjxub-numu).', walk:'Not practical', ride:'~3.5–4.5 hr',
+    todo:'Book the private car to San Miguel (8:30 AM pickup at the Kimpton). Not booked yet.' },
   { t:'~12–1', at:'12:00', d:'NUMU arrival, lunch/check-in.', walk:'On property' },
   { t:'Afternoon', at:'13:30', d:'NUMU pool/rest + get ready. Keep arrival day light.', walk:'On property' },
   { t:'~5:00', at:'17:00', d:'Walk into [Rosewood](https://www.rosewoodhotels.com/en/san-miguel-de-allende) and enjoy the property.', walk:'~1–3', ride:'Unneeded' },
@@ -410,7 +423,7 @@ const DAYS = [
 const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
-  { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM pre-booked private car, Kimpton → NUMU, ~3.5–4.5 hr.'] },
+  { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
   { d:10, h:'San Miguel → Cancún', lines:['~2:30 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '6:00 AM flight QRO → CUN (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '12:07 PM flight CUN → LAX.'] },
 ];
@@ -445,11 +458,12 @@ const SHOP = [
 const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudadela; leave room for a special find in San Miguel/Fábrica La Aurora. Skip generic Día de Muertos décor, mass-produced souvenirs, bulky pieces without a place at home, and anything you only like because you’re on vacation.';
 
 /* ---------- Ideas: changes being considered, NOT in the plan yet ----------
-   Never edit DAYS for an idea until the user says it's decided. A day being
-   reworked gets its own card, at the top, with `rows` for a revised schedule.
+   Never edit DAYS for an idea until the user says it's decided. A card with
+   `day` is a reworked day: it shows under "Day by day" (sorted by date), and
+   `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
-  { h:'Tuesday, Nov 3: a lighter day',
+  { day:3, h:'A lighter day',
     lead:'The busiest day of the trip. The evening change stands on its own; the morning one is optional.',
     opts:[
       { day:3, tag:'Suggested', h:'Evening: Botánico as the main meal', rows:[
@@ -477,7 +491,7 @@ const IDEAS = [
       ], p:'Easy to do alone: Uber door to door both ways, in daylight. Share each Uber trip in the app so you can both see where the other is. If the library runs long, meet at Bellas Artes instead; the walk passes it around 11:15. **Check the library’s hours the day before:** it closed without warning in 2025 and has cut staff since, so the 8:30 opening isn’t guaranteed. No-travel fallback: the Biblioteca de México at La Ciudadela.' },
       { day:3, h:'Split up at La Ciudadela, 12:00–1:00', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
     ]},
-  { h:'Wednesday, Nov 4: the long day',
+  { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
       { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
@@ -490,7 +504,7 @@ const IDEAS = [
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
       { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in, then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
     ]},
-  { h:'Thursday, Nov 5: Chapultepec and Polanco',
+  { day:5, h:'Chapultepec and Polanco',
     lead:'A good day as planned: the castle at opening, the Anthropology Museum, then Polanco. These fix an afternoon zigzag and gather the Thursday ideas in one place.',
     opts:[
       { day:5, tag:'Suggested', h:'Lunch: El Turix at 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
@@ -835,13 +849,28 @@ function renderShop(){
 /* ---------- Ideas ---------- */
 function renderIdeas(){
   let h = '<div class="card"><p class="note"><b>Changes you’re considering.</b> Nothing on this tab is in the plan yet. Once you decide, it moves into the day and comes off this list.</p></div>';
-  IDEAS.forEach((I, n) => {
-    h += '<div class="card idea"><h3>' + (n + 1) + '. ' + esc(I.h) + '</h3><p class="lead">' + md(I.lead) + '</p>';
-    I.opts.forEach(o => {
-      h += '<div class="opt"><div class="oh">' + dayChip(o.day) + '<span>' + esc(o.h) + '</span>' + (o.tag ? pill(o.tag) : '') + '</div>'
+  const opt = (o, chip) => '<div class="opt"><div class="oh">' + (chip ? dayChip(o.day) : '') + '<span>' + esc(o.h) + '</span>' + (o.tag ? pill(o.tag) : '') + '</div>'
          + (o.rows ? '<div class="rows">' + o.rows.map(r => '<div class="kv"><b>' + brk(r[0]) + '</b><span>' + md(r[1]) + '</span></div>').join('') + '</div>' : '')
          + (o.p ? '<p>' + md(o.p) + '</p>' : '')
          + '</div>';
+  const byDay = IDEAS.filter(I => I.day).sort((a, b) => a.day - b.day), other = IDEAS.filter(I => !I.day);
+
+  h += '<div class="ideasec"><h2>Day by day</h2><p>Revised plans for specific days, in trip order. Tap the date to open that day.</p></div>';
+  byDay.forEach(I => {
+    const D = DAYS[dayIdx(I.day)];
+    h += '<div class="card idea dayidea" style="--city:' + CITIES[D.city].color + '">'
+       +   '<div class="idhd"><button class="db" data-day="' + D.d + '"><small>' + DOW[dowOf(D.d)].slice(0,3) + '</small><b>' + D.d + '</b></button>'
+       +   '<div><small>' + esc(longDay(D.d)) + '</small><h3>' + esc(I.h) + '</h3></div></div>'
+       +   '<p class="lead">' + md(I.lead) + '</p>'
+       +   I.opts.map(o => opt(o, false)).join('')
+       + '</div>';
+  });
+
+  h += '<div class="ideasec other"><h2>Other ideas</h2><p>Not tied to one day’s plan yet. Each option shows the day it would fit.</p></div>';
+  other.forEach((I, n) => {
+    h += '<div class="card idea other"><h3>' + (n + 1) + '. ' + esc(I.h) + '</h3><p class="lead">' + md(I.lead) + '</p>';
+    I.opts.forEach(o => {
+      h += opt(o, true);
     });
     h += '</div>';
   });

@@ -27,7 +27,7 @@ Everything shown comes from the data blocks at the top of the script:
 | `STAYS` | hotels with night ranges; verify.js checks every night maps to the right hotel |
 | `TRAVEL` | the Info tab's travel-days card, kept by hand |
 | `SHOP` / `SHOP_NOTE` | the shopping list (`on` = days you're near the shop, as chips) |
-| `IDEAS` | changes being considered, **not in the plan**. Options can carry `rows` (`[time, text]` pairs) for a revised schedule. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
+| `IDEAS` | changes being considered, **not in the plan**. A card with `day` renders under **Day by day** (date block, city colour, sorted); cards without go under **Other ideas** (numbered, shaded). Options can carry `rows` (`[time, text]` pairs) for a revised schedule. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
 
 **Rule (Oct 15 2026): never change `DAYS` (the Today tab) for a suggestion until the user says it's
 decided** (they discuss changes with their wife first). New suggestions go on the Ideas tab, **grouped
@@ -92,6 +92,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
 - [ ] Flight in to Mexico City Nov 2: details not in the PDF.
+- [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
+      "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
+- [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
 - [ ] Ideas to discuss. **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
       through Centro east to west, dropping Biblioteca Vasconcelos (variation: Jen does the
