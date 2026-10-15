@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:41:02Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:43:11Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -463,6 +463,13 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
+  { day:2, h:'Arrival and Día de Muertos',
+    lead:'The plan stays as is. These are tips for a busy Day of the Dead evening in Centro.',
+    opts:[
+      { day:2, h:'Getting into Centro at 5:15', p:'Nov 2 is the main Day of the Dead, so Centro will be packed and cars may not get near the [Zócalo](map:Zocalo Mexico City). If the Uber can’t get close, get dropped near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk down Madero, a pedestrian street, to the Zócalo (~15 min). It’s a nice way in anyway.' },
+      { day:2, h:'Getting to Taverna at 7:40', p:'Walk back toward Bellas Artes before calling an Uber, rather than trying to get picked up in the crowds at the Zócalo. Or walk the whole way: Bellas Artes → Taverna is ~25–30 min, the backup already on the day.' },
+      { day:2, h:'Your landing time', p:'The afternoon depends on when you land, which isn’t in the plan yet. The fixed point is leaving for the Zócalo at 5:15. Land by early afternoon and the Avenida Amsterdam / Parque México stroll fits too.' },
+    ]},
   { day:3, h:'A lighter day',
     lead:'The busiest day of the trip. The evening change stands on its own; the morning one is optional.',
     opts:[

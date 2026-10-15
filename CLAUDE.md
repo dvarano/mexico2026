@@ -116,6 +116,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       believes their Chase Edit bookings include free breakfast (true of The Edit's Boutique Collection,
       not its All-In Collection; unconfirmed per hotel). Tue/Thu/Fri carry a hotel-breakfast alternative;
       Wed suggests asking the Andaz for breakfast to go (6:30 pickup). **Friday Nov 6 card** exists for
-      that only. Monday Nov 2 reviewed Oct 15 and left as is. Still open
+      that only. Monday Nov 2 reviewed Oct 15 and left as is;
+      its card holds Centro tips only (drop-off at Bellas Artes, Uber out from there, landing time). Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.
