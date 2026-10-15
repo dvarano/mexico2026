@@ -32,7 +32,7 @@ Everything shown comes from the data blocks at the top of the script:
 |---|---|
 | `DAYS` | one entry per day: `d` date, `city`, `stay`, `sub` summary, `items`, optional `note` / `todo` / `head` / `tz` / `badge` (pill on Today and Trip) |
 | item fields | `t` time as shown, `at` 24h start `"HH:MM"` (drives Now/Next and the day switch; omit for vague times like "Morning"), `d` details, `walk` / `ride`, `ok` status, `res` name for Reservations, `todo` |
-| `STAYS` | hotels with night ranges; verify.js checks every night maps to the right hotel |
+| `STAYS` | hotels: night ranges, `addr`, `cin` / `cout` times, `perks`, from the user's booking screenshots (Oct 15). Info lists them; Today's hero shows check-in/out times on move days. verify.js checks every night maps to the right hotel |
 | `TRAVEL` | the Info tab's travel-days card, kept by hand |
 | `SHOP` / `SHOP_NOTE` | the shopping list (`on` = days you're near the shop, as chips) |
 | `IDEAS` | changes being considered, **not in the plan**. A card with `day` renders under **Day by day** (date block, city colour, sorted); cards without go under **Other ideas** (numbered, shaded). Options can carry `rows` (`[time, text]` pairs) for a revised schedule. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
@@ -79,7 +79,9 @@ Only on http(s), so the file:// test path skips it. **The script must stay the f
 The repo and site are **public** (free GitHub Pages needs a public repo). `noindex` keeps it out of
 search engines, but anyone with the link can read it. **Never add confirmation numbers, phone
 numbers, passport details or door codes.** The shopping list names Maddie (her surprises are on a
-public page).
+public page). The booking screenshots also showed confirmation numbers, a World of Hyatt number, home
+address, phone, email, card digits and prices: **none of it goes on the site.** Hotel addresses,
+check-in/out times, room type and perks are fine.
 
 ## Testing
 
@@ -123,9 +125,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       **Colorful museums** (Oct 15; the user isn't keen on Diego Rivera): Tuesday adds the Museo de Arte
       Popular instead of MUNAL and an afternoon split (Jen in the Roma shops; Drew at MODO or MUJAM, the
       toy museum by the arena); Thursday adds a morning walk past the monumental alebrijes on Reforma
-      (Ángel → Estela de Luz, on display until Nov 8 2026). **Hotel breakfast** (Oct 15): the user
-      believes their Chase Edit bookings include free breakfast (true of The Edit's Boutique Collection,
-      not its All-In Collection; unconfirmed per hotel). Tue/Thu/Fri carry a hotel-breakfast alternative;
+      (Ángel → Estela de Luz, on display until Nov 8 2026). **Hotel breakfast** (Oct 15): **confirmed** from the
+      bookings: the Andaz and the Kimpton (both The Edit) include daily breakfast for two and a $100
+      credit; the Andaz adds early/late checkout when available, the Kimpton a guaranteed 4 PM late
+      checkout. NUMU (points stay) shows no breakfast; Secrets is all-inclusive. Tue/Thu/Fri carry a hotel-breakfast alternative;
       Wed suggests asking the Andaz for breakfast to go (6:30 pickup). **Friday Nov 6 card** exists for
       that only. Monday Nov 2 reviewed Oct 15 and left as is;
       its card holds Centro tips only (drop-off at Bellas Artes, Uber out from there, landing time). Still open

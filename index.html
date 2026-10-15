@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T17:16:30Z');
+const SITE_UPDATED = Date.parse('2026-10-15T17:39:46Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -245,13 +245,17 @@ const CITIES = {
 };
 
 const STAYS = {
-  andaz:   { name:'Andaz Mexico City Condesa', area:'Condesa, Mexico City', from:2,  to:4,
-             map:'Andaz Mexico City Condesa' },
-  kimpton: { name:'Kimpton Virgilio',          area:'Polanco, Mexico City', from:4,  to:6,
+  andaz:   { name:'Andaz Mexico City Condesa', addr:'Aguascalientes 158, Hipódromo Condesa', from:2, to:4,
+             cin:'3:00 PM', cout:'11:00 AM', perks:'Daily breakfast for two, $100 property credit, room upgrade, early check-in and late checkout (when available)',
+             map:'Andaz Mexico City Condesa Aguascalientes 158' },
+  kimpton: { name:'Kimpton Virgilio',          addr:'Virgilio 7, Polanco', from:4, to:6,
+             cin:'4:00 PM', cout:'12:00 PM', perks:'Daily breakfast for two, $100 property credit, guaranteed 4:00 PM late checkout, room upgrade and early check-in (when available)',
              map:'Kimpton Virgilio Polanco Mexico City' },
-  numu:    { name:'NUMU',                      area:'San Miguel de Allende', from:6, to:10,
-             url:'https://www.hyatt.com/unbound-collection/en-US/bjxub-numu', map:'NUMU Boutique Hotel San Miguel de Allende' },
-  secrets: { name:'Secrets Playa Blanca',      area:'Costa Mujeres, Cancún', from:10, to:14,
+  numu:    { name:'NUMU',                      addr:'Nemesio Díez 20, Zona Centro, San Miguel de Allende', from:6, to:10,
+             cin:'3:00 PM', cout:'12:00 PM',
+             url:'https://www.hyatt.com/unbound-collection/en-US/bjxub-numu', map:'NUMU Boutique Hotel San Miguel de Allende Nemesio Diez 20' },
+  secrets: { name:'Secrets Playa Blanca',      addr:'Carretera Punta Sam – Isla Blanca, Costa Mujeres', from:10, to:14,
+             cin:'3:00 PM', cout:'11:00 AM', perks:'All-inclusive, Preferred Club junior suite',
              url:'https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres', map:'Secrets Playa Blanca Costa Mujeres' },
 };
 
@@ -499,7 +503,7 @@ const IDEAS = [
         ['~12:00–1:00', 'Walk to [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City) through the Alameda, ~15–20 min'],
         ['~1:00', 'Uber to Botánico (no change)'],
       ], p:'**Audio:** VoiceMap’s “Mexico City’s Historical Sights” (by Context Travel; ~75 min, 1.1 mi, about $20) covers the Zócalo, Templo Mayor, the Cathedral and Bellas Artes. For more on the Aztec city, “Mexico City’s Aztec Origins” (~90 min, 1.5 mi, about $15). Buy and download on hotel wifi. **What it changes:** drops Biblioteca Vasconcelos, so no 7:45 start and about an hour less in Ubers. Walking east to west also removes the double-back from Bellas Artes to Templo Mayor and then on to La Ciudadela.' },
-      { day:3, h:'Breakfast: free hotel breakfast at the Andaz', p:'If breakfast is included in your Chase Edit booking, eat at the Andaz instead of Saint or Odette: 8:00–9:00 in the together version, or 7:00–7:40 in the library version if the restaurant is open by then. You can still loop Parque México afterwards.' },
+      { day:3, h:'Breakfast: free hotel breakfast at the Andaz', p:'Your Andaz booking includes daily breakfast for two. Eat there instead of Saint or Odette: 8:00–9:00 in the together version, or 7:00–7:40 in the library version if the restaurant is open by then. You can still loop Parque México afterwards.' },
       { day:3, tag:'Suggested', h:'Museo de Arte Popular instead of MUNAL', p:'End the audio walk at Bellas Artes and skip MUNAL. Walk five to ten minutes through the Alameda to the [Museo de Arte Popular](map:Museo de Arte Popular Revillagigedo 11 CDMX) (Revillagigedo 11) for about 40 minutes: the colorful one, with alebrijes, Talavera, Huichol beadwork and trees of life, and no Diego Rivera. It opens at 10, and La Ciudadela is a ten-minute walk on. Listed hours are Tuesday to Sunday, 10:00 to 6:00.' },
       { day:3, h:'Variation: Biblioteca Vasconcelos solo, then meet up', rows:[
         ['7:00–7:40', 'Breakfast together at Saint or Odette'],
@@ -514,16 +518,16 @@ const IDEAS = [
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
-      { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. If breakfast is included in your Chase Edit booking, ask the night before whether they can pack it for the car.' },
+      { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. Your booking includes breakfast for two, so ask the night before whether they can pack it for the car.' },
       { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
         ['10:45', 'Leave Teotihuacan (no change)'],
-        ['~12:15', 'Driver drops you at the Andaz instead of Maizajo. Shower, pack and check out (ask for a 1:00 PM late checkout); bags to the bell desk'],
+        ['~12:15', 'Driver drops you at the Andaz instead of Maizajo. Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
         ['1:30', '[Maizajo](https://www.maizajo.com/pages/restaurante) (Fernando Montes de Oca 113, Condesa), a short ride or walk'],
         ['~3:00', 'Back to the Andaz for the bags, then one Uber to the Kimpton, ~25–40 min'],
       ], p:'The drive back takes about 1–1.5 hours, so you’d reach Condesa around 12:15 with over an hour before lunch. Using it at the Andaz means lunch without the pyramid dust and no packing against the clock. Alternative: stay longer at Teotihuacan and leave around 11:30.' },
       { day:4, h:'Teotihuacan: check the site status', p:'The route still works: it doesn’t climb anything, and climbing the Pyramid of the Sun has been banned since 2020. The site closed briefly in April 2026 after a shooting at the Pyramid of the Moon and reopened with extra security, and access to the Moon pyramid has been limited since. Check INAH’s notices the week before, expect a bag check at the entrance, and arrive at 8:00 when it opens.' },
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
-      { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in, then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
+      { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in (official check-in is 4:00; early check-in is a perk when available, otherwise leave the bags), then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
     ]},
   { day:5, h:'Chapultepec and Polanco',
     lead:'A good day as planned: the castle at opening, the Anthropology Museum, then Polanco. These fix an afternoon zigzag and gather the Thursday ideas in one place.',
@@ -533,7 +537,7 @@ const IDEAS = [
         ['8:15–8:45', 'Walk west along Reforma past the monumental alebrijes to the [Estela de Luz](map:Estela de Luz CDMX), ~20–25 min'],
         ['~8:50', 'Up the hill to Chapultepec Castle for the 9:00 opening'],
       ], p:'The giant alebrijes from the October 17 parade stand on both sides of Reforma between the Ángel and the Estela de Luz until November 8, so they’re up while you’re in town. Early morning means few people and soft light. Shorter version: leave at 8:20 and walk just the stretch nearest the Estela de Luz, by the park entrance where you’d start up to the castle anyway.' },
-      { day:5, h:'Breakfast: free hotel breakfast at the Kimpton', p:'If breakfast is included in your Chase Edit booking, eat at the Kimpton instead of Joselo or Café Toscano. It’s in the building, so it still works with the 8:00 alebrijes start (eat around 7:15–7:50), or take it slower before the planned 8:35 departure.' },
+      { day:5, h:'Breakfast: free hotel breakfast at the Kimpton', p:'Your Kimpton booking includes daily breakfast for two. Eat there instead of Joselo or Café Toscano. It’s in the building, so it still works with the 8:00 alebrijes start (eat around 7:15–7:50), or take it slower before the planned 8:35 departure.' },
       { day:5, tag:'Suggested', h:'Lunch: El Turix at 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
       { day:5, tag:'Suggested', h:'Afternoon: split up instead of zigzagging', rows:[
         ['1:00–1:45', '[El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City) together'],
@@ -548,17 +552,19 @@ const IDEAS = [
   { day:6, h:'Travel day to San Miguel',
     lead:'Just the morning for now. The rest of San Miguel comes after you’ve talked it over.',
     opts:[
-      { day:6, h:'Breakfast: free hotel breakfast at the Kimpton', p:'If breakfast is included in your Chase Edit booking, eat at the Kimpton from about 7:15 instead of walking to Joselo or Café Toscano. Breakfast, checkout and the 8:30 car are then all in one building.' },
+      { day:6, h:'Breakfast: free hotel breakfast at the Kimpton', p:'Your Kimpton booking includes daily breakfast for two. Eat there from about 7:15 instead of walking to Joselo or Café Toscano. Breakfast, checkout and the 8:30 car are then all in one building.' },
+      { day:6, h:'Leave later? NUMU check-in is 3:00', p:'With the 8:30 car you reach NUMU around noon, three hours before check-in. That’s fine if you’re happy to have lunch and sit by the pool while the room is readied, which fits the plan’s “keep arrival day light”. Since the car isn’t booked yet, you could instead leave around 10:00 after a slower breakfast and arrive about 1:30–2:30. The Kimpton’s guaranteed 4:00 PM late checkout means no rush to leave the room either way. The fixed point is Luna Rooftop at 5:15.' },
     ]},
   { day:14, h:'Travel home',
     lead:'Your flight leaves at 3:07 PM, so the morning is free.',
     opts:[
-      { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Check the resort’s checkout time; if it’s before your pickup, ask for a late checkout or leave your bags with the bell desk.' },
+      { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout, or check out at 11 and leave your bags with the bell desk.' },
     ]},
   { day:10, h:'Travel day to Cancún',
     lead:'The 5:00 AM pickup is now in the plan. Still to decide:',
     opts:[
       { day:10, h:'Private transfer or shared shuttle', p:'A private transfer leaves when you do, with no other pickups. Check that the shared shuttle runs at 5:00 if you’d rather take it.' },
+      { day:10, h:'Arriving before check-in', p:'Secrets check-in is 3:00 and you’ll arrive around 12:30–1:00. Pack swimsuits and sunscreen in the carry-on: at an all-inclusive you can usually have lunch and use the pools while the room is readied.' },
       { day:10, h:'Check in online', p:'Viva opens online check-in 72 hours before. If you’re travelling with just the carry-on and personal item, you may be able to go straight to security.' },
     ]},
   { h:'Specialty taco or seafood lunches',
@@ -708,10 +714,10 @@ function renderToday(){
     const S = STAYS[D.stay], P = prev && prev.stay ? STAYS[prev.stay] : null;
     const link = '<a href="' + esc(S.url || href('map:' + S.map)) + '" target="_blank" rel="noopener">' + esc(S.name) + '</a>';
     stay = (P && prev.stay !== D.stay)
-      ? '<b>Hotel change:</b> ' + esc(P.name) + ' → ' + link
-      : (cur === 0 ? '<b>Check in:</b> ' : '<b>Staying:</b> ') + link;
+      ? '<b>Hotel change:</b> ' + esc(P.name) + ' (out by ' + esc(P.cout) + ') → ' + link + ' (check-in ' + esc(S.cin) + ')'
+      : cur === 0 ? '<b>Check in:</b> ' + link + ' (from ' + esc(S.cin) + ')' : '<b>Staying:</b> ' + link;
   } else if(prev && prev.stay){
-    stay = '<b>Check out:</b> ' + esc(STAYS[prev.stay].name);
+    stay = '<b>Check out:</b> ' + esc(STAYS[prev.stay].name) + ' (by ' + esc(STAYS[prev.stay].cout) + ')';
   }
 
   h += '<div class="card dayhero" style="--city:' + C.color + '">'
@@ -814,7 +820,9 @@ function renderInfo(){
   Object.values(STAYS).forEach(S => {
     const n = S.to - S.from;
     h += '<div class="row"><div class="top"><b>' + esc(S.name) + '</b><span>Nov ' + S.from + '–' + S.to + ' · ' + n + ' night' + (n > 1 ? 's' : '') + '</span></div>'
-       + '<div class="meta">' + esc(S.area) + '</div>'
+       + '<div class="meta">' + esc(S.addr) + '</div>'
+       + '<div class="meta">Check-in ' + esc(S.cin) + ' ' + esc(shortDay(S.from).slice(0, 3)) + ' · check-out ' + esc(S.cout) + ' ' + esc(shortDay(S.to).slice(0, 3)) + '</div>'
+       + (S.perks ? '<div class="meta">' + esc(S.perks) + '</div>' : '')
        + '<div class="links">' + (S.url ? '<a href="' + esc(S.url) + '" target="_blank" rel="noopener">Website</a>' : '')
        + '<a href="' + esc(href('map:' + S.map)) + '" target="_blank" rel="noopener">Map</a></div></div>';
   });
