@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:53:06Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:56:51Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -308,10 +308,11 @@ const DAYS = [
 
 { d:4, city:'cdmx', stay:'kimpton', sub:'Teotihuacan + Maizajo + Kimpton + Polanco + Rosetta',
   items:[
-  { t:'6:30 AM', at:'06:30', d:'Private driver pickup at Andaz.', walk:'Not practical', ride:'Private car',
-    todo:'Not booked yet: a private driver, or Uber out and bus back. Options and costs are on the Ideas tab.' },
-  { t:'8:00–10:45', at:'08:00', d:'[Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), focused route: **Pyramid of the Sun → Avenue of the Dead → Puma Mural → Plaza/Pyramid of the Moon → Quetzalpapalotl complex**. Skip the museums; depart about 10:45 AM.', walk:'Site walking', ride:'Private car' },
-  { t:'1:30 PM', at:'13:30', d:'[Maizajo upstairs](https://www.maizajo.com/pages/restaurante)', ok:'Confirmed', res:'Maizajo (lunch)', ride:'Private car' },
+  { t:'6:30 AM', at:'06:30', d:'Uber from the Andaz to [Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), about MX$350–500 for the car.', walk:'Not practical', ride:'~1 hr',
+    todo:'Schedule the Uber in the app the night before.' },
+  { t:'8:00–10:45', at:'08:00', d:'[Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), focused route: **Pyramid of the Sun → Avenue of the Dead → Puma Mural → Plaza/Pyramid of the Moon → Quetzalpapalotl complex**. Skip the museums; depart about 10:45 AM.', walk:'Site walking' },
+  { t:'~10:45', at:'10:45', d:'Head back. First check Uber for a car nearby; if there isn’t one (likely, since few drivers are out there), take the bus from the main gate to Terminal Norte (every 15–20 min, about MX$70 each; bring pesos). Then Uber to Condesa: the Andaz, or straight to Maizajo.', walk:'Bus ~1 hr', ride:'Terminal Norte → Condesa ~25–35 min' },
+  { t:'1:30 PM', at:'13:30', d:'[Maizajo upstairs](https://www.maizajo.com/pages/restaurante)', ok:'Confirmed', res:'Maizajo (lunch)', ride:'Short ride' },
   { t:'~3:00', at:'15:00', d:'Collect bags at Andaz → [Kimpton Virgilio](map:Kimpton Virgilio Polanco Mexico City).', walk:'Not practical with bags', ride:'~25–40 min' },
   { t:'4:20–5:10', at:'16:20', d:'[Ensamble Artesano](https://ensambleartesano.org/pages/tiendas), [IKAL](https://ikalstore.com/), [LAGO](https://lagolatam.com/pages/stores-2), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones).', walk:'~1–7 min', ride:'Unneeded' },
   { t:'5:10–6:30', at:'17:10', d:'Kimpton rooftop pool/rest.', walk:'On property' },
@@ -436,7 +437,7 @@ const DAYS = [
 /* Travel days for Info. Kept by hand: these are the moves, not every ride. */
 const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
-  { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
+  { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM Uber from the Andaz to Teotihuacan, ~1 hr.', '~10:45 back: Uber if one turns up, otherwise the bus to Terminal Norte (~1 hr), then Uber to Condesa.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
   { d:10, h:'San Miguel → Cancún', lines:['~5:00 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
@@ -480,19 +481,13 @@ const IDEAS = [
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
-      { day:4, tag:'Suggested', h:'Getting there cheaply: Uber out, bus back', rows:[
-        ['6:30', 'Uber from the Andaz, ~1 hr, about MX$350–500 for the car. Schedule it in the app the night before'],
-        ['8:00–10:45', 'Teotihuacan (no change)'],
-        ['~10:45', 'Bus from the main gate to Terminal Norte, ~1 hr, about MX$70 each, every 15–20 min. Bring pesos'],
-        ['~11:45', 'Uber Terminal Norte → the Andaz, ~25–35 min'],
-      ], p:'About US$35–45 for the two of you, against roughly US$200 for a round-trip private driver. Uber out at dawn is easy; Uber back from the pyramids is unreliable because few drivers are out there, which is why the bus. If you’d rather go door to door both ways, book a private driver a few days ahead through the Andaz concierge or a site like Viator.' },
       { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. Your booking includes breakfast for two, so ask the night before whether they can pack it for the car.' },
       { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
         ['10:45', 'Leave Teotihuacan (no change)'],
-        ['~12:15–12:30', 'Back at the Andaz instead of going straight to Maizajo (the driver drops you, or the bus and Uber get you there). Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
+        ['~12:30', 'Uber from Terminal Norte to the Andaz instead of straight to Maizajo. Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
         ['1:30', '[Maizajo](https://www.maizajo.com/pages/restaurante) (Fernando Montes de Oca 113, Condesa), a short ride or walk'],
         ['~3:00', 'Back to the Andaz for the bags, then one Uber to the Kimpton, ~25–40 min'],
-      ], p:'The drive back takes about 1–1.5 hours, so you’d reach Condesa around 12:15 with over an hour before lunch. Using it at the Andaz means lunch without the pyramid dust and no packing against the clock. Alternative: stay longer at Teotihuacan and leave around 11:30.' },
+      ], p:'The bus and Uber back take about 1.5–2 hours, so you’d reach Condesa around 12:30 with about an hour before lunch. Using it at the Andaz means lunch without the pyramid dust and no packing against the clock.' },
       { day:4, h:'Teotihuacan: check the site status', p:'The route still works: it doesn’t climb anything, and climbing the Pyramid of the Sun has been banned since 2020. The site closed briefly in April 2026 after a shooting at the Pyramid of the Moon and reopened with extra security, and access to the Moon pyramid has been limited since. Check INAH’s notices the week before, expect a bag check at the entrance, and arrive at 8:00 when it opens.' },
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
       { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in (official check-in is 4:00; early check-in is a perk when available, otherwise leave the bags), then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },

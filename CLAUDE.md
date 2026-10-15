@@ -109,10 +109,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
       day and in Info. The user also still needs to book the Nov 10 NUMU → QRO transfer (BajíoGo item).
-- [ ] Teotihuacan transport Nov 4: **nothing booked** (user, Oct 15). Todo on the 6:30 item. Ideas card
-      suggests Uber out (~MX$350–500, schedule the night before) and bus back from the gate to
-      Terminal Norte (~MX$70 each) + Uber, ~US$35–45 total, vs ~US$200 for a round-trip private driver.
-      Uber back from the site is unreliable.
+- [x] Teotihuacan transport Nov 4 (decided Oct 15, on Today): **Uber out at 6:30** (schedule it the night
+      before; todo), **back by bus** from the main gate to Terminal Norte then Uber to Condesa, with checking
+      Uber at the site first as an option. No private driver. The Ideas transport option is gone; the
+      midday shower idea now assumes the bus (back ~12:30).
 - [x] Tuesday Nov 3 (decided Oct 15, now on Today): breakfast 8:00 (Saint / Odette / the Andaz) and
       the Parque México + Amsterdam loop; Uber ~9:15 to Templo Mayor; audio walk east to west to MUNAL;
       **Museo de Arte Popular and La Ciudadela are Optional ("depending on mood")**; Jen's solo
