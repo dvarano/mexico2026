@@ -7,7 +7,10 @@ Handoff notes so a future session can pick this up cold.
   calls except the self-update check (below).
 - **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Mexico City (Andaz Condesa
   Nov 2–4, Kimpton Virgilio Polanco Nov 4–6) → San Miguel de Allende (NUMU Nov 6–10) → Cancún
-  (Secrets Playa Blanca, Costa Mujeres, Nov 10–14) → home CUN → LAX 12:07 PM Nov 14.
+  (Secrets Playa Blanca, Costa Mujeres, Nov 10–14) → home Sat Nov 14 on **United UA1275, CUN 3:07 PM →
+  San Luis Obispo (SBP) 7:58 PM** (from the user's United booking, Oct 15). The PDF said "12:07 PM CUN → LAX";
+  12:07 PM Pacific is 3:07 PM in Cancún, so it was probably the same flight in home time. Corrected on
+  the Today tab as a booking fact, like the Nov 6 car status. Never publish the confirmation number.
   **Sat Nov 7 is "Streetiversary"** (The Restaurant, 7:30 PM) and **Fri Nov 13 is "Anniversary"**
   (optional private dinner at Secrets). Renamed Oct 12 2026 at the user's request; set by each day's `badge`.
 - **Source:** `Mexico_Anniversary_Itinerary_Latest_Oct12.pdf` (Drew, Oct 12 2026). Day pages were

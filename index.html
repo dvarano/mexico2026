@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:43:11Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:46:45Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -410,12 +410,12 @@ const DAYS = [
   { t:'After', d:'Desires only if you want a later night.', walk:'On property', ride:'Not needed' },
   ] },
 
-{ d:14, city:'cun', stay:null, head:'Travel home', sub:'Secrets Playa Blanca → CUN → LAX',
+{ d:14, city:'cun', stay:null, head:'Travel home', sub:'Secrets Playa Blanca → CUN → San Luis Obispo',
   items:[
   { t:'Morning', d:'Breakfast + check out.', walk:'On property' },
   { t:'TBD', d:'Pre-arranged resort → CUN transfer; allow drive + airport buffer.', walk:'Not practical', ride:'~45–70 min',
     todo:'Book the resort → CUN transfer and set the pickup time.' },
-  { t:'12:07 PM', at:'12:07', d:'CUN → LAX flight.' },
+  { t:'3:07 PM', at:'15:07', d:'United UA1275, CUN → San Luis Obispo (SBP). Lands 7:58 PM.' },
   ] },
 ];
 
@@ -425,7 +425,7 @@ const TRAVEL = [
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
   { d:10, h:'San Miguel → Cancún', lines:['~2:30 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '6:00 AM flight QRO → CUN (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
-  { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '12:07 PM flight CUN → LAX.'] },
+  { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
 
 /* ---------- Shopping list ---------- */
@@ -540,6 +540,11 @@ const IDEAS = [
     opts:[
       { day:6, h:'Breakfast: free hotel breakfast at the Kimpton', p:'If breakfast is included in your Chase Edit booking, eat at the Kimpton from about 7:15 instead of walking to Joselo or Café Toscano. Breakfast, checkout and the 8:30 car are then all in one building.' },
     ]},
+  { day:14, h:'Travel home',
+    lead:'Your flight leaves at 3:07 PM, so the morning is free.',
+    opts:[
+      { day:14, tag:'Suggested', h:'Resort pickup around 11:15–11:30', p:'The drive to CUN takes 45–70 min, so leaving around 11:15–11:30 gets you there by about 12:15–12:45, roughly two and a half hours before an international flight. Saturdays are often busy at Cancún airport, so don’t push it much later. That leaves time for a slow breakfast and a last swim. Check the resort’s checkout time; if it’s before your pickup, ask for a late checkout or leave your bags with the bell desk.' },
+    ]},
   { h:'Specialty taco or seafood lunches',
     lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
     opts:[
@@ -562,7 +567,6 @@ const IDEAS = [
     opts:[
       { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
       { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
-      { day:14, h:'Flight home', p:'Set the resort pickup for about 8:15–8:30 AM: 45–70 min to CUN, then two-plus hours before the 12:07 PM flight.' },
     ]},
 ];
 
