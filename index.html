@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:48:06Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:59:01Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -271,9 +271,12 @@ const STAYS = {
 const DAYS = [
 { d:2, city:'cdmx', stay:'andaz', sub:'Arrival + Día de Muertos + Taverna',
   items:[
-  { t:'Arrival', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa). Check in and settle.', walk:'Not practical', ride:'~30–60 min' },
+  { t:'6:00 AM', d:'American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM (local times).' },
+  { t:'11:42 AM', d:'American AA501, Phoenix → Mexico City (Phoenix time).' },
+  { t:'3:55 PM', at:'15:55', d:'Land at MEX. Immigration and customs, then airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa). Check in and settle.', walk:'Not practical', ride:'~30–60 min' },
   { t:'Late PM', d:'[Avenida Amsterdam](map:Avenida Amsterdam Condesa Mexico City) + [Parque México](map:Parque Mexico Condesa Mexico City).', walk:'~5–10 min from hotel', ride:'Unneeded' },
-  { t:'5:15 PM', at:'17:15', d:'Leave for [Zócalo](map:Zocalo Mexico City) / Centro for Día de Muertos atmosphere.', walk:'~75–90 min', ride:'~25–40 min' },
+  { t:'5:15 PM', at:'17:15', d:'Leave for [Zócalo](map:Zocalo Mexico City) / Centro for Día de Muertos atmosphere.', walk:'~75–90 min', ride:'~25–40 min',
+    todo:'You land at 3:55 PM, so you’ll still be getting to the hotel at 5:15. Revised timing is on the Ideas tab.' },
   { t:'5:45–7:40', at:'17:45', d:'Centro/Zócalo at dusk and after illumination begins. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
   { t:'7:40 PM', at:'19:40', d:'Leave for [Taverna](map:Taverna Prim Mexico City).', walk:'Zócalo ~35–45 min', ride:'~10–20 min' },
   { t:'8:30 PM', at:'20:30', d:'[Taverna](map:Taverna Prim Mexico City)', ok:'Confirmed', res:'Taverna', ride:'Return to Andaz ~15–25 min' },
@@ -373,11 +376,11 @@ const DAYS = [
    day keeps that zone; the clocks go forward an hour on landing in Cancún. */
 { d:10, city:'cun', tz:-6, stay:'secrets', sub:'QRO → Cancún → Secrets Playa Blanca',
   items:[
-  { t:'~2:30 AM', at:'02:30', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 6:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
-    todo:'Book the BajíoGo pickup: confirm the shared shuttle runs at 2:30 AM, and compare a private transfer.' },
+  { t:'~2:30 AM', at:'02:30', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 8:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
+    todo:'Book the BajíoGo pickup. The flight is at 8:00 AM, not 6:00, so this pickup and the 4:00 airport arrival are two hours too early. Suggested times are on the Ideas tab.' },
   { t:'~4:00', at:'04:00', d:'Target QRO airport arrival.' },
-  { t:'6:00', at:'06:00', d:'QRO → CUN flight.' },
-  { t:'Arrival', d:'[Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
+  { t:'8:00 AM', at:'08:00', d:'Viva Aerobus VB 2061, QRO → CUN.' },
+  { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
   { t:'Day', d:'Lunch, beach/pool, nap, easy dinner. Check the weekly activity schedule and choose one activity for the stay.', walk:'On property', ride:'On property' },
   ],
   note:'Cancún is one hour ahead of San Miguel. Times before landing are San Miguel / Querétaro time.' },
@@ -421,10 +424,10 @@ const DAYS = [
 
 /* Travel days for Info. Kept by hand: these are the moves, not every ride. */
 const TRAVEL = [
-  { d:2,  h:'Fly in to Mexico City', lines:['Airport → Andaz Condesa, ~30–60 min by car.'] },
+  { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
-  { d:10, h:'San Miguel → Cancún', lines:['~2:30 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '6:00 AM flight QRO → CUN (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
+  { d:10, h:'San Miguel → Cancún', lines:['BajíoGo pickup at NUMU → QRO airport, ~1.5 hr (time to reset for the 8:00 flight).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
 
@@ -464,11 +467,18 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
   { day:2, h:'Arrival and Día de Muertos',
-    lead:'The plan stays as is. These are tips for a busy Day of the Dead evening in Centro.',
+    lead:'You land at 3:55 PM, so the 5:15 departure for the Zócalo won’t work. Revised timing first, then tips for a busy Day of the Dead evening in Centro.',
     opts:[
-      { day:2, h:'Getting into Centro at 5:15', p:'Nov 2 is the main Day of the Dead, so Centro will be packed and cars may not get near the [Zócalo](map:Zocalo Mexico City). If the Uber can’t get close, get dropped near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk down Madero, a pedestrian street, to the Zócalo (~15 min). It’s a nice way in anyway.' },
-      { day:2, h:'Getting to Taverna at 7:40', p:'Walk back toward Bellas Artes before calling an Uber, rather than trying to get picked up in the crowds at the Zócalo. Or walk the whole way: Bellas Artes → Taverna is ~25–30 min, the backup already on the day.' },
-      { day:2, h:'Your landing time', p:'The afternoon depends on when you land, which isn’t in the plan yet. The fixed point is leaving for the Zócalo at 5:15. Land by early afternoon and the Avenida Amsterdam / Parque México stroll fits too.' },
+      { day:2, tag:'Suggested', h:'Evening: Centro after dark, then Taverna', rows:[
+        ['3:55', 'Land at MEX. Allow about an hour for immigration, bags and customs'],
+        ['~5:00', 'Uber to the Andaz, ~30–60 min. Check in and drop the bags'],
+        ['~6:30', 'Uber toward the Zócalo, ~25–40 min (tips below)'],
+        ['~7:15–8:10', 'Zócalo and Centro after dark, lit up for Día de Muertos'],
+        ['~8:10', 'To Taverna, 10–20 min by car'],
+        ['8:30', '[Taverna](map:Taverna Prim Mexico City) (no change)'],
+      ], p:'This keeps both Centro and Taverna, but it’s tight. If the airport is slow, skip Centro tonight (Tuesday’s walk goes through it) and go straight to Taverna, or ask Taverna whether 9:00 is possible. The Avenida Amsterdam / Parque México stroll fits Tuesday’s breakfast loop instead.' },
+      { day:2, h:'Getting into Centro', p:'Nov 2 is the main Day of the Dead, so Centro will be packed and cars may not get near the [Zócalo](map:Zocalo Mexico City). If the Uber can’t get close, get dropped near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk down Madero, a pedestrian street, to the Zócalo (~15 min). It’s a nice way in anyway.' },
+      { day:2, h:'Getting to Taverna', p:'Walk back toward Bellas Artes before calling an Uber, rather than trying to get picked up in the crowds at the Zócalo. Or walk the whole way: Bellas Artes → Taverna is ~25–30 min, the backup already on the day.' },
     ]},
   { day:3, h:'A lighter day',
     lead:'The busiest day of the trip. The evening change stands on its own; the morning one is optional.',
@@ -545,6 +555,18 @@ const IDEAS = [
     opts:[
       { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Check the resort’s checkout time; if it’s before your pickup, ask for a late checkout or leave your bags with the bell desk.' },
     ]},
+  { day:10, h:'Later start to Cancún',
+    lead:'Your Viva Aerobus flight leaves Querétaro at 8:00, not 6:00, so the 2:30 AM pickup can move two and a half hours later.',
+    opts:[
+      { day:10, tag:'Suggested', h:'Pickup at about 5:00 AM', rows:[
+        ['~5:00', 'BajíoGo pickup at NUMU → QRO, ~1.5 hr'],
+        ['~6:30', 'At QRO, an hour and a half before a domestic flight at a small airport'],
+        ['8:00', 'Viva Aerobus VB 2061, QRO → CUN'],
+        ['11:27', 'Land at CUN, Terminal 2 (Cancún time, one hour ahead)'],
+        ['~12:30–1:00', 'At Secrets, ~45–70 min'],
+      ], p:'Viva opens online check-in 72 hours before. If you’re travelling with just the carry-on and personal item, you may be able to go straight to security.' },
+      { day:10, h:'Private transfer or shared shuttle', p:'A private transfer leaves when you do, with no other pickups. The shared shuttle may be more likely to run at 5:00 than at 2:30, but check either way.' },
+    ]},
   { h:'Specialty taco or seafood lunches',
     lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
     opts:[
@@ -566,7 +588,6 @@ const IDEAS = [
     lead:'Jazz is optional; the connection fixes take pressure off the busiest days.',
     opts:[
       { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
-      { day:10, h:'The 2:30 AM pickup', p:'Book the private transfer rather than the shared shuttle: it leaves when you do, with no other pickups.' },
     ]},
 ];
 
@@ -830,7 +851,6 @@ function renderInfo(){
   todos.forEach(({ D, t }) => {
     h += '<div class="row"><div class="top"><span style="white-space:normal;color:var(--ink-1);font-size:14px">' + md(t) + '</span>' + dayChip(D.d) + '</div></div>';
   });
-  h += '<div class="row"><div class="top"><span style="white-space:normal;color:var(--ink-1);font-size:14px">Flight in to Mexico City: add the details.</span>' + dayChip(2) + '</div></div>';
   h += '</div>';
 
   h += '<div class="card"><h2>Time zones</h2>'

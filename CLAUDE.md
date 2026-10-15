@@ -5,12 +5,17 @@ Handoff notes so a future session can pick this up cold.
 - **Live site:** https://dvarano.github.io/mexico2026/
 - **The app:** `index.html`, one self-contained file. No build step, no dependencies, no network
   calls except the self-update check (below).
-- **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Mexico City (Andaz Condesa
+- **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Flying in Mon Nov 2 on **American
+  AA1524 SBP 6:00 AM → PHX 8:55, AA501 PHX 11:42 AM → MEX 3:55 PM**. Mexico City (Andaz Condesa
   Nov 2–4, Kimpton Virgilio Polanco Nov 4–6) → San Miguel de Allende (NUMU Nov 6–10) → Cancún
-  (Secrets Playa Blanca, Costa Mujeres, Nov 10–14) → home Sat Nov 14 on **United UA1275, CUN 3:07 PM →
+  (Secrets Playa Blanca, Costa Mujeres, Nov 10–14; **Viva Aerobus VB 2061 QRO 8:00 AM → CUN 11:27 AM T2** on
+  Nov 10, not the PDF's 6:00) → home Sat Nov 14 on **United UA1275, CUN 3:07 PM →
   San Luis Obispo (SBP) 7:58 PM** (from the user's United booking, Oct 15). The PDF said "12:07 PM CUN → LAX";
   12:07 PM Pacific is 3:07 PM in Cancún, so it was probably the same flight in home time. Corrected on
-  the Today tab as a booking fact, like the Nov 6 car status. Never publish the confirmation number.
+  the Today tab as a booking fact, like the Nov 6 car status. Flights come from the user's booking
+  screenshots (Oct 15). **Never publish confirmation codes, seat numbers or surnames.** Booking facts
+  go straight onto the Today tab; times that follow from them (Nov 2 evening, Nov 10 pickup) are
+  flagged with a todo there and proposed on the Ideas tab until the user decides.
   **Sat Nov 7 is "Streetiversary"** (The Restaurant, 7:30 PM) and **Fri Nov 13 is "Anniversary"**
   (optional private dinner at Secrets). Renamed Oct 12 2026 at the user's request; set by each day's `badge`.
 - **Source:** `Mexico_Anniversary_Itinerary_Latest_Oct12.pdf` (Drew, Oct 12 2026). Day pages were
@@ -88,13 +93,18 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 
 ## Open items (from the PDF)
 
-- [ ] BajíoGo 2:30 AM pickup Nov 10: confirm the shared shuttle runs that early; compare private.
+- [ ] BajíoGo pickup Nov 10: book it (shared or private) once the new pickup time is decided.
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
-- [ ] Flight in to Mexico City Nov 2: details not in the PDF.
+- [ ] Nov 2: landing 3:55 PM makes the 5:15 Zócalo departure impossible. Ideas card proposes ~6:30
+      to Centro, Zócalo ~7:15–8:10, Taverna 8:30 (or 9:00 if they'll move it).
+- [ ] Nov 10: flight is 8:00 AM, so the 2:30 AM pickup / 4:00 airport are two hours early. Ideas card
+      proposes a ~5:00 AM pickup. When it's decided, the 10th stops opening at 8 PM the night before
+      (that rule keys off a first `at` before 5:00): update the Info "About this site" text and the
+      verify.js §2/§3 cases that assume the 2:30 pickup.
 - [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
       "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
 - [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
