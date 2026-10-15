@@ -113,8 +113,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       the Parque México + Amsterdam loop; Uber ~9:15 to Templo Mayor; audio walk east to west to MUNAL;
       **Museo de Arte Popular and La Ciudadela are Optional ("depending on mood")**; Jen's solo
       Biblioteca Vasconcelos at 7:45 is an Optional item; Botánico as the main meal; Roma shops; rest;
-      Uber 6:15 to the arena; optional Carmelita; Lucha 7:30; Orinoco after. The Tuesday Ideas card
-      now holds only the two split-up options.
+      Uber 6:15 to the arena; optional Carmelita; Lucha 7:30; Orinoco after. **3:00–5:00 is a split**
+      (Jen: Roma shops; Drew: La Roma audio walk, MODO or MUJAM; meet at Casa Bosques ~4:45), added
+      Oct 15. The Tuesday Ideas card holds only the La Ciudadela split; the audio-tours card is gone.
 - [x] Thursday Nov 5 (decided Oct 15, now on Today): Kimpton breakfast 7:15; Uber 8:00 to the Ángel and
       walk the alebrijes to the Estela de Luz; castle at 9:00; Anthropology with the gallery order;
       **lunch keeps both options (El Turix or Sala Gastronómica)**; Masaryk shopping 2:00–4:00;

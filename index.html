@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:44:40Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:46:18Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -296,7 +296,7 @@ const DAYS = [
   { t:'~12:15–1:00', at:'12:15', ok:'Optional', d:'**Depending on mood:** [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City): gifts, textiles + napkins, and Maddie’s alebrije.', walk:'~10 min from the Museo de Arte Popular' },
   { t:'~1:00', at:'13:00', d:'Uber to Botánico. If you skip the optional stops, head back earlier and wander Condesa.', walk:'Long walk', ride:'~15–25 min' },
   { t:'1:30–3:00', at:'13:30', d:'[Botánico](map:Botanico Condesa CDMX), the main meal of the day.', ok:'Confirmed', res:'Botánico (lunch)' },
-  { t:'3:00–5:00', at:'15:00', d:'Roma shops at an easy pace: [Utilitario Mexicano](https://www.utilitariomexicano.com/) → [Proyecto Rufina](map:Proyecto Rufina Roma Norte CDMX) → [Casa Bosques](https://casabosques.net/) → optional [Xinú](https://xinu.mx/).', walk:'Walk between nearby shops', ride:'Short Ubers as needed' },
+  { t:'3:00–5:00', at:'15:00', d:'Split up in Roma, then meet at [Casa Bosques](https://casabosques.net/) around 4:45. **Jen:** the Roma shops at an easy pace: [Utilitario Mexicano](https://www.utilitariomexicano.com/) → [Proyecto Rufina](map:Proyecto Rufina Roma Norte CDMX) → Casa Bosques → optional [Xinú](https://xinu.mx/). **Drew, pick one:** the La Roma audio walk (VoiceMap’s “Mexico City Streets: La Roma”, ~45 min, 1.3 mi, about $8; or the food-focused “La Roma Culinary Quest” from Jardín Pushkin, about $20); [MODO, Museo del Objeto](map:Museo del Objeto del Objeto Colima 145 Roma Norte CDMX) (Colima 145, a short walk; design objects, packaging and posters; the current show is listed through October, so check what’s on); or [MUJAM](map:Museo del Juguete Antiguo Mexico Dr Olvera 15 Doctores CDMX), the antique toy museum in Doctores (a short Uber; vintage toys, a lucha libre room and rooftop murals; listed as closing at 5 or 6 PM).', walk:'Walk between nearby shops', ride:'Short Ubers as needed' },
   { t:'5:00–6:15', at:'17:00', d:'Andaz rest / shower / change.' },
   { t:'6:15', at:'18:15', d:'Uber straight to [Arena México](map:Arena Mexico CDMX), arriving 30–45 min early.', walk:'Not after dark', ride:'~10–20 min' },
   { t:'~6:40', at:'18:40', ok:'Optional', d:'If hungry: tacos at [Tacos Carmelita](map:Tacos Carmelita Doctor Lavista Doctores CDMX), a stand by the arena on Dr. Lavista (bring pesos), or snacks inside.' },
@@ -477,10 +477,9 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
   { day:3, h:'A lighter day',
-    lead:'The new morning and evening are in the plan. Still open: splitting up.',
+    lead:'The new morning, afternoon and evening are in the plan. Still open:',
     opts:[
       { day:3, h:'Split up at La Ciudadela, if you go', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
-      { day:3, h:'Afternoon split: Roma shops, or a colorful museum', p:'**Jen:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Drew:** [MODO, Museo del Objeto](map:Museo del Objeto del Objeto Colima 145 Roma Norte CDMX) (Colima 145, a short walk; design objects, packaging and posters; the current show is listed through October, so check what’s on), or [MUJAM](map:Museo del Juguete Antiguo Mexico Dr Olvera 15 Doctores CDMX), the antique toy museum in Doctores (a short Uber; vintage toys, a lucha libre room and rooftop murals, a good warm-up for the evening; listed as closing at 5 or 6 PM). Or the La Roma audio walk. Meet at Casa Bosques.' },
     ]},
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
@@ -523,11 +522,6 @@ const IDEAS = [
     lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
     opts:[
       { day:7, h:'San Miguel, midday', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open.' },
-    ]},
-  { h:'Self-guided audio tours',
-    lead:'VoiceMap tours play by GPS as you walk. Buy and download them on hotel wifi first, then they work offline.',
-    opts:[
-      { day:3, h:'Roma, afternoon', p:'“Mexico City Streets: La Roma” (~45 min, 1.3 mi, about $8) fits between Botánico and the shops. The food-focused version is “La Roma Culinary Quest” (starts at Jardín Pushkin, about $20).' },
     ]},
   { h:'Split up for some shopping',
     lead:'Agree on a meet-up spot and time before splitting. These are the windows that already have shopping in them.',
