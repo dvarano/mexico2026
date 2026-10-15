@@ -108,6 +108,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       "driver carries the bags" idea. **Thursday Nov 5 card** (Oct 15): El Turix lunch; afternoon
       split (Jen on Masaryk, Drew to Soumaya/Jumex or the pool) instead of the Soumaya zigzag;
       Anthropology galleries (Teotihuacan, Mexica, Maya); pack before Jacinta; optional Parker &
-      Lenox. The Thursday items moved here from the theme cards. Still open
+      Lenox. The Thursday items moved here from the theme cards.
+      **Colorful museums** (Oct 15; the user isn't keen on Diego Rivera): Tuesday adds the Museo de Arte
+      Popular instead of MUNAL and an afternoon split (Jen in the Roma shops; Drew at MODO or MUJAM, the
+      toy museum by the arena); Thursday adds a morning walk past the monumental alebrijes on Reforma
+      (Ángel → Estela de Luz, on display until Nov 8 2026). Still open
       from Oct 12: El Turix / seafood lunch, audio tours, splitting up for shopping, optional jazz +
       simpler connections.

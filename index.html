@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:28:17Z');
+const SITE_UPDATED = Date.parse('2026-10-15T16:33:58Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -482,6 +482,7 @@ const IDEAS = [
         ['~12:00–1:00', 'Walk to [La Ciudadela](map:Mercado de Artesanias La Ciudadela Mexico City) through the Alameda, ~15–20 min'],
         ['~1:00', 'Uber to Botánico (no change)'],
       ], p:'**Audio:** VoiceMap’s “Mexico City’s Historical Sights” (by Context Travel; ~75 min, 1.1 mi, about $20) covers the Zócalo, Templo Mayor, the Cathedral and Bellas Artes. For more on the Aztec city, “Mexico City’s Aztec Origins” (~90 min, 1.5 mi, about $15). Buy and download on hotel wifi. **What it changes:** drops Biblioteca Vasconcelos, so no 7:45 start and about an hour less in Ubers. Walking east to west also removes the double-back from Bellas Artes to Templo Mayor and then on to La Ciudadela.' },
+      { day:3, tag:'Suggested', h:'Museo de Arte Popular instead of MUNAL', p:'End the audio walk at Bellas Artes and skip MUNAL. Walk five to ten minutes through the Alameda to the [Museo de Arte Popular](map:Museo de Arte Popular Revillagigedo 11 CDMX) (Revillagigedo 11) for about 40 minutes: the colorful one, with alebrijes, Talavera, Huichol beadwork and trees of life, and no Diego Rivera. It opens at 10, and La Ciudadela is a ten-minute walk on. Listed hours are Tuesday to Sunday, 10:00 to 6:00.' },
       { day:3, h:'Variation: Biblioteca Vasconcelos solo, then meet up', rows:[
         ['7:00–7:40', 'Breakfast together at Saint or Odette'],
         ['7:45', '**Library:** Uber to [Biblioteca Vasconcelos](https://www.bibliotecavasconcelos.gob.mx/), ~20–30 min. **Meanwhile:** Parque México, coffee, or the Condesa audio walk'],
@@ -490,6 +491,7 @@ const IDEAS = [
         ['~9:45', 'Meet at [Templo Mayor](map:Templo Mayor Mexico City), by the Cathedral at the Zócalo’s northeast corner, and start the audio walk together'],
       ], p:'Easy to do alone: Uber door to door both ways, in daylight. Share each Uber trip in the app so you can both see where the other is. If the library runs long, meet at Bellas Artes instead; the walk passes it around 11:15. **Check the library’s hours the day before:** it closed without warning in 2025 and has cut staff since, so the 8:30 opening isn’t guaranteed. No-travel fallback: the Biblioteca de México at La Ciudadela.' },
       { day:3, h:'Split up at La Ciudadela, 12:00–1:00', p:'**Shop:** the craft market (napkins, Maddie’s alebrije). **Wander:** the [Biblioteca de México](map:Biblioteca de Mexico La Ciudadela CDMX) in the old Ciudadela building across the plaza. It’s free, and Lonely Planet tips its floating-shelf reading rooms for design lovers, so it’s a library visit without the trip out to Buenavista. Or walk a few blocks east to [Mercado de San Juan](map:Mercado de San Juan Ernesto Pugibet 21 CDMX) for food tastings. Meet back at the market entrance.' },
+      { day:3, h:'Afternoon split: Roma shops, or a colorful museum', p:'**Jen:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Drew:** [MODO, Museo del Objeto](map:Museo del Objeto del Objeto Colima 145 Roma Norte CDMX) (Colima 145, a short walk; design objects, packaging and posters; the current show is listed through October, so check what’s on), or [MUJAM](map:Museo del Juguete Antiguo Mexico Dr Olvera 15 Doctores CDMX), the antique toy museum in Doctores (a short Uber; vintage toys, a lucha libre room and rooftop murals, a good warm-up for the evening; listed as closing at 5 or 6 PM). Or the La Roma audio walk. Meet at Casa Bosques.' },
     ]},
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
@@ -507,6 +509,11 @@ const IDEAS = [
   { day:5, h:'Chapultepec and Polanco',
     lead:'A good day as planned: the castle at opening, the Anthropology Museum, then Polanco. These fix an afternoon zigzag and gather the Thursday ideas in one place.',
     opts:[
+      { day:5, tag:'Suggested', h:'Morning: the giant alebrijes on Reforma', rows:[
+        ['8:00', 'Uber to the [Ángel de la Independencia](map:Angel de la Independencia CDMX), ~10–15 min'],
+        ['8:15–8:45', 'Walk west along Reforma past the monumental alebrijes to the [Estela de Luz](map:Estela de Luz CDMX), ~20–25 min'],
+        ['~8:50', 'Up the hill to Chapultepec Castle for the 9:00 opening'],
+      ], p:'The giant alebrijes from the October 17 parade stand on both sides of Reforma between the Ángel and the Estela de Luz until November 8, so they’re up while you’re in town. Early morning means few people and soft light. Shorter version: leave at 8:20 and walk just the stretch nearest the Estela de Luz, by the park entrance where you’d start up to the castle anyway.' },
       { day:5, tag:'Suggested', h:'Lunch: El Turix at 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
       { day:5, tag:'Suggested', h:'Afternoon: split up instead of zigzagging', rows:[
         ['1:00–1:45', '[El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City) together'],
@@ -532,7 +539,6 @@ const IDEAS = [
   { h:'Split up for some shopping',
     lead:'Agree on a meet-up spot and time before splitting. These are the windows that already have shopping in them.',
     opts:[
-      { day:3, h:'Roma shops, afternoon', p:'**Shop:** Utilitario Mexicano, Proyecto Rufina, Casa Bosques, Xinú. **Wander:** the La Roma audio walk, then meet at Casa Bosques.' },
       { day:7, h:'San Miguel markets, late morning', p:'**Shop:** Mercado de Artesanías. **Wander:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
       { day:9, h:'Final shopping, 2:00–4:00', p:'**Shop:** revisit favorites. **Wander:** a last walk through Centro, or El Mirador if Sunday morning skipped it.' },
     ]},
