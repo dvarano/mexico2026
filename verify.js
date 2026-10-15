@@ -78,7 +78,8 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     ['2026-11-04T05:30:00Z', 'today', 3, 'Nov 3 23:30 CDMX: still the 3rd'],
     ['2026-11-04T09:00:00Z', 'today', 4, 'Nov 4 03:00 CDMX: the 4th'],
     ['2026-11-10T01:59:00Z', 'today', 9, 'Nov 9 19:59 SMA: still the 9th'],
-    ['2026-11-10T02:00:00Z', 'today', 10,'Nov 9 20:00 SMA: the 10th, for the 2:30 AM pickup'],
+    ['2026-11-10T03:00:00Z', 'today', 9, 'Nov 9 21:00 SMA: still the 9th (pickup is 5:00, not pre-dawn)'],
+    ['2026-11-10T09:00:00Z', 'today', 10,'Nov 10 03:00 SMA: the 10th, ahead of the 5:00 AM pickup'],
     ['2026-11-11T07:59:00Z', 'today', 10,'Nov 11 02:59 Cancún: still the 10th'],
     ['2026-11-11T08:00:00Z', 'today', 11,'Nov 11 03:00 Cancún: the 11th'],
     ['2026-11-14T16:00:00Z', 'today', 14,'Nov 14 11:00 Cancún: travel home'],
@@ -103,9 +104,14 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     await ctx.close();
   }
   {
-    const { ctx, page } = await open(browser, '2026-11-10T03:00:00Z');   // Nov 9 21:00 SMA
+    const { ctx, page } = await open(browser, '2026-11-10T10:30:00Z');   // Nov 10 04:30 SMA
     const tags = await page.$$eval('#tab-today .it', els => els.map(e => (e.querySelector('.t em') || {}).textContent || ''));
-    ok(tags[0] === 'Next' && tags.indexOf('Now') < 0, 'evening before the 10th: pickup is Next, nothing Now');
+    ok(tags[0] === 'Next' && tags.indexOf('Now') < 0, 'early on the 10th: the 5:00 pickup is Next, nothing Now');
+    await ctx.close();
+  }
+  {
+    const { ctx, page } = await open(browser, '2026-11-10T03:00:00Z');   // Nov 9 21:00 SMA
+    ok(/~5:00 AM/.test(await page.textContent('#tab-today .tmrw')), 'the evening of the 9th previews the 5:00 AM pickup');
     await ctx.close();
   }
   {

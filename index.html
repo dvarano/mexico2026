@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T16:59:01Z');
+const SITE_UPDATED = Date.parse('2026-10-15T17:16:30Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -376,9 +376,9 @@ const DAYS = [
    day keeps that zone; the clocks go forward an hour on landing in Cancún. */
 { d:10, city:'cun', tz:-6, stay:'secrets', sub:'QRO → Cancún → Secrets Playa Blanca',
   items:[
-  { t:'~2:30 AM', at:'02:30', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 8:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
-    todo:'Book the BajíoGo pickup. The flight is at 8:00 AM, not 6:00, so this pickup and the 4:00 airport arrival are two hours too early. Suggested times are on the Ideas tab.' },
-  { t:'~4:00', at:'04:00', d:'Target QRO airport arrival.' },
+  { t:'~5:00 AM', at:'05:00', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 8:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
+    todo:'Book the BajíoGo pickup for about 5:00 AM: confirm the shared shuttle runs then, and compare a private transfer.' },
+  { t:'~6:30', at:'06:30', d:'Target QRO airport arrival.' },
   { t:'8:00 AM', at:'08:00', d:'Viva Aerobus VB 2061, QRO → CUN.' },
   { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
   { t:'Day', d:'Lunch, beach/pool, nap, easy dinner. Check the weekly activity schedule and choose one activity for the stay.', walk:'On property', ride:'On property' },
@@ -427,7 +427,7 @@ const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM private driver from the Andaz.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['8:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
-  { d:10, h:'San Miguel → Cancún', lines:['BajíoGo pickup at NUMU → QRO airport, ~1.5 hr (time to reset for the 8:00 flight).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
+  { d:10, h:'San Miguel → Cancún', lines:['~5:00 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
 
@@ -555,17 +555,11 @@ const IDEAS = [
     opts:[
       { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Check the resort’s checkout time; if it’s before your pickup, ask for a late checkout or leave your bags with the bell desk.' },
     ]},
-  { day:10, h:'Later start to Cancún',
-    lead:'Your Viva Aerobus flight leaves Querétaro at 8:00, not 6:00, so the 2:30 AM pickup can move two and a half hours later.',
+  { day:10, h:'Travel day to Cancún',
+    lead:'The 5:00 AM pickup is now in the plan. Still to decide:',
     opts:[
-      { day:10, tag:'Suggested', h:'Pickup at about 5:00 AM', rows:[
-        ['~5:00', 'BajíoGo pickup at NUMU → QRO, ~1.5 hr'],
-        ['~6:30', 'At QRO, an hour and a half before a domestic flight at a small airport'],
-        ['8:00', 'Viva Aerobus VB 2061, QRO → CUN'],
-        ['11:27', 'Land at CUN, Terminal 2 (Cancún time, one hour ahead)'],
-        ['~12:30–1:00', 'At Secrets, ~45–70 min'],
-      ], p:'Viva opens online check-in 72 hours before. If you’re travelling with just the carry-on and personal item, you may be able to go straight to security.' },
-      { day:10, h:'Private transfer or shared shuttle', p:'A private transfer leaves when you do, with no other pickups. The shared shuttle may be more likely to run at 5:00 than at 2:30, but check either way.' },
+      { day:10, h:'Private transfer or shared shuttle', p:'A private transfer leaves when you do, with no other pickups. Check that the shared shuttle runs at 5:00 if you’d rather take it.' },
+      { day:10, h:'Check in online', p:'Viva opens online check-in 72 hours before. If you’re travelling with just the carry-on and personal item, you may be able to go straight to security.' },
     ]},
   { h:'Specialty taco or seafood lunches',
     lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
@@ -630,8 +624,8 @@ function utcAt(date, hhmm, tz){
   return Date.UTC(YEAR, MONTH, date, h - tz, m);
 }
 /* A day "opens" (becomes Today) at 3 AM local, so a late dinner still shows
-   that day's plan. A day whose first fixed time is before 5 AM (the 2:30
-   pickup on the 10th) opens at 8 PM the evening before instead. */
+   that day's plan. A day whose first fixed time is before 5 AM opens at 8 PM
+   the evening before instead (none at the moment: the 10th's pickup is 5:00). */
 function dayOpens(i){
   const D = DAYS[i], first = D.items.find(x => x.at);
   if(i > 0 && first && first.at < '05:00'){
@@ -860,7 +854,7 @@ function renderInfo(){
      + '</div>';
 
   h += '<div class="card"><h2>About this site</h2>'
-     + '<p class="note">It opens on today’s plan once the trip starts. Each day takes over at 3 AM local time, so a late dinner still shows that night’s plan. The 10th takes over at 8 PM the night before, because of the 2:30 AM pickup.</p>'
+     + '<p class="note">It opens on today’s plan once the trip starts. Each day takes over at 3 AM local time, so a late dinner still shows that night’s plan.</p>'
      + '<p class="note">Tap any place to open it in Google Maps. When the plan changes, an open page reloads itself with the new version.</p>'
      + '<p class="note">Plan last updated ' + esc(ago(SITE_UPDATED)) + '.</p>'
      + '</div>';

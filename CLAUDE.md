@@ -55,11 +55,13 @@ It drives "Updated X ago". Not for tests or docs.
 
 Mexico City and San Miguel are **UTC−6 all year**; Cancún (Quintana Roo) is **UTC−5 all year**.
 Neither observes DST (Mexico dropped it in 2022). Each city carries its `tz`; a day can override it.
-**Nov 10 uses `tz:-6`** because its fixed times (2:30 AM pickup, 6:00 AM flight) are San Miguel /
+**Nov 10 uses `tz:-6`** because its fixed times (5:00 AM pickup, 8:00 AM flight) are San Miguel /
 Querétaro time; its note says Cancún is an hour ahead.
 
 `liveDay(now)`: a day becomes Today at **3 AM local**, so a late dinner still shows that night.
-A day whose first `at` is before 5:00 (only Nov 10) takes over at **8 PM the evening before**.
+A day whose first `at` is before 5:00 takes over at **8 PM the evening before**. No day does now:
+Nov 10's pickup moved from 2:30 to 5:00 (Oct 15), so it opens at 3 AM and the evening of the 9th
+previews it in the Tomorrow card.
 Before the trip and after it, the site opens on the Trip tab; during it, on Today. Now/Next tags
 appear only on the live day. An open page that comes back to the foreground rolls on to the new
 day if it was showing the old one. All pinned in verify.js §2–§3.
@@ -93,7 +95,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 
 ## Open items (from the PDF)
 
-- [ ] BajíoGo pickup Nov 10: book it (shared or private) once the new pickup time is decided.
+- [ ] BajíoGo pickup Nov 10 at ~5:00 AM (decided Oct 15, for the 8:00 VB 2061): book it, shared or private.
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
@@ -101,10 +103,6 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
 - [ ] Nov 2: landing 3:55 PM makes the 5:15 Zócalo departure impossible. Ideas card proposes ~6:30
       to Centro, Zócalo ~7:15–8:10, Taverna 8:30 (or 9:00 if they'll move it).
-- [ ] Nov 10: flight is 8:00 AM, so the 2:30 AM pickup / 4:00 airport are two hours early. Ideas card
-      proposes a ~5:00 AM pickup. When it's decided, the 10th stops opening at 8 PM the night before
-      (that rule keys off a first `at` before 5:00): update the Info "About this site" text and the
-      verify.js §2/§3 cases that assume the 2:30 pickup.
 - [ ] Private car Kimpton → NUMU Nov 6, 8:30 AM: **not booked** (Oct 15, per the user; the PDF's
       "pre-booked" wording had been read as booked). Shown as a todo on the day and in Info.
 - [ ] Teotihuacan private driver Nov 4, 6:30 AM: the PDF doesn't mark it confirmed; ask.
