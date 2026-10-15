@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-15T20:28:48Z');
+const SITE_UPDATED = Date.parse('2026-10-15T20:40:02Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -319,16 +319,20 @@ const DAYS = [
   { t:'9:00 PM', at:'21:00', d:'[Rosetta](https://rosetta.com.mx/) indoor dinner', ok:'Confirmed', res:'Rosetta', walk:'Limantour → Rosetta ~10–15', ride:'~5–10 min' },
   ] },
 
-{ d:5, city:'cdmx', stay:'kimpton', sub:'Chapultepec + Anthropology + Polanco + Comedor Jacinta',
+{ d:5, city:'cdmx', stay:'kimpton', sub:'Alebrijes + Chapultepec + Anthropology + Polanco + Comedor Jacinta',
   items:[
-  { t:'Early AM', d:'[Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) or [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City) + Parque Lincoln.', walk:'Nearby', ride:'Unneeded' },
-  { t:'8:35', at:'08:35', d:'Leave for [Chapultepec Castle](https://mnh.inah.gob.mx/).', walk:'~30–40 incl. uphill', ride:'~10–20 + uphill' },
+  { t:'7:15–7:50', at:'07:15', d:'Breakfast at the Kimpton (breakfast for two is included; check it’s open by 7:15), or [Joselo Café](map:Joselo Cafe Emilio Castelar 107-F Polanco Mexico City) / [Café Toscano](map:Cafe Toscano Temistocles 26 Polanco Mexico City) nearby.', walk:'On property', ride:'Unneeded' },
+  { t:'8:00', at:'08:00', d:'Uber to the [Ángel de la Independencia](map:Angel de la Independencia CDMX).', walk:'Not practical', ride:'~10–15 min' },
+  { t:'8:15–8:45', at:'08:15', d:'Walk west along Reforma past the **monumental alebrijes** to the [Estela de Luz](map:Estela de Luz CDMX). The giant alebrijes from the October 17 parade line both sides of Reforma until November 8; early morning means few people and soft light.', walk:'~20–25 min' },
+  { t:'~8:50', at:'08:50', d:'Up the hill to [Chapultepec Castle](https://mnh.inah.gob.mx/) for the 9:00 opening. The path starts at the park entrance by the Estela de Luz.', walk:'~10–15 min uphill' },
   { t:'9:00–10:30', at:'09:00', d:'Chapultepec Castle. Don’t miss the Alcázar terraces/gardens and views over Paseo de la Reforma.', walk:'Inside/site' },
-  { t:'11:00–1:00', at:'11:00', d:'[Anthropology Museum](https://mna.inah.gob.mx/) key galleries.', walk:'Castle → museum ~20–30', ride:'Short ride possible' },
-  { t:'1:00', at:'13:00', d:'Sala Gastronómica OR [El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City).', walk:'Varies', ride:'Short Uber if El Turix' },
-  { t:'2:00–2:45', at:'14:00', d:'Optional [Museo Soumaya](https://www.museosoumaya.org/). Skip it if you’d rather stay longer at Anthropology.', walk:'Longer walk', ride:'Uber recommended' },
-  { t:'3:00–4:30', at:'15:00', d:'Shopping: [Onora](map:Onora Polanco Mexico City), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones), [Yuriko Moda](https://yurikomoda.mx/), [Zara Masaryk](https://www.zara.com/mx/); optional ACAPELLA.', walk:'Walk between Polanco stops', ride:'Short Ubers as needed' },
+  { t:'11:00–1:00', at:'11:00', d:'[Anthropology Museum](https://mna.inah.gob.mx/) key galleries. Start with the Teotihuacan hall (the day after the pyramids), then the Mexica hall with the Sun Stone (it ties back to Tuesday’s Templo Mayor), then the Maya hall if there’s time.', walk:'Castle → museum ~20–30', ride:'Short ride possible' },
+  { t:'1:00', at:'13:00', d:'Lunch, two options: [El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City) (Emilio Castelar 212, two blocks from Parque Lincoln) for cochinita pibil tacos, panuchos and tortas at a quick stand-up counter; bring pesos in case it’s cash only. Or **Sala Gastronómica**, the museum’s own restaurant, if you’d rather stay put.', walk:'Varies', ride:'Short Uber if El Turix' },
+  { t:'2:00–4:00', at:'14:00', d:'Shopping on Masaryk: [Onora](map:Onora Polanco Mexico City), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones), [Yuriko Moda](https://yurikomoda.mx/), [Zara Masaryk](https://www.zara.com/mx/); optional ACAPELLA. If Drew would rather skip it, the Kimpton pool and Parque Lincoln are a few minutes away.', walk:'Walk between Polanco stops', ride:'Short Ubers as needed' },
+  { t:'~4:00–5:00', at:'16:00', ok:'Optional', d:'[Museo Soumaya](https://www.museosoumaya.org/) at Plaza Carso in Nuevo Polanco: free, and the building itself is the draw (open to 6:30). Museo Jumex next door closes at 5:00.', walk:'Not practical', ride:'~10–15 min' },
+  { t:'5:00–7:00', at:'17:00', d:'Back to the Kimpton: rest, and pack for tomorrow’s move to San Miguel.', walk:'On property' },
   { t:'7:30 PM', at:'19:30', d:'[Comedor Jacinta](map:Comedor Jacinta Polanco Mexico City), Salón Standard.', ok:'Confirmed', res:'Comedor Jacinta', walk:'~3–6 from Kimpton', ride:'Unneeded' },
+  { t:'~9:30', at:'21:30', ok:'Optional', d:'Live jazz at [Parker & Lenox](map:Parker and Lenox Milan 14 Juarez CDMX) (Milán 14, Juárez): jazz or blues most nights, listed as Tuesday to Saturday. Reserve a table and keep it to one set, with the move to San Miguel in the morning.', ride:'~15–20 min' },
   ] },
 
 { d:6, city:'sma', stay:'numu', sub:'Private Car + NUMU + Pool/Rest + Luna + Tostévere',
@@ -492,26 +496,6 @@ const IDEAS = [
       { day:4, h:'Teotihuacan: check the site status', p:'The route still works: it doesn’t climb anything, and climbing the Pyramid of the Sun has been banned since 2020. The site closed briefly in April 2026 after a shooting at the Pyramid of the Moon and reopened with extra security, and access to the Moon pyramid has been limited since. Check INAH’s notices the week before, expect a bag check at the entrance, and arrive at 8:00 when it opens.' },
       { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
       { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in (official check-in is 4:00; early check-in is a perk when available, otherwise leave the bags), then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
-    ]},
-  { day:5, h:'Chapultepec and Polanco',
-    lead:'A good day as planned: the castle at opening, the Anthropology Museum, then Polanco. These fix an afternoon zigzag and gather the Thursday ideas in one place.',
-    opts:[
-      { day:5, tag:'Suggested', h:'Morning: the giant alebrijes on Reforma', rows:[
-        ['8:00', 'Uber to the [Ángel de la Independencia](map:Angel de la Independencia CDMX), ~10–15 min'],
-        ['8:15–8:45', 'Walk west along Reforma past the monumental alebrijes to the [Estela de Luz](map:Estela de Luz CDMX), ~20–25 min'],
-        ['~8:50', 'Up the hill to Chapultepec Castle for the 9:00 opening'],
-      ], p:'The giant alebrijes from the October 17 parade stand on both sides of Reforma between the Ángel and the Estela de Luz until November 8, so they’re up while you’re in town. Early morning means few people and soft light. Shorter version: leave at 8:20 and walk just the stretch nearest the Estela de Luz, by the park entrance where you’d start up to the castle anyway.' },
-      { day:5, h:'Breakfast: free hotel breakfast at the Kimpton', p:'Your Kimpton booking includes daily breakfast for two. Eat there instead of Joselo or Café Toscano. It’s in the building, so it still works with the 8:00 alebrijes start (eat around 7:15–7:50), or take it slower before the planned 8:35 departure.' },
-      { day:5, tag:'Suggested', h:'Lunch: El Turix at 1:00', p:'Make it the plan and Sala Gastronómica the backup. Cochinita pibil tacos, panuchos and tortas at Emilio Castelar 212, two blocks from Parque Lincoln and close to the Kimpton. It’s a stand-up counter, so lunch is quick. Hours reported as about 11:30 AM to 9:30 PM. Bring pesos in case it’s cash only.' },
-      { day:5, tag:'Suggested', h:'Afternoon: split up instead of zigzagging', rows:[
-        ['1:00–1:45', '[El Turix](map:El Turix Emilio Castelar 212 Polanco Mexico City) together'],
-        ['2:00–4:30', '**Jen:** the Masaryk shops, on foot from El Turix: Onora, Uriarte, Yuriko Moda, Zara Masaryk, optional ACAPELLA'],
-        ['2:00–4:30', '**Drew:** short Uber to Plaza Carso for [Museo Soumaya](https://www.museosoumaya.org/) (free, and the building is the draw) and Museo Jumex next door. Or skip both for the Kimpton pool'],
-        ['4:30', 'Meet back at the Kimpton'],
-      ], p:'As planned, the afternoon goes from the museum to Polanquito for lunch, out to Soumaya in Nuevo Polanco, then back to Polanquito for the shops. Splitting up cuts the back-and-forth and gives Jen two and a half hours on Masaryk instead of one and a half.' },
-      { day:5, h:'Anthropology Museum: which galleries', p:'Two hours goes fast in a museum this size. Start with the Teotihuacan hall (the day after the pyramids), then the Mexica hall with the Sun Stone (it ties back to Tuesday’s Templo Mayor), then the Maya hall if there’s time.' },
-      { day:5, h:'Evening: pack before dinner', p:'The car to San Miguel leaves at 8:30 Friday morning. Packing between 4:30 and 7:00 means Comedor Jacinta, a few minutes’ walk from the Kimpton, can be an unhurried dinner with no late-night repack.' },
-      { day:5, h:'Optional jazz: Parker & Lenox', p:'After Comedor Jacinta on the last Mexico City night. Speakeasy at Milán 14 in Juárez with live jazz or blues most nights (reported Tuesday to Saturday), ~15–20 min by Uber. Reserve a table and keep it to one set, since the car to San Miguel leaves at 8:30 AM. Alternative: Zinco Jazz Club in Centro (Motolinia 20, reservations needed).' },
     ]},
   { day:6, h:'Travel day to San Miguel',
     lead:'Just the morning for now. The rest of San Miguel comes after you’ve talked it over.',

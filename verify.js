@@ -158,10 +158,10 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     await page.click('#tab-ideas .chip[data-day="7"]');
     ok((await state(page)).day === 7, 'Other ideas chip opens that day');
     await page.click('nav button[data-tab="ideas"]');
-    await page.click('#tab-ideas .dayidea .db[data-day="5"]');
+    await page.click('#tab-ideas .dayidea .db[data-day="4"]');
     s = await state(page);
-    ok(s.tab === 'today' && s.day === 5, 'Ideas chip opens that day');
-    await page.click('#nextD');
+    ok(s.tab === 'today' && s.day === 4, 'Ideas day card opens that day');
+    await page.click('#nextD'); await page.click('#nextD');
     s = await state(page);
     ok(s.day === 6, 'next-day button');
     ok(/Hotel change/.test(await page.textContent('#tab-today .dayhero')), 'the 6th shows the hotel change');

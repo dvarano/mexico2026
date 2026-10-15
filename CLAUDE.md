@@ -115,6 +115,11 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Biblioteca Vasconcelos at 7:45 is an Optional item; Botánico as the main meal; Roma shops; rest;
       Uber 6:15 to the arena; optional Carmelita; Lucha 7:30; Orinoco after. The Tuesday Ideas card
       now holds only the two split-up options.
+- [x] Thursday Nov 5 (decided Oct 15, now on Today): Kimpton breakfast 7:15; Uber 8:00 to the Ángel and
+      walk the alebrijes to the Estela de Luz; castle at 9:00; Anthropology with the gallery order;
+      **lunch keeps both options (El Turix or Sala Gastronómica)**; Masaryk shopping 2:00–4:00;
+      **Museo Soumaya Optional after the shopping (~4:00–5:00)**, per the user, instead of the split;
+      rest and pack 5:00–7:00; Jacinta 7:30; Parker & Lenox Optional. The Thursday Ideas card is gone.
 - [ ] Ideas to discuss. (History) **Tuesday Nov 3 card** (Oct 15): evening with Botánico as the main meal,
       no 5:30 dinner, snack at the arena, Orinoco after the show (the user's #1); morning audio walk
       through Centro east to west, dropping Biblioteca Vasconcelos (variation: Jen does the
