@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-28T16:14:07Z');
+const SITE_UPDATED = Date.parse('2026-10-28T16:17:18Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -279,9 +279,10 @@ const DAYS = [
   { t:'11:42 AM', d:'American AA501, Phoenix → Mexico City (Phoenix time).' },
   { t:'3:55 PM', at:'15:55', d:'Land at MEX. Allow about an hour for immigration, bags and customs.' },
   { t:'~5:00', at:'17:00', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa Aguascalientes 158). Check in and drop the bags.', walk:'Not practical', ride:'~30–60 min' },
-  { t:'~6:30', at:'18:30', d:'Leave for [Zócalo](map:Zocalo Mexico City) / Centro for Día de Muertos. Nov 2 is the main Day of the Dead, so cars may not get near the Zócalo. If not, get dropped near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk down Madero, a pedestrian street (~15 min).', walk:'~75–90 min', ride:'~25–40 min' },
-  { t:'~7:15–8:00', at:'19:15', d:'Zócalo and Centro after dark, lit up for Día de Muertos, including the Zócalo’s free Ofrenda Monumental: a 32-meter catrina honoring José Guadalupe Posada. Tonight is its last night. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
-  { t:'~8:00', at:'20:00', d:'Leave for [Taverna](map:Taverna Prim Mexico City). Walk back toward Bellas Artes before calling the Uber, rather than trying to get picked up in the crowds at the Zócalo, or walk the whole way.', walk:'Bellas Artes → Taverna ~25–30 min', ride:'~10–20 min' },
+  { t:'~6:30', at:'18:30', d:'Uber to the [Palacio de Bellas Artes](map:Palacio de Bellas Artes Mexico City), **Avenida Juárez side**. It’s on the edge of Centro, so the car stays out of the jammed streets around the Zócalo. **If traffic is too heavy:** the Torre Latinoamericana corner (Eje Central and Madero), or the south option: [Izazaga at 20 de Noviembre](map:Jose Maria Izazaga y 20 de Noviembre Centro CDMX), then walk straight up 20 de Noviembre to the Zócalo (~10 min), staying on 20 de Noviembre rather than heading east.', walk:'~75–90 min', ride:'~25–40 min' },
+  { t:'~7:00', at:'19:00', d:'Walk Madero, the pedestrian street, to the [Zócalo](map:Zocalo Mexico City).', walk:'~15 min' },
+  { t:'~7:15–7:45', at:'19:15', d:'The Zócalo after dark, lit up for Día de Muertos, with its free Ofrenda Monumental: a 32-meter catrina honoring José Guadalupe Posada. Tonight is its last night. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
+  { t:'~7:45', at:'19:45', d:'Walk to [Taverna](map:Taverna Prim Mexico City): back along Madero to Bellas Artes (your first time on Madero if you came in from the south), along the Alameda on Avenida Juárez, then down Bucareli; General Prim is just off it. Stay on the busy main streets, keep phones and wallets in front pockets in the crowds, and don’t wander into the side streets north and east of the Zócalo. Tired? Get an Uber at Bellas Artes for the last stretch.', walk:'~40–45 min in all', ride:'From Bellas Artes ~10–20 min' },
   { t:'8:30 PM', at:'20:30', d:'[Taverna](map:Taverna Prim Mexico City), table for two under Jen (OpenTable).', ok:'Confirmed', res:'Taverna', ride:'Return to Andaz ~15–25 min' },
   ],
   note:'Running late from the airport? Backup plans are on the Ideas tab. The Zócalo’s ofrenda comes down after tonight, so Tuesday’s walk won’t catch it. Avenida Amsterdam and Parque México move to Tuesday morning’s breakfast loop.' },
@@ -478,17 +479,10 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
-  { day:2, h:'Centro on foot, and a backup if you’re late',
-    lead:'Tonight is the last night of the Zócalo’s Ofrenda Monumental. One Uber in, then on foot; and if the flight runs late, check the time when you reach the Andaz.',
+  { day:2, h:'Backup if you’re late from the airport',
+    lead:'Check the time when you reach the Andaz. Tonight is the last night of the Zócalo’s Ofrenda Monumental, so the backups still try to catch it.',
     opts:[
-      { day:2, tag:'Suggested', h:'One Uber in, then walk to Taverna', rows:[
-        ['~6:30', 'Uber to the **Palacio de Bellas Artes, Avenida Juárez side**, ~25–40 min. It’s on the edge of Centro, so the car stays out of the jammed streets around the Zócalo. If Juárez is gridlocked, the Torre Latinoamericana corner (Eje Central and Madero) works too'],
-        ['~7:00', 'Walk Madero, the pedestrian street, to the [Zócalo](map:Zocalo Mexico City), ~15 min'],
-        ['~7:15–7:45', 'The Ofrenda Monumental and the catrina'],
-        ['~7:45', 'Walk back along Madero to Bellas Artes, along the Alameda on Avenida Juárez, then down Bucareli to [Taverna](map:Taverna Prim Mexico City); General Prim is just off Bucareli. ~40–45 min in all'],
-        ['8:30', 'Taverna (no change)'],
-      ], p:'Walking is probably as quick as an Uber out of Centro that night, with no waiting for a pickup in the crowds. The route stays on busy, well-lit main streets, and Madero and the Alameda will be full of people for the holiday. Keep phones and wallets in front pockets in the crowds, and don’t wander into the side streets north and east of the Zócalo. If you’re tired, get an Uber at Bellas Artes for the last stretch (10–20 min). **Alternative drop-off, further south:** Izazaga at 20 de Noviembre, then walk straight up 20 de Noviembre to the Zócalo (~10 min) with the Cathedral ahead of you, and walk Madero only once, westward, on the way to Taverna. Stay on 20 de Noviembre rather than heading east.' },
-      { day:2, h:'At the Andaz by about 6:15: the plan as is', p:'Leave for Centro around 6:30, Zócalo ~7:15–8:00, then Taverna at 8:30.' },
+      { day:2, h:'At the Andaz by about 6:15: the plan as is', p:'Leave around 6:30 and follow the plan: the Zócalo ~7:15–7:45, then walk to Taverna for 8:30.' },
       { day:2, tag:'Suggested', h:'Later than about 6:15: dinner first, Zócalo after', rows:[
         ['~8:00', 'Uber straight to [Taverna](map:Taverna Prim Mexico City) (General Prim 34, Colonia Juárez), ~15–20 min'],
         ['8:30', 'Taverna (no change)'],
