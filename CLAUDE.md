@@ -114,6 +114,9 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Latinoamericana corner or the south option (Izazaga at 20 de Noviembre, walk up 20 de Noviembre);
       Madero to the Zócalo 7:15–7:45; walk to Taverna via Madero, the Alameda and Bucareli for 8:30.
       The Monday Ideas card is back to just the late-arrival backup.
+      After Taverna (user, Oct 28): Uber back recommended; walking (~40 min, ~3 km) listed as an option via
+      Bucareli → Av. Chapultepec → Glorieta de Insurgentes → Insurgentes Sur (the Andaz is in the I421 /
+      Conjunto Aristos complex at Insurgentes and Aguascalientes).
       Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
 - [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
