@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-28T16:21:52Z');
+const SITE_UPDATED = Date.parse('2026-10-28T16:31:16Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -393,7 +393,8 @@ const DAYS = [
     todo:'Book the BajíoGo pickup for about 5:00 AM: confirm the shared shuttle runs then, and compare a private transfer.' },
   { t:'~6:30', at:'06:30', d:'Target QRO airport arrival.' },
   { t:'8:00 AM', at:'08:00', d:'Viva Aerobus VB 2061, QRO → CUN.' },
-  { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
+  { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer',
+    todo:'Book the CUN → Secrets transfer ahead (app pickups at Cancún airport are contested). Booking it as a round trip with the Nov 14 return covers both.' },
   { t:'Day', d:'Lunch, beach/pool, nap, easy dinner. Check the weekly activity schedule and choose one activity for the stay.', walk:'On property', ride:'On property' },
   ],
   note:'Cancún is one hour ahead of San Miguel. Times before landing are San Miguel / Querétaro time.' },
@@ -442,6 +443,17 @@ const TRAVEL = [
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM private car (not booked yet), Kimpton → NUMU, ~3.5–4.5 hr.'] },
   { d:10, h:'San Miguel → Cancún', lines:['~5:00 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
+];
+
+/* Ride-hailing tips for Info (Oct 28 2026 research). Facts here go stale; recheck before the trip. */
+const RIDES = [
+  '**Apps:** install **Uber** and **DiDi** and set both up at home (phone verification, card on file). Lyft doesn’t operate in Mexico, and Cabify left in 2024. DiDi is often 10–15% cheaper; Uber usually has more drivers and quicker pickups. Check both when it matters.',
+  '**Which car:** UberX is fine for short hops in the city. For longer rides or rides with bags (Teotihuacan, the hotel move, airports), pick **Uber Comfort**: in Mexico it means a sedan no more than six years old with a bigger trunk and more legroom, and highly rated drivers. Expect roughly 20–40% more than UberX. Uber Black costs a lot more for little extra.',
+  '**Every ride:** match the plate, car and driver name before you get in; sit in the back; share the trip in the app; pay by card in the app rather than cash. Don’t hail taxis on the street; use the apps or a taxi the hotel calls.',
+  '**Mexico City airport (Nov 2):** app pickups there have been on and off. Most recently Uber and DiDi pick up at designated zones, so follow the pickup point the app gives you. The simpler option with bags after a long day is an authorized taxi from the official prepaid booths inside arrivals.',
+  '**San Miguel:** Uber works, and you can schedule rides up to 30 days ahead, but in town most people use the local taxis, which are cheap and plentiful.',
+  '**Cancún:** app pickups at the airport are contested by the local taxi unions, so use pre-arranged transfers for both airport runs.',
+  '**Data:** the apps need mobile data, so make sure both phones have an international plan or eSIM.',
 ];
 
 /* ---------- Shopping list ---------- */
@@ -783,6 +795,9 @@ function renderInfo(){
        + '<ul class="steps">' + T.lines.map(l => '<li>' + md(l) + '</li>').join('') + '</ul></div>';
   });
   h += '</div>';
+
+  h += '<div class="card"><h2>Uber and getting around</h2><ul class="steps">'
+     + RIDES.map(l => '<li>' + md(l) + '</li>').join('') + '</ul></div>';
 
   const res = [];
   DAYS.forEach(D => D.items.forEach(x => { if(x.res) res.push({ D, x }); }));

@@ -34,6 +34,7 @@ Everything shown comes from the data blocks at the top of the script:
 | item fields | `t` time as shown, `at` 24h start `"HH:MM"` (drives Now/Next and the day switch; omit for vague times like "Morning"), `d` details, `walk` / `ride`, `ok` status, `res` name for Reservations, `todo` |
 | `STAYS` | hotels: night ranges, `addr`, `cin` / `cout` times, `perks`, from the user's booking screenshots (Oct 15). Info lists them; Today's hero shows check-in/out times on move days. verify.js checks every night maps to the right hotel |
 | `TRAVEL` | the Info tab's travel-days card, kept by hand |
+| `RIDES` | Info's "Uber and getting around" tips (Oct 28 2026): Uber + DiDi (no Lyft; Cabify left 2024), Uber Comfort for long rides or bags, ride safety, MEX airport pickup zones vs authorized taxis, SMA taxis, Cancún transfers. Facts go stale: recheck before the trip |
 | `SHOP` / `SHOP_NOTE` | the shopping list (`on` = days you're near the shop, as chips) |
 | `IDEAS` | changes being considered, **not in the plan**. A card with `day` renders under **Day by day** (date block, city colour, sorted); cards without go under **Other ideas** (numbered, shaded). Options can carry `rows` (`[time, text]` pairs) for a revised schedule. When one is decided, move it into `DAYS` and delete it from `IDEAS` |
 
@@ -99,6 +100,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 
 - [ ] BajíoGo pickup Nov 10 at ~5:00 AM (decided Oct 15, for the 8:00 VB 2061): book it, shared or private.
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
+- [ ] CUN → Secrets transfer Nov 10 (arrival 11:27 AM): book it too; todo on the day (Oct 28). Round trip with Nov 14.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
