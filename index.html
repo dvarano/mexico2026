@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-28T15:59:14Z');
+const SITE_UPDATED = Date.parse('2026-10-28T16:02:40Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -280,11 +280,11 @@ const DAYS = [
   { t:'3:55 PM', at:'15:55', d:'Land at MEX. Allow about an hour for immigration, bags and customs.' },
   { t:'~5:00', at:'17:00', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa Aguascalientes 158). Check in and drop the bags.', walk:'Not practical', ride:'~30–60 min' },
   { t:'~6:30', at:'18:30', d:'Leave for [Zócalo](map:Zocalo Mexico City) / Centro for Día de Muertos. Nov 2 is the main Day of the Dead, so cars may not get near the Zócalo. If not, get dropped near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk down Madero, a pedestrian street (~15 min).', walk:'~75–90 min', ride:'~25–40 min' },
-  { t:'~7:15–8:00', at:'19:15', d:'Zócalo and Centro after dark, lit up for Día de Muertos. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
+  { t:'~7:15–8:00', at:'19:15', d:'Zócalo and Centro after dark, lit up for Día de Muertos, including the Zócalo’s free Ofrenda Monumental: a 32-meter catrina honoring José Guadalupe Posada. Tonight is its last night. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
   { t:'~8:00', at:'20:00', d:'Leave for [Taverna](map:Taverna Prim Mexico City). Walk back toward Bellas Artes before calling the Uber, rather than trying to get picked up in the crowds at the Zócalo, or walk the whole way.', walk:'Bellas Artes → Taverna ~25–30 min', ride:'~10–20 min' },
   { t:'8:30 PM', at:'20:30', d:'[Taverna](map:Taverna Prim Mexico City), table for two under Jen (OpenTable).', ok:'Confirmed', res:'Taverna', ride:'Return to Andaz ~15–25 min' },
   ],
-  note:'If the airport is slow, skip Centro tonight (Tuesday goes through it) and go straight to Taverna. Avenida Amsterdam and Parque México move to Tuesday morning’s breakfast loop.' },
+  note:'Running late from the airport? Backup plans are on the Ideas tab. The Zócalo’s ofrenda comes down after tonight, so Tuesday’s walk won’t catch it. Avenida Amsterdam and Parque México move to Tuesday morning’s breakfast loop.' },
 
 { d:3, city:'cdmx', stay:'andaz', sub:'Centro audio walk + Botánico + Roma + Lucha Libre',
   items:[
@@ -478,6 +478,18 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
+  { day:2, h:'Backup if you’re late from the airport',
+    lead:'Check the time when you reach the Andaz. Tonight is the last night of the Zócalo’s Ofrenda Monumental, so the backups still try to catch it.',
+    opts:[
+      { day:2, h:'At the Andaz by about 6:15: the plan as is', p:'Leave for Centro around 6:30, Zócalo ~7:15–8:00, then Taverna at 8:30.' },
+      { day:2, tag:'Suggested', h:'Later than about 6:15: dinner first, Zócalo after', rows:[
+        ['~8:00', 'Uber straight to [Taverna](map:Taverna Prim Mexico City) (General Prim 34, Colonia Juárez), ~15–20 min'],
+        ['8:30', 'Taverna (no change)'],
+        ['~10:15', 'Uber ~10–15 min to near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk Madero to the Zócalo for the ofrenda and the catrina'],
+        ['~11:00', 'Uber back to the Andaz from near Bellas Artes, ~25–35 min'],
+      ], p:'Taverna sits between Condesa and Centro, so the Zócalo is close after dinner. In past years the ofrenda had no fixed closing time, but it’s the last night, so check it’s still open before you go. It makes for a very long first day.' },
+      { day:2, h:'Too late or too tired: stay local', p:'Go straight to Taverna and skip Centro. Many restaurants and shops in Condesa, Roma and Juárez put up their own ofrendas for the holiday, so a short walk on Avenida Amsterdam before you leave, or around Taverna after dinner, still gives you a taste. Open House Día de Muertos also sets up designer ofrendas in houses in Condesa, Roma Norte and Juárez around the first weekend of November; dates, hours and venues weren’t published when I checked. And you’ll walk past the giant alebrijes on Reforma on Thursday.' },
+    ]},
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[

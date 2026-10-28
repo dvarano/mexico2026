@@ -106,6 +106,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [x] Nov 2 evening (decided Oct 15, now on Today): land 3:55, Andaz ~5:00, Centro ~6:30 (drop at
       Bellas Artes if needed, walk Madero), Zócalo ~7:15–8:00, leave ~8:00, **Taverna 8:30 PM**: Jen's
       OpenTable confirmation (Oct 28) overrode the "moved to 9:00" the user had passed on earlier.
+      Taverna is at General Prim 34, Colonia Juárez. The Zócalo's Ofrenda Monumental (32 m Posada catrina)
+      runs Oct 29–Nov 2, 2026, so Nov 2 is its last night; Today's note says so. **Monday Ideas card**
+      (Oct 28): backup if late: by ~6:15 plan as is; later, dinner first then the Zócalo ~10:15; too
+      late, stay local (neighbourhood ofrendas, Open House Día de Muertos if its dates fit).
       Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
 - [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
