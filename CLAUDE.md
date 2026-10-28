@@ -110,6 +110,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       runs Oct 29–Nov 2, 2026, so Nov 2 is its last night; Today's note says so. **Monday Ideas card**
       (Oct 28): backup if late: by ~6:15 plan as is; later, dinner first then the Zócalo ~10:15; too
       late, stay local (neighbourhood ofrendas, Open House Día de Muertos if its dates fit).
+      Its first option (Oct 28, suggested, not yet on Today): Uber to Bellas Artes (Av. Juárez side), walk
+      Madero to the Zócalo 7:15–7:45, then walk back via Madero, the Alameda and Bucareli to Taverna for 8:30.
       Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
 - [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
