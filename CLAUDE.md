@@ -106,15 +106,15 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
 - [x] Nov 2 evening (decided Oct 15, now on Today): land 3:55, Andaz ~5:00, Centro ~6:30 (drop at
-      Bellas Artes if needed, walk Madero), Zócalo ~7:15–8:00, leave ~8:00, **Taverna 8:30 PM**: Jen's
-      OpenTable confirmation (Oct 28) overrode the "moved to 9:00" the user had passed on earlier.
+      Bellas Artes if needed, walk Madero), Zócalo ~7:15–8:15, walk ~8:15, **Taverna 9:00 PM** (final, per
+      the user Oct 28: the 8:30 OpenTable email Jen forwarded was outdated). Backup thresholds moved to ~6:45.
       Taverna is at General Prim 34, Colonia Juárez. The Zócalo's Ofrenda Monumental (32 m Posada catrina)
       runs Oct 29–Nov 2, 2026, so Nov 2 is its last night; Today's note says so. **Monday Ideas card**
       (Oct 28): backup if late: by ~6:15 plan as is; later, dinner first then the Zócalo ~10:15; too
       late, stay local (neighbourhood ofrendas, Open House Día de Muertos if its dates fit).
       **Now on Today (Oct 28):** Uber ~6:30 to Bellas Artes (Av. Juárez side); if traffic is bad, the Torre
       Latinoamericana corner or the south option (Izazaga at 20 de Noviembre, walk up 20 de Noviembre);
-      Madero to the Zócalo 7:15–7:45; walk to Taverna via Madero, the Alameda and Bucareli for 8:30.
+      Madero to the Zócalo 7:15–8:15; walk to Taverna via Madero, the Alameda and Bucareli for 9:00.
       The Monday Ideas card is back to just the late-arrival backup.
       After Taverna (user, Oct 28): Uber back recommended; walking (~40 min, ~3 km) listed as an option via
       Bucareli → Av. Chapultepec → Glorieta de Insurgentes → Insurgentes Sur (the Andaz is in the I421 /
