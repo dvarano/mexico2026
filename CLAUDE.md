@@ -120,9 +120,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Bucareli → Av. Chapultepec → Glorieta de Insurgentes → Insurgentes Sur (the Andaz is in the I421 /
       Conjunto Aristos complex at Insurgentes and Aguascalientes).
       Amsterdam / Parque México moved to Tuesday's breakfast loop. Monday's Ideas card is gone.
-- [ ] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
-      with NUMU's 3:00 check-in; slow Kimpton breakfast first): **not booked**. Shown as a todo on the
-      day and in Info. The user also still needs to book the Nov 10 NUMU → QRO transfer (BajíoGo item).
+- [~] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
+      with NUMU's 3:00 check-in; slow Kimpton breakfast first): **booked with BajíoGo Oct 29, not paid**
+      (card by phone or cash to driver). Their confirmation used airport-pickup wording, so the todo asks them to
+      confirm the Kimpton pickup, vehicle and tolls. No reservation number, price or phone on the site. The user also still needs to book the Nov 10 NUMU → QRO transfer (BajíoGo item).
 - [x] Teotihuacan transport Nov 4 (decided Oct 15, on Today): **Uber out at 6:30** (schedule it the night
       before; todo), **back by bus** from the main gate to Terminal Norte then Uber to Condesa, with checking
       Uber at the site first as an option. No private driver. The Ideas transport option is gone; the
