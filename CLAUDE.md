@@ -98,7 +98,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 
 ## Open items (from the PDF)
 
-- [ ] BajíoGo pickup Nov 10 at ~5:00 AM (decided Oct 15, for the 8:00 VB 2061): book it, shared or private.
+- [~] BajíoGo private car Nov 10, 5:00 AM NUMU → QRO for VB 2061: **booked Oct 30, not paid** (card by phone
+      or cash to driver). Chosen over Uber (~$60–70 on demand, but no guaranteed driver at 5 AM) and NUMU's car.
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
 - [ ] CUN → Secrets transfer Nov 10 (arrival 11:27 AM): book it too; todo on the day (Oct 28). Round trip with Nov 14.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
@@ -123,7 +124,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [~] Private car Kimpton → NUMU Nov 6, **10:30 AM** (moved from 8:30 by the user, Oct 15, to line up
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **booked with BajíoGo Oct 29, not paid**
       (card by phone or cash to driver). Their confirmation used airport-pickup wording, so the todo asks them to
-      confirm the Kimpton pickup, vehicle and tolls. No reservation number, price or phone on the site. The user also still needs to book the Nov 10 NUMU → QRO transfer (BajíoGo item).
+      confirm the Kimpton pickup, vehicle and tolls. No reservation number, price or phone on the site.
 - [x] Teotihuacan transport Nov 4 (decided Oct 15, on Today): **Uber out at 6:30** (schedule it the night
       before; todo), **back by bus** from the main gate to Terminal Norte then Uber to Condesa, with checking
       Uber at the site first as an option. No private driver. The Ideas transport option is gone; the

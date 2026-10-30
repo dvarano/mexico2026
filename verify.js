@@ -111,7 +111,7 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
   }
   {
     const { ctx, page } = await open(browser, '2026-11-10T03:00:00Z');   // Nov 9 21:00 SMA
-    ok(/~5:00 AM/.test(await page.textContent('#tab-today .tmrw')), 'the evening of the 9th previews the 5:00 AM pickup');
+    ok(/5:00 AM/.test(await page.textContent('#tab-today .tmrw')), 'the evening of the 9th previews the 5:00 AM pickup');
     await ctx.close();
   }
   {

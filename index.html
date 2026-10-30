@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-29T19:35:02Z');
+const SITE_UPDATED = Date.parse('2026-10-30T15:59:02Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -389,8 +389,8 @@ const DAYS = [
    day keeps that zone; the clocks go forward an hour on landing in Cancún. */
 { d:10, city:'cun', tz:-6, stay:'secrets', sub:'QRO → Cancún → Secrets Playa Blanca',
   items:[
-  { t:'~5:00 AM', at:'05:00', d:'**Pre-book** [BajíoGo](https://www.bajiogo.com/en) **pickup** at NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO). Shared shuttle is currently listed at US$34/person one way and about 1.5 hr. **Confirm that shared service operates this early; compare private-transfer pricing for the 8:00 AM flight.**', walk:'Not practical', ride:'BajíoGo shared/private transfer',
-    todo:'Book the BajíoGo pickup for about 5:00 AM: confirm the shared shuttle runs then, and compare a private transfer.' },
+  { t:'5:00 AM', at:'05:00', d:'[BajíoGo](https://www.bajiogo.com/en) private car, non-stop from NUMU → [QRO Airport](map:Queretaro Intercontinental Airport QRO).', ok:'Booked', res:'BajíoGo to Querétaro airport', walk:'Not practical', ride:'~1 hr 30 min',
+    todo:'Not paid yet: pay by card over the phone, or cash to the driver (USD or pesos; the driver can’t take cards).' },
   { t:'~6:30', at:'06:30', d:'Target QRO airport arrival.' },
   { t:'8:00 AM', at:'08:00', d:'Viva Aerobus VB 2061, QRO → CUN.' },
   { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer',
@@ -441,7 +441,7 @@ const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM Uber from the Andaz to Teotihuacan, ~1 hr.', '~10:45 back: Uber if one turns up, otherwise the bus to Terminal Norte (~1 hr), then Uber to Condesa.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM BajíoGo private car, Kimpton → NUMU, ~4 hr (booked, not yet paid).'] },
-  { d:10, h:'San Miguel → Cancún', lines:['~5:00 AM BajíoGo pickup at NUMU → QRO airport, ~1.5 hr.', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
+  { d:10, h:'San Miguel → Cancún', lines:['5:00 AM BajíoGo private car, NUMU → QRO airport, ~1.5 hr (booked, not yet paid).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
 
