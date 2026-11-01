@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-01T15:25:20Z');
+const SITE_UPDATED = Date.parse('2026-11-01T15:47:15Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -547,6 +547,28 @@ const IDEAS = [
     opts:[
       { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout (the friend asked for 12:00 or 1:00), or check out at 11 and leave your bags with the bell desk.' },
     ]},
+  { day:6, h:'Friday in San Miguel',
+    lead:'Arrival day; keep it light.',
+    opts:[
+      { day:6, h:'Jazz: Raindog Lounge tonight', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
+    ]},
+  { day:7, h:'Streetiversary in San Miguel',
+    lead:'Saturday has two shopping stretches (the markets late morning, then Dôce 18, Mixta and Recreo at midday). Options for Drew while Jen shops:',
+    opts:[
+      { day:7, h:'Split at the markets, late morning', p:'**Jen:** Mercado de Artesanías. **Drew:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
+      { day:7, h:'Lunch: fish tacos', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open. Drew can head there while Jen finishes at Mixta and Recreo.' },
+    ]},
+  { day:8, h:'Sunday in San Miguel',
+    lead:'The most shopping-heavy day: Fábrica La Aurora all morning, then “missed Centro shops” in the afternoon. Two swaps that suit Drew better:',
+    opts:[
+      { day:8, tag:'Suggested', h:'Morning: a round of golf while Jen does Fábrica La Aurora', p:'Two courses near town. **Ventanas de San Miguel** is a Nick Faldo design. **Club de Golf Malanquín** is the older club close to town and cheaper (one listing showed weekend green fees around MXN 680, but it may be 9 holes and the figure may be dated). An 8:00 tee time gets Drew to Café de la Aurora for lunch together around 1:00. NUMU’s concierge can confirm rates and book.' },
+      { day:8, tag:'Suggested', h:'Afternoon: hot springs and Atotonilco together', p:'Instead of more shops: a taxi ~11 km north (about MXN 250 each way) to the **Sanctuary of Atotonilco**, a UNESCO site called the “Sistine Chapel of Mexico” for its painted ceilings, then a soak at **La Gruta**, a hot-springs spa with a candlelit tunnel into a warm grotto, a short walk from the sanctuary. La Gruta was listed as open Wednesday to Sunday, 7:00 to 5:00, so Sunday works and Monday doesn’t. Leave around 1:30, back by about 5:30 for Bocaciega at 7:30.' },
+    ]},
+  { day:9, h:'Monday in San Miguel',
+    lead:'The 2:00–4:00 block is final shopping.',
+    opts:[
+      { day:9, h:'Split for the final shopping, 2:00–4:00', p:'**Jen:** revisit favorites. **Drew:** a last walk through Centro, or El Mirador if Sunday morning skipped it, or a mezcal tasting at a mezcalería or a craft-beer taproom in Centro (NUMU can point to a current favorite). Keep it short: the pickup is at 5:00 AM.' },
+    ]},
   { day:10, h:'Travel day to Cancún',
     lead:'The 5:00 AM pickup is booked. For the Cancún end, from a friend’s February 2026 stay:',
     opts:[
@@ -562,22 +584,6 @@ const IDEAS = [
       { day:11, h:'Dress code for the dinner restaurants', p:'Portofino, El Patio, Himitsu and Bordeaux are smart casual: **men need long trousers** and a collared or short-sleeved dress shirt; no sleeveless shirts or flip-flops (dress sandals or sneakers are fine). The Seaside Grill, Oceana and Market Café are casual, though still no sleeveless shirts for men.' },
       { day:11, h:'Closed days', p:'Himitsu and Bordeaux: Wednesdays. Portofino: Thursdays. El Patio: Sundays. Coco Café is open 24 hours.' },
       { day:11, h:'Food notes', p:'Best rated: the Market Café breakfast buffet and the Seaside Grill (5/5), Himitsu à la carte (5/5), Oceana (4.5/5; filet or catch of the day at lunch). Room service was only middling (3/5).' },
-    ]},
-  { h:'Specialty taco or seafood lunches',
-    lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',
-    opts:[
-      { day:7, h:'San Miguel, midday', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open.' },
-    ]},
-  { h:'Split up for some shopping',
-    lead:'Agree on a meet-up spot and time before splitting. These are the windows that already have shopping in them.',
-    opts:[
-      { day:7, h:'San Miguel markets, late morning', p:'**Shop:** Mercado de Artesanías. **Wander:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
-      { day:9, h:'Final shopping, 2:00–4:00', p:'**Shop:** revisit favorites. **Wander:** a last walk through Centro, or El Mirador if Sunday morning skipped it.' },
-    ]},
-  { h:'Live jazz, and fewer clock-watching connections',
-    lead:'Jazz is optional; the connection fixes take pressure off the busiest days.',
-    opts:[
-      { day:6, h:'Jazz: Raindog Lounge', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
     ]},
 ];
 

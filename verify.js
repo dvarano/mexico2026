@@ -155,8 +155,8 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     await page.click('#tab-ideas .dayidea .db[data-day="4"]');
     ok((await state(page)).day === 4, 'day card date opens that day');
     await page.click('nav button[data-tab="ideas"]');
-    await page.click('#tab-ideas .chip[data-day="7"]');
-    ok((await state(page)).day === 7, 'Other ideas chip opens that day');
+    await page.click('#tab-ideas .idea.other .chip[data-day="11"]');
+    ok((await state(page)).day === 11, 'Other ideas chip opens that day');
     await page.click('nav button[data-tab="ideas"]');
     await page.click('#tab-ideas .dayidea .db[data-day="4"]');
     s = await state(page);

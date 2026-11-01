@@ -108,6 +108,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Grill; hydrotherapy question; men need long trousers at the smart-casual restaurants. Ideas cards Nov 10–14 + an
       Other ideas tips card. None of the friend's personal details or booking codes go on the site.
       Thursday card also has a morning round at Playa Mujeres Golf Club (Greg Norman; ~US$200–300; ask about a guest rate).
+- [ ] **San Miguel ideas (Nov 1)**, to balance Jen's shopping/design stops: Fri Raindog; Sat market split + Baja Fish
+      Taquito lunch; **Sun golf (Ventanas de San Miguel, Faldo; or Malanquín) while Jen does Fábrica La Aurora, and La Gruta
+      hot springs + Atotonilco sanctuary in the afternoon** (La Gruta listed Wed–Sun 7–5); Mon split with a mezcal tasting
+      or taproom. The old topic cards (lunches, shopping splits, jazz) were folded into these day cards.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
