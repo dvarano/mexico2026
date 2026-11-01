@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-10-30T15:59:02Z');
+const SITE_UPDATED = Date.parse('2026-11-01T15:12:16Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -405,7 +405,8 @@ const DAYS = [
   { t:'Daytime', d:'Beach/pool; optional kayak.', walk:'On property', ride:'On property' },
   { t:'Activity', d:'Choose one resort activity during the stay based on the current weekly schedule: cocktail, cooking, tequila, art/alebrije, etc.', walk:'On property', ride:'Not needed' },
   { t:'Pre-dinner', d:'Rendezvous cocktail.', walk:'~2–10 min', ride:'Not needed' },
-  { t:'Dinner', d:'Himitsu.', walk:'On property', ride:'Not needed' },
+  { t:'Dinner', d:'Himitsu.', walk:'On property', ride:'Not needed',
+    todo:'Himitsu (and Bordeaux) were closed on Wednesdays as of February 2026, and Nov 11 is a Wednesday. A swap is suggested on the Ideas tab; confirm with the concierge.' },
   ] },
 
 { d:12, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Spa Day + Beach/Pool + Bordeaux',
@@ -522,17 +523,45 @@ const IDEAS = [
     opts:[
       { day:5, h:'Nightcap at Limantour Polanco', p:'[Licorería Limantour’s Polanco bar](map:Licoreria Limantour Polanco Oscar Wilde) is on Oscar Wilde, between Masaryk and Parque Lincoln, a short walk from Jacinta and the Kimpton. Quieter and more upscale than the Roma original; reservations recommended. It does repeat Wednesday’s Limantour stop in Roma, so it’s only worth it if you loved that one.' },
     ]},
+  { day:11, h:'Wednesday at Secrets',
+    lead:'From a friend’s February 2026 notes. Confirm the current weekly schedule when you arrive.',
+    opts:[
+      { day:11, tag:'Suggested', h:'Dinner: El Patio instead of Himitsu', p:'Himitsu and Bordeaux were both closed on Wednesdays. **El Patio** (Mexican; closed Sundays) was open, and the friend’s advice was to eat as much Mexican food as you can: try the corn cake and the tableside guacamole. The **Seaside Grill** (rated 5/5) and **Oceana** (seafood, 4.5/5) are the casual alternatives. Move Himitsu to Thursday.' },
+      { day:11, h:'Morning options', p:'Yoga at 8:00 at the Palapa on the beach most days, stretching at 9:00, and a **driving range at 9:00 by the pickleball courts**. Hobie sailboats, paddleboards and kayaks are free, but reserve early in the day. For a quiet pool, get to the **Jungle Pool** early; it has few loungers.' },
+    ]},
+  { day:12, h:'Thursday at Secrets',
+    lead:'From a friend’s February 2026 notes.',
+    opts:[
+      { day:12, tag:'Suggested', h:'Dinner: Himitsu, moved from Wednesday', p:'The friend rated **Himitsu** 5/5: order à la carte (the short rib gyozas), since the teppanyaki table was fun but the food only OK. Bordeaux moves to Friday as the anniversary backup.' },
+      { day:12, h:'Spa day: ask about hydrotherapy', p:'Before booking, ask whether hydrotherapy is complimentary for Preferred Club or World of Hyatt guests.' },
+      { day:12, h:'Late-afternoon activity', p:'The 4:00 slot had a **mixology class** (“Sharing Secrets”) and a **tequila tasting** on some days, a good pick for the one-activity idea.' },
+    ]},
+  { day:13, h:'Anniversary at Secrets',
+    lead:'From a friend’s February 2026 notes.',
+    opts:[
+      { day:13, tag:'Suggested', h:'Backup dinner: Bordeaux, not Portofino', p:'If you skip the private dinner, the friend rated Portofino only 3/5. **Bordeaux** (French: beef filet, French onion soup, catch of the day, pork belly) is the better anniversary backup, with the Seaside Grill (5/5) as the casual one. Peak dinner hours can mean a 20–30 minute wait, with a buzzer so you can get a drink meanwhile.' },
+      { day:13, h:'Ask about special dinners', p:'The friend’s favorite meals were the beachside special-event dinners (a Mexican feast, an asado night). Ask the concierge which nights they fall on that week.' },
+    ]},
   { day:14, h:'Travel home',
     lead:'Your flight leaves at 3:07 PM, so the morning is free.',
     opts:[
-      { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout, or check out at 11 and leave your bags with the bell desk.' },
+      { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout (the friend asked for 12:00 or 1:00), or check out at 11 and leave your bags with the bell desk.' },
     ]},
   { day:10, h:'Travel day to Cancún',
-    lead:'The 5:00 AM pickup is now in the plan. Still to decide:',
+    lead:'The 5:00 AM pickup is booked. For the Cancún end, from a friend’s February 2026 stay:',
     opts:[
-      { day:10, h:'Private transfer or shared shuttle', p:'A private transfer leaves when you do, with no other pickups. Check that the shared shuttle runs at 5:00 if you’d rather take it.' },
+      { day:10, tag:'Suggested', h:'Airport ↔ Secrets transfers: Kalido Travel', p:'The friend who stayed in February booked [Kalido Travel](https://kalidotravel.com) for the Cancún airport runs and had used them before (about US$130 including taxes for their trip). Ask them for a round trip: Nov 10 from CUN Terminal 2 (land 11:27 AM, Viva VB 2061) and Nov 14 from Secrets at 11:45 AM.' },
+      { day:10, tag:'Suggested', h:'Room request before you arrive', p:'Email Secrets or ask at check-in for a room on the **even-numbered building side (2, 4, 6, 8)**: in February there was construction next to buildings 1, 3, 5 and 7. Also ask for an **end or corner suite**: they’re a little bigger, with a larger bathroom and an extra window. The construction may be finished by November, but it costs nothing to ask.' },
+      { day:10, h:'Your Preferred Club perks', p:'Preferred Club guests get breakfast at the Seaside Grill, a quieter Preferred pool a few minutes from the beach, and the Preferred Club lounge with live music in the evenings. Make friends with the concierge early; the friend says they help a lot.' },
       { day:10, h:'Arriving before check-in', p:'Secrets check-in is 3:00 and you’ll arrive around 12:30–1:00. Pack swimsuits and sunscreen in the carry-on: at an all-inclusive you can usually have lunch and use the pools while the room is readied.' },
       { day:10, h:'Check in online', p:'Viva opens online check-in 72 hours before. If you’re travelling with just the carry-on and personal item, you may be able to go straight to security.' },
+    ]},
+  { h:'Secrets Playa Blanca: tips from a friend',
+    lead:'From a February 2026 stay. Hours and closed days can change.',
+    opts:[
+      { day:11, h:'Dress code for the dinner restaurants', p:'Portofino, El Patio, Himitsu and Bordeaux are smart casual: **men need long trousers** and a collared or short-sleeved dress shirt; no sleeveless shirts or flip-flops (dress sandals or sneakers are fine). The Seaside Grill, Oceana and Market Café are casual, though still no sleeveless shirts for men.' },
+      { day:11, h:'Closed days', p:'Himitsu and Bordeaux: Wednesdays. Portofino: Thursdays. El Patio: Sundays. Coco Café is open 24 hours.' },
+      { day:11, h:'Food notes', p:'Best rated: the Market Café breakfast buffet and the Seaside Grill (5/5), Himitsu à la carte (5/5), Oceana (4.5/5; filet or catch of the day at lunch). Room service was only middling (3/5).' },
     ]},
   { h:'Specialty taco or seafood lunches',
     lead:'El Turix is on the Thursday card. One more slot fits without moving anything confirmed.',

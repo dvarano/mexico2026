@@ -102,6 +102,11 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       or cash to driver). Chosen over Uber (~$60–70 on demand, but no guaranteed driver at 5 AM) and NUMU's car.
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
 - [ ] CUN → Secrets transfer Nov 10 (arrival 11:27 AM): book it too; todo on the day (Oct 28). Round trip with Nov 14.
+- [ ] **Secrets ideas (Nov 1)** from a friend's Feb 2026 spreadsheet: Himitsu and Bordeaux closed Wednesdays (Nov 11 is a
+      Wednesday, so Today's Himitsu has a todo); suggested Wed El Patio, Thu Himitsu, Fri backup Bordeaux (Portofino 3/5);
+      Kalido Travel for the CUN round trip; even-numbered buildings + end suites; Preferred Club breakfast at Seaside
+      Grill; hydrotherapy question; men need long trousers at the smart-casual restaurants. Ideas cards Nov 10–14 + an
+      Other ideas tips card. None of the friend's personal details or booking codes go on the site.
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
