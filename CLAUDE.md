@@ -107,6 +107,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Kalido Travel for the CUN round trip; even-numbered buildings + end suites; Preferred Club breakfast at Seaside
       Grill; hydrotherapy question; men need long trousers at the smart-casual restaurants. Ideas cards Nov 10–14 + an
       Other ideas tips card. None of the friend's personal details or booking codes go on the site.
+      Thursday card also has a morning round at Playa Mujeres Golf Club (Greg Norman; ~US$200–300; ask about a guest rate).
 - [ ] Lucha Libre tickets Nov 3: not marked as bought.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
