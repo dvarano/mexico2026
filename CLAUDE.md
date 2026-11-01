@@ -103,7 +103,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 - [ ] Resort → CUN transfer Nov 14: book it and set the time.
 - [ ] CUN → Secrets transfer Nov 10 (arrival 11:27 AM): book it too; todo on the day (Oct 28). Round trip with Nov 14.
 - [ ] **Secrets ideas (Nov 1)** from a friend's Feb 2026 spreadsheet: Himitsu and Bordeaux closed Wednesdays (Nov 11 is a
-      Wednesday, so Today's Himitsu has a todo); suggested Wed El Patio, Thu Himitsu, Fri backup Bordeaux (Portofino 3/5);
+      Wednesday; the user wants this on Ideas only, so Today has no flag for it); suggested Wed El Patio, Thu Himitsu, Fri backup Bordeaux (Portofino 3/5);
       Kalido Travel for the CUN round trip; even-numbered buildings + end suites; Preferred Club breakfast at Seaside
       Grill; hydrotherapy question; men need long trousers at the smart-casual restaurants. Ideas cards Nov 10–14 + an
       Other ideas tips card. None of the friend's personal details or booking codes go on the site.
