@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-01T15:58:48Z');
+const SITE_UPDATED = Date.parse('2026-11-02T01:49:04Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -275,10 +275,9 @@ const STAYS = {
 const DAYS = [
 { d:2, city:'cdmx', stay:'andaz', sub:'Arrival + Día de Muertos + Taverna',
   items:[
-  { t:'6:00 AM', d:'American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM (local times).' },
-  { t:'11:42 AM', d:'American AA501, Phoenix → Mexico City (Phoenix time).' },
-  { t:'3:55 PM', at:'15:55', d:'Land at MEX. Allow about an hour for immigration, bags and customs.' },
-  { t:'~5:00', at:'17:00', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa Aguascalientes 158). Check in and drop the bags.', walk:'Not practical', ride:'~30–60 min' },
+  { t:'8:13 AM', d:'American AA2546, Los Angeles (LAX, Terminal 4) → Mexico City, nonstop (Pacific time; boards 7:28). Rebooked after the San Luis Obispo flight was cancelled.' },
+  { t:'~2:00 PM', at:'14:00', d:'Land at MEX (check the American app for the exact time). Allow about an hour for immigration and customs.' },
+  { t:'~3:00', at:'15:00', d:'Airport → [Andaz Mexico City Condesa](map:Andaz Mexico City Condesa Aguascalientes 158). Check in (rooms from 3:00), drop the bags and rest before the evening.', walk:'Not practical', ride:'~30–60 min' },
   { t:'~6:30', at:'18:30', d:'Uber to the [Palacio de Bellas Artes](map:Palacio de Bellas Artes Mexico City), **Avenida Juárez side**. It’s on the edge of Centro, so the car stays out of the jammed streets around the Zócalo. **If traffic is too heavy:** the Torre Latinoamericana corner (Eje Central and Madero), or the south option: [Izazaga at 20 de Noviembre](map:Jose Maria Izazaga y 20 de Noviembre Centro CDMX), then walk straight up 20 de Noviembre to the Zócalo (~10 min), staying on 20 de Noviembre rather than heading east.', walk:'~75–90 min', ride:'~25–40 min' },
   { t:'~7:00', at:'19:00', d:'Walk Madero, the pedestrian street, to the [Zócalo](map:Zocalo Mexico City).', walk:'~15 min' },
   { t:'~7:15–8:15', at:'19:15', d:'The Zócalo after dark, lit up for Día de Muertos, with its free Ofrenda Monumental: a 32-meter catrina honoring José Guadalupe Posada. Tonight is its last night. **Optional 5–10 min:** peek into the [Gran Hotel Ciudad de México](map:Gran Hotel Ciudad de Mexico) lobby for its stained-glass ceiling if access is open to non-guests.', walk:'Explore on foot' },
@@ -438,7 +437,7 @@ const DAYS = [
 
 /* Travel days for Info. Kept by hand: these are the moves, not every ride. */
 const TRAVEL = [
-  { d:2,  h:'Fly in to Mexico City', lines:['6:00 AM American AA1524, San Luis Obispo → Phoenix, lands 8:55 AM.', '11:42 AM American AA501, Phoenix → Mexico City, lands 3:55 PM.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
+  { d:2,  h:'Fly in to Mexico City', lines:['8:13 AM American AA2546, LAX Terminal 4 → Mexico City nonstop, landing around 2:00 PM local.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM Uber from the Andaz to Teotihuacan, ~1 hr.', '~10:45 back: Uber if one turns up, otherwise the bus to Terminal Norte (~1 hr), then Uber to Condesa.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM BajíoGo private car, Kimpton → NUMU, ~4 hr (booked, not yet paid).'] },
   { d:10, h:'San Miguel → Cancún', lines:['5:00 AM BajíoGo private car, NUMU → QRO airport, ~1.5 hr (booked, not yet paid).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },

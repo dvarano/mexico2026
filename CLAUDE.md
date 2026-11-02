@@ -6,7 +6,8 @@ Handoff notes so a future session can pick this up cold.
 - **The app:** `index.html`, one self-contained file. No build step, no dependencies, no network
   calls except the self-update check (below).
 - **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Flying in Mon Nov 2 on **American
-  AA1524 SBP 6:00 AM → PHX 8:55, AA501 PHX 11:42 AM → MEX 3:55 PM**. Mexico City (Andaz Condesa
+  AA2546 LAX 8:13 AM → MEX nonstop, landing ~2:00 PM** (rebooked Nov 2 after the SBP–PHX–MEX AA1524/AA501
+  itinerary was cancelled; they drove to LAX in a one-way Avis rental). Mexico City (Andaz Condesa
   Nov 2–4, Kimpton Virgilio Polanco Nov 4–6) → San Miguel de Allende (NUMU Nov 6–10) → Cancún
   (Secrets Playa Blanca, Costa Mujeres, Nov 10–14; **Viva Aerobus VB 2061 QRO 8:00 AM → CUN 11:27 AM T2** on
   Nov 10, not the PDF's 6:00) → home Sat Nov 14 on **United UA1275, CUN 3:07 PM →
