@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-03T00:25:44Z');
+const SITE_UPDATED = Date.parse('2026-11-03T15:57:15Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -505,6 +505,13 @@ const IDEAS = [
   { day:4, h:'The long day',
     lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
     opts:[
+      { day:4, tag:'Suggested', h:'Leave at 7:30 with friends', rows:[
+        ['6:30–7:15', 'Breakfast at the Andaz (included). Check out and leave the bags at the bell desk'],
+        ['7:30', 'Shared ride to Teotihuacan (UberXL if you’re more than four), ~1–1.5 hr in rush-hour traffic'],
+        ['~9:00–11:15', 'The focused route: Sun → Avenue of the Dead → Puma Mural → Moon → Quetzalpapalotl'],
+        ['~11:15', 'Head back (check Uber, otherwise the bus to Terminal Norte), then Uber straight to Maizajo'],
+        ['1:30', 'Maizajo (no change); skip the shower-at-the-Andaz stop'],
+      ], p:'Fine, with trade-offs: you lose an hour of cool, quiet morning before the tour groups and midday sun, and the return is tight for the 1:30 lunch, so keep the visit to about 2–2¼ hours. The upside is breakfast and company.' },
       { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. Your booking includes breakfast for two, so ask the night before whether they can pack it for the car.' },
       { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
         ['10:45', 'Leave Teotihuacan (no change)'],
