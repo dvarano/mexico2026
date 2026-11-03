@@ -113,7 +113,7 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Taquito lunch; **Sun golf (Ventanas de San Miguel, Faldo; or Malanquín) while Jen does Fábrica La Aurora, and La Gruta
       hot springs + Atotonilco sanctuary in the afternoon** (La Gruta listed Wed–Sun 7–5); Mon split with a mezcal tasting
       or taproom. The old topic cards (lunches, shopping splits, jazz) were folded into these day cards.
-- [ ] Lucha Libre tickets Nov 3: not marked as bought.
+- [x] Lucha Libre Nov 3: **2 Balcón tickets bought** (Ticketmaster MX, Martes Populares; unreserved seated GA). Booked on Today.
 - [ ] Bekeb cocktail class Nov 7: decide / book.
 - [ ] Kan Bei Nov 7: waiting; The Restaurant stays unless they switch.
 - [ ] Private anniversary dinner at Secrets Nov 13: ask the concierge.
