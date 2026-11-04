@@ -136,7 +136,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       with NUMU's 3:00 check-in; slow Kimpton breakfast first): **booked with BajíoGo Oct 29, not paid**
       (card by phone or cash to driver). Their confirmation used airport-pickup wording, so the todo asks them to
       confirm the Kimpton pickup, vehicle and tolls. No reservation number, price or phone on the site.
-- [x] Teotihuacan transport Nov 4 (decided Oct 15, on Today): **Uber out at 6:30** (schedule it the night
+- [x] Teotihuacan transport Nov 4: **changed on the day** to a round trip with their Uber driver (agreed directly,
+      waits at the site; no price on the site), staying until ~11. Earlier plan: **Uber out at 6:30** (schedule it the night
       before; todo), **back by bus** from the main gate to Terminal Norte then Uber to Condesa, with checking
       Uber at the site first as an option. No private driver. The Ideas transport option is gone; the
       midday shower idea now assumes the bus (back ~12:30).

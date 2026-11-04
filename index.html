@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-03T15:57:15Z');
+const SITE_UPDATED = Date.parse('2026-11-04T12:55:33Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -308,10 +308,9 @@ const DAYS = [
 
 { d:4, city:'cdmx', stay:'kimpton', sub:'Teotihuacan + Maizajo + Kimpton + Polanco + Rosetta',
   items:[
-  { t:'6:30 AM', at:'06:30', d:'Uber from the Andaz to [Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), about MX$350–500 for the car.', walk:'Not practical', ride:'~1 hr',
-    todo:'Schedule the Uber in the app the night before.' },
+  { t:'6:30 AM', at:'06:30', d:'Your Uber driver, now booked directly for the round trip, from the Andaz to [Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), dropping at Puerta 2 by the Pyramid of the Sun. The driver waits and brings you back.', walk:'Not practical', ride:'~1 hr' },
   { t:'8:00–10:45', at:'08:00', d:'[Teotihuacan](https://visitateotihuacan.inah.gob.mx/visita/), focused route: **Pyramid of the Sun → Avenue of the Dead → Puma Mural → Plaza/Pyramid of the Moon → Quetzalpapalotl complex**. Skip the museums; depart about 10:45 AM.', walk:'Site walking' },
-  { t:'~10:45', at:'10:45', d:'Head back. First check Uber for a car nearby; if there isn’t one (likely, since few drivers are out there), take the bus from the main gate to Terminal Norte (every 15–20 min, about MX$70 each; bring pesos). Then Uber to Condesa: the Andaz, or straight to Maizajo.', walk:'Bus ~1 hr', ride:'Terminal Norte → Condesa ~25–35 min' },
+  { t:'~11:00', at:'11:00', d:'Head back with the driver to Condesa (the Andaz or straight to Maizajo). Pay at the end, not up front.', walk:'Not practical', ride:'~1–1.5 hr' },
   { t:'1:30 PM', at:'13:30', d:'[Maizajo upstairs](https://www.maizajo.com/pages/restaurante)', ok:'Confirmed', res:'Maizajo (lunch)', ride:'Short ride' },
   { t:'~3:00', at:'15:00', d:'Collect bags at Andaz → [Kimpton Virgilio](map:Kimpton Virgilio Polanco Mexico City).', walk:'Not practical with bags', ride:'~25–40 min' },
   { t:'4:20–5:10', at:'16:20', d:'[Ensamble Artesano](https://ensambleartesano.org/pages/tiendas), [IKAL](https://ikalstore.com/), [LAGO](https://lagolatam.com/pages/stores-2), [Uriarte](https://www.uriartetalavera.com.mx/contcto-y-ubicaciones).', walk:'~1–7 min', ride:'Unneeded' },
@@ -438,7 +437,7 @@ const DAYS = [
 /* Travel days for Info. Kept by hand: these are the moves, not every ride. */
 const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['8:13 AM American AA2546, LAX Terminal 4 → Mexico City nonstop, landing around 2:00 PM local.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
-  { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM Uber from the Andaz to Teotihuacan, ~1 hr.', '~10:45 back: Uber if one turns up, otherwise the bus to Terminal Norte (~1 hr), then Uber to Condesa.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
+  { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM round trip to Teotihuacan with the driver, back around 12:00–12:30.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM BajíoGo private car, Kimpton → NUMU, ~4 hr (booked, not yet paid).'] },
   { d:10, h:'San Miguel → Cancún', lines:['5:00 AM BajíoGo private car, NUMU → QRO airport, ~1.5 hr (booked, not yet paid).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
   { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
