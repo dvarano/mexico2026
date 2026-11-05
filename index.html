@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-04T12:55:33Z');
+const SITE_UPDATED = Date.parse('2026-11-05T19:04:53Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -560,7 +560,13 @@ const IDEAS = [
   { day:7, h:'Streetiversary in San Miguel',
     lead:'Saturday has two shopping stretches (the markets late morning, then Dôce 18, Mixta and Recreo at midday). Options for Drew while Jen shops:',
     opts:[
-      { day:7, h:'Split at the markets, late morning', p:'**Jen:** Mercado de Artesanías. **Drew:** Mercado Ignacio Ramírez next door for food stalls and fruit.' },
+      { day:7, tag:'Suggested', h:'Breakfast: lamb barbacoa at El Pato', rows:[
+        ['8:15', 'Taxi to [El Pato Barbacoa y Mixiotes](map:El Pato Barbacoa y Mixiotes Calzada de la Estacion 121 San Miguel de Allende) (Calzada de la Estación 121, by the bus station), ~10 min'],
+        ['8:30–9:15', 'Lamb barbacoa tacos, a mixiote (lamb steamed in a parcel with chiles) and a cup of consomé'],
+        ['9:30', 'Taxi to Parque Juárez and start the scenic walk there (no change after that)'],
+      ], p:'Instead of Lavanda or Panio. Tyler Cowen’s rule for eating in San Miguel (2011) is barbacoa in the morning, carnitas at midday and chorizo after 8 PM, from cooks who make one thing for a few hours a day. El Pato is a family place in exactly that mold. It’s listed as open Wednesday to Sunday, 8:00 to 2:00 (closed Monday and Tuesday), so Saturday or Sunday are the only chances; Sunday works too if you skip golf. Order small: The Restaurant is tonight. Cash is safest.' },
+      { day:7, h:'Split at the markets, late morning', p:'**Jen:** Mercado de Artesanías. **Drew:** Mercado Ignacio Ramírez next door for the prepared-food counters: look for **enchiladas mineras** (the Guanajuato dish: guajillo-red tortillas with cheese, potatoes and carrots), gorditas, or tamales and atole. Keep it to a snack if lunch is carnitas.' },
+      { day:7, tag:'Suggested', h:'Lunch: carnitas at Carnitas Bautista', p:'Cowen singled out the Bautista family’s carnitas stands in San Miguel. The best-documented one today is [Carnitas Bautista](map:Carnitas Bautista Guadiana 2 Colonia Allende San Miguel de Allende) at Guadiana 2, Colonia Allende, a short taxi from Centro and always busy. Listings say daily 8:00 to 6:00 but often sold out by about 3:00 on weekends, so go around 12:30 and you’re back for the 2:30 pool time. Order carnitas tacos (maciza is lean, surtida mixed) and a gordita de migajas if they have them; bring pesos. Several other stands use the Bautista name (El Güero Bautista on Canal in Centro is the walkable one); I couldn’t confirm which is Cowen’s. An alternative to the fish tacos below.' },
       { day:7, h:'Lunch: fish tacos', p:'The “casual lunch” slot could be fish and shrimp tacos at Baja Fish Taquito (Mesones 11-B, near Plaza Cívica). The reviews I found are older, so confirm it’s still open. Drew can head there while Jen finishes at Mixta and Recreo.' },
     ]},
   { day:8, h:'Sunday in San Miguel',
@@ -572,6 +578,7 @@ const IDEAS = [
   { day:9, h:'Monday in San Miguel',
     lead:'The 2:00–4:00 block is final shopping.',
     opts:[
+      { day:9, h:'Light dinner: ask a local for their taco stand', p:'For the early dinner near NUMU, ask the staff or a taxi driver: “¿Dónde come usted los mejores tacos por la noche, fuera del centro turístico?” (Where do you eat the best tacos at night, away from the tourist center?). Cowen’s pick for the evening is chorizo tacos, but stands usually get going after dark, so go as early as they open and keep it short for the 5:00 AM pickup.' },
       { day:9, h:'Split for the final shopping, 2:00–4:00', p:'**Jen:** revisit favorites. **Drew:** a last walk through Centro, or El Mirador if Sunday morning skipped it, or a mezcal tasting at a mezcalería or a craft-beer taproom in Centro (NUMU can point to a current favorite). Keep it short: the pickup is at 5:00 AM.' },
     ]},
   { day:10, h:'Travel day to Cancún',

@@ -109,6 +109,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       Grill; hydrotherapy question; men need long trousers at the smart-casual restaurants. Ideas cards Nov 10–14 + an
       Other ideas tips card. None of the friend's personal details or booking codes go on the site.
       Thursday card also has a morning round at Playa Mujeres Golf Club (Greg Norman; ~US$200–300; ask about a guest rate).
+- [ ] **San Miguel food ideas (Nov 5)**, from Tyler Cowen's 2011 "barbacoa morning, carnitas midday, chorizo night" rule
+      (the user's research): Sat El Pato barbacoa breakfast (listed Wed–Sun 8–2), market food counters (enchiladas mineras),
+      Sat lunch at Carnitas Bautista (Guadiana 2, Col. Allende; often sold out ~3 on weekends), Mon light dinner taco
+      stand via a local. Skipped Tacos Don Felix (Fri–Sun only; those dinners are booked). Ideas only.
 - [ ] **San Miguel ideas (Nov 1)**, to balance Jen's shopping/design stops: Fri Raindog; Sat market split + Baja Fish
       Taquito lunch; **Sun golf (Ventanas de San Miguel, Faldo; or Malanquín) while Jen does Fábrica La Aurora, and La Gruta
       hot springs + Atotonilco sanctuary in the afternoon** (La Gruta listed Wed–Sun 7–5); Mon split with a mezcal tasting
