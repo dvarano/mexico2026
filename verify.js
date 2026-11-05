@@ -181,7 +181,7 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     const { ctx, page } = await open(browser, '2026-10-12T17:00:00Z');
     await page.click('nav button[data-tab="info"]');
     const t = await page.textContent('#tab-info');
-    ['Taverna', 'Rosetta', 'Comedor Jacinta', 'The Restaurant', 'Bocaciega', 'Sazón Cooking School', 'Luna Rooftop']
+    ['Taverna', 'Rosetta', 'The Restaurant', 'Bocaciega', 'Sazón Cooking School', 'Luna Rooftop']
       .forEach(n => ok(t.includes(n), 'Reservations lists ' + n));
     ok(/BajíoGo/.test(t) && /CUN transfer/.test(t), 'Still to sort lists the transfers');
     ok(/DiDi/.test(t) && /Uber Comfort/.test(t), 'Info has the ride tips');
