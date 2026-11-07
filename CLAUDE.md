@@ -113,6 +113,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       (the user's research): Sat El Pato barbacoa breakfast (listed Wed–Sun 8–2), market food counters (enchiladas mineras),
       Sat lunch at Carnitas Bautista (Guadiana 2, Col. Allende; often sold out ~3 on weekends), Mon light dinner taco
       stand via a local. Skipped Tacos Don Felix (Fri–Sun only; those dinners are booked). Ideas only.
+- [x] **Sun Nov 8 La Gruta for Drew only** (user, Nov 7): on Today 7:45 taxi, soak, ~11:45 taxi to Fábrica La Aurora
+      to meet Jen (who shops as planned) for lunch. Ideas card now: golf instead, or add Atotonilco.
 - [ ] **San Miguel ideas (Nov 1)**, to balance Jen's shopping/design stops: Fri Raindog; Sat market split + Baja Fish
       Taquito lunch; **Sun golf (Ventanas de San Miguel, Faldo; or Malanquín) while Jen does Fábrica La Aurora, and La Gruta
       hot springs + Atotonilco sanctuary in the afternoon** (La Gruta listed Wed–Sun 7–5); Mon split with a mezcal tasting
