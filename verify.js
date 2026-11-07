@@ -152,19 +152,19 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     const secs = await page.$$eval('#tab-ideas .ideasec h2', els => els.map(e => e.textContent));
     ok(secs.join('|') === 'Day by day|Other ideas', 'Ideas has Day by day then Other ideas, got ' + secs.join('|'));
     ok(await page.evaluate(() => { const c = document.querySelectorAll('#tab-ideas .card.idea'); const firstOther = [...c].findIndex(e => e.classList.contains('other')); return [...c].slice(firstOther).every(e => e.classList.contains('other')); }), 'no day card after the Other ideas heading');
-    await page.click('#tab-ideas .dayidea .db[data-day="4"]');
-    ok((await state(page)).day === 4, 'day card date opens that day');
+    await page.click('#tab-ideas .dayidea .db[data-day="8"]');
+    ok((await state(page)).day === 8, 'day card date opens that day');
     await page.click('nav button[data-tab="ideas"]');
     await page.click('#tab-ideas .idea.other .chip[data-day="11"]');
     ok((await state(page)).day === 11, 'Other ideas chip opens that day');
     await page.click('nav button[data-tab="ideas"]');
-    await page.click('#tab-ideas .dayidea .db[data-day="4"]');
+    await page.click('#tab-ideas .dayidea .db[data-day="8"]');
     s = await state(page);
-    ok(s.tab === 'today' && s.day === 4, 'Ideas day card opens that day');
+    ok(s.tab === 'today' && s.day === 8, 'Ideas day card opens that day');
     await page.click('#nextD'); await page.click('#nextD');
     s = await state(page);
-    ok(s.day === 6, 'next-day button');
-    ok(/Hotel change/.test(await page.textContent('#tab-today .dayhero')), 'the 6th shows the hotel change');
+    ok(s.day === 10, 'next-day button');
+    ok(/Hotel change/.test(await page.textContent('#tab-today .dayhero')), 'the 10th shows the hotel change');
     await ctx.close();
   }
   {

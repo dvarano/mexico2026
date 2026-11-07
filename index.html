@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-07T00:30:20Z');
+const SITE_UPDATED = Date.parse('2026-11-07T00:32:44Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -491,44 +491,6 @@ const SHOP_NOTE = '**Shopping strategy:** Buy value/useful textiles at La Ciudad
    `rows` give a revised schedule. Cards without `day` go under "Other ideas".
    When one is decided, move it into DAYS and delete it here. */
 const IDEAS = [
-  { day:2, h:'Backup if you’re late from the airport',
-    lead:'Check the time when you reach the Andaz. Tonight is the last night of the Zócalo’s Ofrenda Monumental, so the backups still try to catch it.',
-    opts:[
-      { day:2, h:'At the Andaz by about 6:45: the plan as is', p:'Leave by about 7:00 at the latest; you still get time at the Zócalo before walking to Taverna for 9:00.' },
-      { day:2, tag:'Suggested', h:'Later than about 6:45: dinner first, Zócalo after', rows:[
-        ['~8:30', 'Uber straight to [Taverna](map:Taverna Prim Mexico City) (General Prim 34, Colonia Juárez), ~15–20 min'],
-        ['9:00', 'Taverna (no change)'],
-        ['~10:45', 'Uber ~10–15 min to near [Bellas Artes](map:Palacio de Bellas Artes Mexico City) and walk Madero to the Zócalo for the ofrenda and the catrina'],
-        ['~11:30', 'Uber back to the Andaz from near Bellas Artes, ~25–35 min'],
-      ], p:'Taverna sits between Condesa and Centro, so the Zócalo is close after dinner. In past years the ofrenda had no fixed closing time, but it’s the last night, so check it’s still open before you go. It makes for a very long first day.' },
-      { day:2, h:'Too late or too tired: stay local', p:'Go straight to Taverna and skip Centro. Many restaurants and shops in Condesa, Roma and Juárez put up their own ofrendas for the holiday, so a short walk on Avenida Amsterdam before you leave, or around Taverna after dinner, still gives you a taste. Open House Día de Muertos also sets up designer ofrendas in houses in Condesa, Roma Norte and Juárez around the first weekend of November; dates, hours and venues weren’t published when I checked. And you’ll walk past the giant alebrijes on Reforma on Thursday.' },
-    ]},
-  { day:4, h:'The long day',
-    lead:'Works as planned. These take the pressure off a day that runs from a 6:30 AM pickup to a late dinner.',
-    opts:[
-      { day:4, tag:'Suggested', h:'Leave at 7:30 with friends', rows:[
-        ['6:30–7:15', 'Breakfast at the Andaz (included). Check out and leave the bags at the bell desk'],
-        ['7:30', 'Shared ride to Teotihuacan (UberXL if you’re more than four), ~1–1.5 hr in rush-hour traffic'],
-        ['~9:00–11:15', 'The focused route: Sun → Avenue of the Dead → Puma Mural → Moon → Quetzalpapalotl'],
-        ['~11:15', 'Head back (check Uber, otherwise the bus to Terminal Norte), then Uber straight to Maizajo'],
-        ['1:30', 'Maizajo (no change); skip the shower-at-the-Andaz stop'],
-      ], p:'Fine, with trade-offs: you lose an hour of cool, quiet morning before the tour groups and midday sun, and the return is tight for the 1:30 lunch, so keep the visit to about 2–2¼ hours. The upside is breakfast and company.' },
-      { day:4, h:'Breakfast: ask the Andaz for something to go', p:'The 6:30 AM pickup is probably before the hotel restaurant opens, so a sit-down breakfast likely won’t fit. Your booking includes breakfast for two, so ask the night before whether they can pack it for the car.' },
-      { day:4, tag:'Suggested', h:'Midday: shower and check out before lunch', rows:[
-        ['10:45', 'Leave Teotihuacan (no change)'],
-        ['~12:30', 'Uber from Terminal Norte to the Andaz instead of straight to Maizajo. Shower, pack and check out. Checkout is 11:00, but late checkout (when available) is one of your booking’s perks: ask for 1:00 PM. Bags to the bell desk'],
-        ['1:30', '[Maizajo](https://www.maizajo.com/pages/restaurante) (Fernando Montes de Oca 113, Condesa), a short ride or walk'],
-        ['~3:00', 'Back to the Andaz for the bags, then one Uber to the Kimpton, ~25–40 min'],
-      ], p:'The bus and Uber back take about 1.5–2 hours, so you’d reach Condesa around 12:30 with about an hour before lunch. Using it at the Andaz means lunch without the pyramid dust and no packing against the clock.' },
-      { day:4, h:'Teotihuacan: check the site status', p:'The route still works: it doesn’t climb anything, and climbing the Pyramid of the Sun has been banned since 2020. The site closed briefly in April 2026 after a shooting at the Pyramid of the Moon and reopened with extra security, and access to the Moon pyramid has been limited since. Check INAH’s notices the week before, expect a bag check at the entrance, and arrive at 8:00 when it opens.' },
-      { day:4, h:'Evening: try to be seated early at Rosetta', p:'As planned you’re back at the Kimpton around 11:00–11:30 PM, with an 8:35 start on Thursday. Consider arriving about 30 minutes early (leave Limantour around 8:15) to see if they can seat you early.' },
-      { day:4, h:'Split up in Polanco, ~3:30–5:10', p:'On the ~3:00 Uber from the Andaz, drop Jen at the Polanco shops on the way and Drew rides on to the Kimpton with the bags to check in. **Jen:** Ensamble Artesano, IKAL, LAGO, Uriarte, starting about 3:30 instead of 4:20; they’re a few minutes’ walk from the hotel. **Drew:** check in (official check-in is 4:00; early check-in is a perk when available, otherwise leave the bags), then the rooftop pool or a lap of Parque Lincoln. Meet at the pool by 5:10.' },
-    ]},
-  { day:5, h:'After dinner, on foot',
-    lead:'Only walkable options after dinner. I couldn’t find a reliable live-jazz spot within walking distance in Polanco.',
-    opts:[
-      { day:5, h:'Nightcap at Limantour Polanco', p:'[Licorería Limantour’s Polanco bar](map:Licoreria Limantour Polanco Oscar Wilde) is on Oscar Wilde, between Masaryk and Parque Lincoln, a short walk from the Kimpton. Quieter and more upscale than the Roma original; reservations recommended. It does repeat Wednesday’s Limantour stop in Roma, so it’s only worth it if you loved that one.' },
-    ]},
   { day:11, h:'Wednesday at Secrets',
     lead:'From a friend’s February 2026 notes. Confirm the current weekly schedule when you arrive.',
     opts:[
@@ -553,11 +515,6 @@ const IDEAS = [
     lead:'Your flight leaves at 3:07 PM, so the morning is free.',
     opts:[
       { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout (the friend asked for 12:00 or 1:00), or check out at 11 and leave your bags with the bell desk.' },
-    ]},
-  { day:6, h:'Friday in San Miguel',
-    lead:'Arrival day; keep it light.',
-    opts:[
-      { day:6, h:'Jazz: Raindog Lounge tonight', p:'It’s penciled in as optional on both Friday and Saturday. Pick Friday so Streetiversary night stays simple.' },
     ]},
   { day:7, h:'Streetiversary in San Miguel',
     lead:'Saturday has two shopping stretches (the markets late morning, then Dôce 18, Mixta and Recreo at midday). Options for Drew while Jen shops:',

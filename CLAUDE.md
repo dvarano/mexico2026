@@ -113,6 +113,8 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
       (the user's research): Sat El Pato barbacoa breakfast (listed Wed–Sun 8–2), market food counters (enchiladas mineras),
       Sat lunch at Carnitas Bautista (Guadiana 2, Col. Allende; often sold out ~3 on weekends), Mon light dinner taco
       stand via a local. Skipped Tacos Don Felix (Fri–Sun only; those dinners are booked). Ideas only.
+- [x] **Ideas pruned (Nov 6, user):** the Mexico City cards (Nov 2, 4, 5) and the Friday Nov 6 card were removed;
+      Ideas now starts at Sat Nov 7. Older Ideas history below refers to cards that no longer exist.
 - [x] **Sun Nov 8 La Gruta for Drew only** (user, Nov 7): on Today 7:45 taxi, soak, ~11:45 taxi to Fábrica La Aurora
       to meet Jen (who shops as planned) for lunch. Ideas card now: golf instead, or add Atotonilco.
 - [ ] **San Miguel ideas (Nov 1)**, to balance Jen's shopping/design stops: Fri Raindog; Sat market split + Baja Fish
