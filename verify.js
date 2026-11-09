@@ -183,7 +183,7 @@ const overflow = page => page.evaluate(() => document.documentElement.scrollWidt
     const t = await page.textContent('#tab-info');
     ['Taverna', 'Rosetta', 'The Restaurant', 'Bocaciega', 'Sazón Cooking School', 'Luna Rooftop']
       .forEach(n => ok(t.includes(n), 'Reservations lists ' + n));
-    ok(/BajíoGo/.test(t) && /CUN transfer/.test(t), 'Still to sort lists the transfers');
+    ok(/BajíoGo/.test(t) && /Caribbean Transfers/.test(t), 'Still to sort lists the transfers');
     ok(/DiDi/.test(t) && /Uber Comfort/.test(t), 'Info has the ride tips');
     ok(/Check-in 3:00 PM Mon · check-out 11:00 AM Wed/.test(t) && /guaranteed 4:00 PM late checkout/.test(t), 'Info shows hotel times and perks');
     await ctx.close();

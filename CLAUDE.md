@@ -101,8 +101,10 @@ reload. If Chromium isn't on the default path, set `executablePath` in `chromium
 
 - [~] BajíoGo private car Nov 10, 5:00 AM NUMU → QRO for VB 2061: **booked Oct 30, not paid** (card by phone
       or cash to driver). Chosen over Uber (~$60–70 on demand, but no guaranteed driver at 5 AM) and NUMU's car.
-- [ ] Resort → CUN transfer Nov 14: book it and set the time.
-- [ ] CUN → Secrets transfer Nov 10 (arrival 11:27 AM): book it too; todo on the day (Oct 28). Round trip with Nov 14.
+- [x] CUN ↔ Secrets transfers: **booked Nov 7 with Caribbean Transfers**, round trip, Sedan Plus: CUN pickup on VB 2061
+      arrival Nov 10, Secrets pickup **11:30 AM Nov 14**. Payment pending (todo). Booking ID, phone numbers and price stay off the site.
+- [x] Secrets dinners (user, Nov 8): **Himitsu Thursday Nov 12** (ask at check-in about teppanyaki seats), **Bordeaux Friday
+      Nov 13** (anniversary); Wednesday dinner left open (both closed Wed; El Patio idea). Private dinner kept as an Optional alternative.
 - [ ] **Secrets ideas (Nov 1)** from a friend's Feb 2026 spreadsheet: Himitsu and Bordeaux closed Wednesdays (Nov 11 is a
       Wednesday; the user wants this on Ideas only, so Today has no flag for it); suggested Wed El Patio, Thu Himitsu, Fri backup Bordeaux (Portofino 3/5);
       Kalido Travel for the CUN round trip; even-numbered buildings + end suites; Preferred Club breakfast at Seaside

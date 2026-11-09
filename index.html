@@ -233,7 +233,7 @@ nav button[aria-selected=true]{color:var(--accent);font-weight:650}
 const TRIP_NAME = 'Mexico 2026';
 const TRIP_SUB  = 'Anniversary · Nov 2–14';
 /* Bump on every commit that changes something you'd see on the site (UTC). */
-const SITE_UPDATED = Date.parse('2026-11-07T00:32:44Z');
+const SITE_UPDATED = Date.parse('2026-11-09T15:01:19Z');
 const YEAR = 2026, MONTH = 10;          // November (0-based)
 
 /* Mexico City and San Miguel stay on UTC-6 all year; Cancún (Quintana Roo)
@@ -393,45 +393,45 @@ const DAYS = [
     todo:'Not paid yet: pay by card over the phone, or cash to the driver (USD or pesos; the driver can’t take cards).' },
   { t:'~6:30', at:'06:30', d:'Target QRO airport arrival.' },
   { t:'8:00 AM', at:'08:00', d:'Viva Aerobus VB 2061, QRO → CUN.' },
-  { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer',
-    todo:'Book the CUN → Secrets transfer ahead (app pickups at Cancún airport are contested). Booking it as a round trip with the Nov 14 return covers both.' },
+  { t:'11:27 AM', d:'Land at CUN, Terminal 2 (Cancún time). [Cancún Airport](map:Cancun International Airport CUN) → [Secrets Playa Blanca](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres).', walk:'Not practical', ride:'~45–70 min transfer' },
+  { t:'On landing', d:'**Caribbean Transfers** private sedan (round trip, booked for VB 2061) meets you at Terminal 2 arrivals. Show the confirmation email (the QR code) on your phone, have an ID ready, and sign their pickup form. If you don’t see the driver, the call and WhatsApp numbers are in the email.', ok:'Booked', res:'Caribbean Transfers (CUN ↔ Secrets, round trip)', walk:'Not practical', ride:'~45–70 min',
+    todo:'Caribbean Transfers: payment shows as pending. Check the email for how to pay (driver on arrival or online) and have pesos or a card ready.' },
+  { t:'At check-in', d:'Ask the concierge to reserve **Himitsu for Thursday** (decide teppanyaki grill seats or à la carte) and **Bordeaux for Friday**, and confirm the Saturday 11:30 pickup.', walk:'On property' },
   { t:'Day', d:'Lunch, beach/pool, nap, easy dinner. Check the weekly activity schedule and choose one activity for the stay.', walk:'On property', ride:'On property' },
   ],
   note:'Cancún is one hour ahead of San Miguel. Times before landing are San Miguel / Querétaro time.' },
 
-{ d:11, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Workout + Beach/Pool + Himitsu',
+{ d:11, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Workout + Beach/Pool + dinner',
   items:[
   { t:'Morning', d:'Yoga/Pilates/stretching/aqua fitness if offered; gym backup.', walk:'On property', ride:'On property' },
   { t:'Daytime', d:'Beach/pool; optional kayak.', walk:'On property', ride:'On property' },
   { t:'Activity', d:'Choose one resort activity during the stay based on the current weekly schedule: cocktail, cooking, tequila, art/alebrije, etc.', walk:'On property', ride:'Not needed' },
   { t:'Pre-dinner', d:'Rendezvous cocktail.', walk:'~2–10 min', ride:'Not needed' },
-  { t:'Dinner', d:'Himitsu.', walk:'On property', ride:'Not needed' },
+  { t:'Dinner', d:'Himitsu and Bordeaux are closed on Wednesdays, so tonight is another restaurant: El Patio (Mexican), the Seaside Grill or Oceana (see Ideas).', walk:'On property', ride:'Not needed' },
   ] },
 
-{ d:12, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Spa Day + Beach/Pool + Bordeaux',
+{ d:12, city:'cun', stay:'secrets', head:'Secrets Playa Blanca', sub:'Spa Day + Beach/Pool + Himitsu',
   items:[
   { t:'Morning', d:'Slow breakfast + beach/pool.', walk:'On property', ride:'On property' },
   { t:'Spa', d:'Massage + hydrotherapy.', walk:'On property', ride:'On property' },
   { t:'Afternoon', d:'Barracuda or Manatees + beach/pool.', walk:'~2–10 min', ride:'Not needed' },
   { t:'Pre-dinner', d:'Rendezvous.', walk:'~2–10 min', ride:'Not needed' },
-  { t:'Dinner', d:'Bordeaux.', walk:'On property', ride:'Not needed' },
+  { t:'Dinner', d:'**Himitsu** (Japanese). Teppanyaki grill seats if you reserved them; otherwise à la carte, which a friend rated 5/5 (order the short rib gyozas; the teppanyaki show was fun but the food only OK). Smart casual: long trousers for Drew.', walk:'On property', ride:'Not needed' },
   ] },
 
-{ d:13, city:'cun', stay:'secrets', badge:'Anniversary', head:'Secrets Playa Blanca', sub:'Favorite Resort Day + Optional Anniversary Finale',
+{ d:13, city:'cun', stay:'secrets', badge:'Anniversary', head:'Secrets Playa Blanca', sub:'Favorite Resort Day + Bordeaux anniversary dinner',
   items:[
   { t:'Morning', d:'Favorite workout/class if desired.', walk:'On property', ride:'On property' },
   { t:'Daytime', d:'Favorite pool/beach + optional one resort activity.', walk:'On property', ride:'On property' },
-  { t:'Dinner', ok:'Optional', d:'Romantic/private dining. Ask concierge for current price, menu, locations, inclusions + weather policy. [Celebrations info](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres/weddings).', walk:'On property', ride:'Not needed',
-    todo:'Private anniversary dinner: ask the concierge about price, menu, location and weather policy.' },
-  { t:'Backup', d:'Portofino or Seaside Grill. [Dining & drinks](https://www.secretsresorts.com.mx/en/resorts-hotels/secrets/mexico/playa-blanca-costa-mujeres/dining-drinks/).', walk:'On property', ride:'Not needed' },
+  { t:'Dinner', d:'**Bordeaux** (French) for the anniversary dinner: the friend’s picks were the beef filet, French onion soup, catch of the day and pork belly. Smart casual: long trousers for Drew. At peak times there can be a 20–30 min wait, with a buzzer so you can get a drink.', walk:'On property', ride:'Not needed' },
+  { t:'Instead', ok:'Optional', d:'A romantic/private dinner set up by the resort. Ask the concierge for price, menu, location and weather policy. [Celebrations info](https://www.hyatt.com/secrets/en-US/sepbc-secrets-playa-blanca-costa-mujeres/weddings).', walk:'On property', ride:'Not needed' },
   { t:'After', d:'Desires only if you want a later night.', walk:'On property', ride:'Not needed' },
   ] },
 
 { d:14, city:'cun', stay:null, head:'Travel home', sub:'Secrets Playa Blanca → CUN → San Luis Obispo',
   items:[
   { t:'Morning', d:'Breakfast + check out.', walk:'On property' },
-  { t:'TBD', d:'Pre-arranged resort → CUN transfer; allow drive + airport buffer.', walk:'Not practical', ride:'~45–70 min',
-    todo:'Book the resort → CUN transfer and set the pickup time.' },
+  { t:'11:30 AM', at:'11:30', d:'**Caribbean Transfers** pickup at Secrets → CUN (the return leg of the round trip). Checkout is 11:00: ask for late checkout or leave bags with the bell desk. Have the confirmation email and ID ready.', ok:'Booked', res:'Caribbean Transfers (Secrets → CUN)', walk:'Not practical', ride:'~45–70 min' },
   { t:'3:07 PM', at:'15:07', d:'United UA1275, CUN → San Luis Obispo (SBP). Lands 7:58 PM.' },
   ] },
 ];
@@ -441,8 +441,8 @@ const TRAVEL = [
   { d:2,  h:'Fly in to Mexico City', lines:['8:13 AM American AA2546, LAX Terminal 4 → Mexico City nonstop, landing around 2:00 PM local.', 'Airport → Andaz Condesa, ~30–60 min by car.'] },
   { d:4,  h:'Teotihuacan + hotel move', lines:['6:30 AM round trip to Teotihuacan with the driver, back around 12:00–12:30.', '~3:00 PM bags from the Andaz → Kimpton Virgilio, ~25–40 min.'] },
   { d:6,  h:'Mexico City → San Miguel', lines:['10:30 AM BajíoGo private car, Kimpton → NUMU, ~4 hr (booked, not yet paid).'] },
-  { d:10, h:'San Miguel → Cancún', lines:['5:00 AM BajíoGo private car, NUMU → QRO airport, ~1.5 hr (booked, not yet paid).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'CUN → Secrets Playa Blanca, ~45–70 min.'] },
-  { d:14, h:'Home', lines:['Resort → CUN transfer (time to set), ~45–70 min.', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
+  { d:10, h:'San Miguel → Cancún', lines:['5:00 AM BajíoGo private car, NUMU → QRO airport, ~1.5 hr (booked, not yet paid).', '8:00 AM Viva Aerobus VB 2061, QRO → CUN, lands 11:27 AM at Terminal 2 (Cancún is one hour ahead).', 'Caribbean Transfers private sedan, CUN → Secrets Playa Blanca, ~45–70 min (booked).'] },
+  { d:14, h:'Home', lines:['11:30 AM Caribbean Transfers pickup, Secrets → CUN, ~45–70 min (booked).', '3:07 PM United UA1275, CUN → San Luis Obispo (SBP), landing 7:58 PM.'] },
 ];
 
 /* Ride-hailing tips for Info (Oct 28 2026 research). Facts here go stale; recheck before the trip. */
@@ -494,13 +494,12 @@ const IDEAS = [
   { day:11, h:'Wednesday at Secrets',
     lead:'From a friend’s February 2026 notes. Confirm the current weekly schedule when you arrive.',
     opts:[
-      { day:11, tag:'Suggested', h:'Dinner: El Patio instead of Himitsu', p:'Himitsu and Bordeaux were both closed on Wednesdays. **El Patio** (Mexican; closed Sundays) was open, and the friend’s advice was to eat as much Mexican food as you can: try the corn cake and the tableside guacamole. The **Seaside Grill** (rated 5/5) and **Oceana** (seafood, 4.5/5) are the casual alternatives. Move Himitsu to Thursday.' },
+      { day:11, tag:'Suggested', h:'Dinner: El Patio instead of Himitsu', p:'Himitsu and Bordeaux were both closed on Wednesdays. **El Patio** (Mexican; closed Sundays) was open, and the friend’s advice was to eat as much Mexican food as you can: try the corn cake and the tableside guacamole. The **Seaside Grill** (rated 5/5) and **Oceana** (seafood, 4.5/5) are the casual alternatives. Himitsu is now Thursday and Bordeaux Friday.' },
       { day:11, h:'Morning options', p:'Yoga at 8:00 at the Palapa on the beach most days, stretching at 9:00, and a **driving range at 9:00 by the pickleball courts**. Hobie sailboats, paddleboards and kayaks are free, but reserve early in the day. For a quiet pool, get to the **Jungle Pool** early; it has few loungers.' },
     ]},
   { day:12, h:'Thursday at Secrets',
     lead:'From a friend’s February 2026 notes.',
     opts:[
-      { day:12, tag:'Suggested', h:'Dinner: Himitsu, moved from Wednesday', p:'The friend rated **Himitsu** 5/5: order à la carte (the short rib gyozas), since the teppanyaki table was fun but the food only OK. Bordeaux moves to Friday as the anniversary backup.' },
       { day:12, h:'Morning round at Playa Mujeres Golf Club', p:'A real course nearby: the [Playa Mujeres Golf Club](map:Playa Mujeres Golf Club Cancun), a Greg Norman design in the same Costa Mujeres area. Green fees are estimated at about US$200–300 for 2026, depending on season and tee time; twilight is cheaper. Ask the concierge whether Secrets guests get a discounted rate (some sister resorts do), how far it is, and to book an early tee time, so Drew is back for lunch while Jen does the spa morning. The resort’s own “driving range” at the pickleball courts is a casual hit-into-a-net activity, not a real range.' },
       { day:12, h:'Spa day: ask about hydrotherapy', p:'Before booking, ask whether hydrotherapy is complimentary for Preferred Club or World of Hyatt guests.' },
       { day:12, h:'Late-afternoon activity', p:'The 4:00 slot had a **mixology class** (“Sharing Secrets”) and a **tequila tasting** on some days, a good pick for the one-activity idea.' },
@@ -508,13 +507,7 @@ const IDEAS = [
   { day:13, h:'Anniversary at Secrets',
     lead:'From a friend’s February 2026 notes.',
     opts:[
-      { day:13, tag:'Suggested', h:'Backup dinner: Bordeaux, not Portofino', p:'If you skip the private dinner, the friend rated Portofino only 3/5. **Bordeaux** (French: beef filet, French onion soup, catch of the day, pork belly) is the better anniversary backup, with the Seaside Grill (5/5) as the casual one. Peak dinner hours can mean a 20–30 minute wait, with a buzzer so you can get a drink meanwhile.' },
       { day:13, h:'Ask about special dinners', p:'The friend’s favorite meals were the beachside special-event dinners (a Mexican feast, an asado night). Ask the concierge which nights they fall on that week.' },
-    ]},
-  { day:14, h:'Travel home',
-    lead:'Your flight leaves at 3:07 PM, so the morning is free.',
-    opts:[
-      { day:14, tag:'Suggested', h:'Resort pickup at 11:45', p:'The drive to CUN takes 45–70 min, so an 11:45 pickup gets you there by about 12:30–12:55, a bit over two hours before the 3:07 PM flight. That leaves time for a slow breakfast and a last swim. Checkout is 11:00, 45 minutes before the pickup: ask for a late checkout (the friend asked for 12:00 or 1:00), or check out at 11 and leave your bags with the bell desk.' },
     ]},
   { day:7, h:'Streetiversary in San Miguel',
     lead:'Saturday has two shopping stretches (the markets late morning, then Dôce 18, Mixta and Recreo at midday). Options for Drew while Jen shops:',
@@ -541,9 +534,8 @@ const IDEAS = [
       { day:9, h:'Split for the final shopping, 2:00–4:00', p:'**Jen:** revisit favorites. **Drew:** a last walk through Centro, or El Mirador if Sunday morning skipped it, or a mezcal tasting at a mezcalería or a craft-beer taproom in Centro (NUMU can point to a current favorite). Keep it short: the pickup is at 5:00 AM.' },
     ]},
   { day:10, h:'Travel day to Cancún',
-    lead:'The 5:00 AM pickup is booked. For the Cancún end, from a friend’s February 2026 stay:',
+    lead:'The 5:00 AM pickup and the Cancún transfers are booked. For the Cancún end, from a friend’s February 2026 stay:',
     opts:[
-      { day:10, tag:'Suggested', h:'Airport ↔ Secrets transfers: Kalido Travel', p:'The friend who stayed in February booked [Kalido Travel](https://kalidotravel.com) for the Cancún airport runs and had used them before (about US$130 including taxes for their trip). Ask them for a round trip: Nov 10 from CUN Terminal 2 (land 11:27 AM, Viva VB 2061) and Nov 14 from Secrets at 11:45 AM.' },
       { day:10, tag:'Suggested', h:'Room request before you arrive', p:'Email Secrets or ask at check-in for a room on the **even-numbered building side (2, 4, 6, 8)**: in February there was construction next to buildings 1, 3, 5 and 7. Also ask for an **end or corner suite**: they’re a little bigger, with a larger bathroom and an extra window. The construction may be finished by November, but it costs nothing to ask.' },
       { day:10, h:'Your Preferred Club perks', p:'Preferred Club guests get breakfast at the Seaside Grill, a quieter Preferred pool a few minutes from the beach, and the Preferred Club lounge with live music in the evenings. Make friends with the concierge early; the friend says they help a lot.' },
       { day:10, h:'Arriving before check-in', p:'Secrets check-in is 3:00 and you’ll arrive around 12:30–1:00. Pack swimsuits and sunscreen in the carry-on: at an all-inclusive you can usually have lunch and use the pools while the room is readied.' },
