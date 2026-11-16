@@ -2,7 +2,11 @@
 
 Handoff notes so a future session can pick this up cold.
 
-- **Live site:** https://dvarano.github.io/mexico2026/
+- **Retired Nov 16 2026 (user: "we are done with the trip").** `index.html` on `main` is now a one-line
+  "no longer available" page. The last full site is commit `fa7dfc3`; restore with
+  `git show fa7dfc3:index.html > index.html` (verify.js only works against that version). The repo and its
+  history are still public: making the repo private (or unpublishing Pages in Settings) hides them.
+- **Former live site:** dvarano.github.io/mexico2026
 - **The app:** `index.html`, one self-contained file. No build step, no dependencies, no network
   calls except the self-update check (below).
 - **Trip:** an anniversary trip for **Drew and Jen**, **Nov 2–14 2026**. Flying in Mon Nov 2 on **American
